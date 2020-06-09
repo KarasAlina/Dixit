@@ -3,6 +3,7 @@
 {% from "../parts/_menu.nunj" import menu %}
 {% from "../parts/_intro.nunj" import intro %}
 {% from "../parts/_register.nunj" import register %}
+{% from "../parts/_language.nunj" import language %}
 
 
 {# Пример расширения существующего блока #}
@@ -14,6 +15,7 @@
 		<div class="section-slider" data-slider-slides>
 			{{ intro() }}
 			{{ register() }}
+			{{ language() }}
 		</div>
 		
 		
