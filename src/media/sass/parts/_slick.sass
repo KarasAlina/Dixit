@@ -1,0 +1,105 @@
+.section-slider
+	overflow: hidden
+
+.slider
+	position: relative
+
+.slick-slider
+	opacity: 0
+	position: relative
+	box-sizing: border-box
+	touch-action: pan-y
+	-webkit-tap-highlight-color: transparent
+	&.slick-initialized
+		opacity: 1
+
+.slick-slider
+	*
+		outline: none
+
+.slick-list
+	position: relative
+	display: block
+	height: 100%
+	margin: 0
+	padding: 0
+	&:focus
+		outline: none
+
+.slick-track
+	position: relative
+	top: 0
+	left: 0
+	display: block
+	height: 100%
+	white-space: nowrap
+	&:before,
+	&:after
+		display: table
+		content: ''
+	&:after
+		clear: both
+
+.slides
+	position: relative
+	white-space: nowrap
+
+[data-slider-slides]
+	> *:not(:first-child)
+		display: none
+
+.slick-loading
+	.slick-track
+		visibility: hidden
+
+.slick-slide
+	display: inline-block
+	vertical-align: top
+	height: 100vh
+	min-height: 1px
+	white-space: normal
+	& > div
+		height: 100%
+
+.slick-initialized
+	.slick-slide
+		display: inline-block
+
+.slick-loading
+	.slick-slide
+		visibility: hidden
+
+.slick-vertical
+	.slick-slide
+		display: block
+		height: auto
+		border: 1px solid transparent
+
+.slick-disabled
+	pointer-events: none
+
+.slide
+	white-space: normal
+
+.slick-dots
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	& li
+		width: 7px
+		height: 7px
+		border-radius: 50%
+		background: $c-white
+		transition: background-color $default-transition-duration $default-transition-function, opacity $default-transition-duration $default-transition-function
+		margin: 7px 5px
+		font-size: 0
+		color: transparent
+		&.slick-active,
+		&._active
+			background: $c-primary
+			transition: none
+	& button
+		display: none
+
+.slick-hidden
+	visibility: hidden

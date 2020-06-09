@@ -1,0 +1,26 @@
+{% macro intro() %}
+	<section class="section intro">
+        <div class="section__wrapper">
+            <div class="section__background intro__background"></div>
+            <div class="motion-wrapper">     
+                {% for item in motionElements %}
+                    <div class="motion-element motion-element-{{ item.prefix }} {{ item.wrapperClass }}">
+                        <div class="motion-element-wrapper {{ item.level }}">
+                             <svg class="motion-element-{{ item.prefix }}__item "><use xlink:href="#icon-{{ item.prefix }}-{{ item.icon }}"></use></svg>
+                        </div>
+                    </div>
+                {% endfor %}
+                
+            </div>
+
+        
+            <button data-slider-next style="position: absolute; top: 50%;left:50%; z-ondex: 1000;">next</button>
+        </div>
+        <div class="intro-leafs">
+            {% for item in leafs %}
+                <svg class="intro-leafs__item {{ item.class }}"><use xlink:href="#icon-leaf-{{ item.icon }}"></use></svg>
+            {% endfor %}
+        </div>
+           
+    </section>
+{% endmacro %}

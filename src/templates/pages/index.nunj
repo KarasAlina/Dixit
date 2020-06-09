@@ -1,0 +1,22 @@
+{% extends "../ext/base.nunj" %}
+
+{% from "../parts/_menu.nunj" import menu %}
+{% from "../parts/_intro.nunj" import intro %}
+{% from "../parts/_register.nunj" import register %}
+
+
+{# Пример расширения существующего блока #}
+{# Например можно использовать для добавления уникальных тайтлов для каждой страницы #}
+{# {% block title %}Home {{ super() }}{% endblock title %} #}
+
+{% block content %}
+	<div class="wrapper" data-slider="main">
+		<div class="section-slider" data-slider-slides>
+			{{ intro() }}
+			{{ register() }}
+		</div>
+		
+		
+	</div>
+	
+{% endblock content %}

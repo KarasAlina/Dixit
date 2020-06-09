@@ -1,0 +1,176 @@
+{
+	"menuItems": [
+		{
+			"name": "Главная",
+			"path": "/"
+		},
+		{
+			"name": "Элемент меню 2",
+			"path": "#"
+		},
+		{
+			"name": "Элемент меню 3",
+			"path": "#"
+		},
+		{
+			"name": "Элемент меню 4",
+			"path": "#"
+		}
+	],
+	"motionElements": [
+		{
+			"prefix": "hexagon",
+			"icon": "1",
+			"level": "level-1",
+			"wrapperClass": " _v1"
+		},
+		{
+			"prefix": "hexagon",
+			"icon": "2",
+			"level": " level-2-reverse",
+			"wrapperClass": "_ratate _v2"
+		},
+		{
+			"prefix": "hexagon",
+			"icon": "3",
+			"level": "level-3",
+			"wrapperClass": "_ratate _v3"
+		},
+		{
+			"prefix": "hexagon",
+			"icon": "4",
+			"level": "level-4",
+			"wrapperClass": "_ratate _v4"
+		},
+		{
+			"prefix": "hexagon",
+			"icon": "5",
+			"level": "level-5",
+			"wrapperClass": "_ratate _v5"
+		},
+		{
+			"prefix": "hexagon",
+			"icon": "6",
+			"level": "level-6-reverse",
+			"wrapperClass": "_ratate _v6"
+		},
+		{
+			"prefix": "rhombus",
+			"icon": "1",
+			"level": "level-6",
+			"wrapperClass": " _v1"
+		},
+		{
+			"prefix": "rhombus",
+			"icon": "2",
+			"level": "level-3-reverse",
+			"wrapperClass": " _v2"
+		},
+		{
+			"prefix": "rhombus",
+			"icon": "3",
+			"level": "level-2",
+			"wrapperClass": " _v3"
+		},
+		{
+			"prefix": "rhombus",
+			"icon": "4",
+			"level": "level-1-reverse",
+			"wrapperClass": " _v4"
+		}
+	],
+	"leafs": [
+		{
+			"icon": "1",
+			"class": "_v1"
+		},
+		{
+			"icon": "2",
+			"class": "_v2"
+		},
+		{
+			"icon": "3",
+			"class": "_v3"
+		}
+	],
+	"clouds": [
+		{
+			"prefix": "cloud",
+			"icon": "1",
+			"level": "level-3",
+			"wrapperClass": " _v1"
+		},
+		{
+			"prefix": "cloud",
+			"icon": "2",
+			"level": " level-2-reverse",
+			"wrapperClass": " _v2"
+		}
+	],
+	"motionElementsRegister": [
+		{
+			"prefix": "round",
+			"icon": "2",
+			"level": "level-1-reverse",
+			"wrapperClass": " _v1"
+		},
+		{
+			"prefix": "round",
+			"icon": "2",
+			"level": " level-2-reverse",
+			"wrapperClass": "_v2"
+		},
+		{
+			"prefix": "round",
+			"icon": "1",
+			"level": "level-3",
+			"wrapperClass": " _v3"
+		},
+		{
+			"prefix": "round",
+			"icon": "2",
+			"level": "level-4-reverse",
+			"wrapperClass": " _v4"
+		},
+		{
+			"prefix": "round",
+			"icon": "1",
+			"level": "level-5",
+			"wrapperClass": " _v5"
+		},
+		{
+			"prefix": "round",
+			"icon": "2",
+			"level": "level-2-reverse",
+			"wrapperClass": " _v6"
+		},
+		{
+			"prefix": "round",
+			"icon": "1",
+			"level": "level-6",
+			"wrapperClass": " _v7"
+		}
+	],
+	"pollens": [
+		{
+			"icon": "1",
+			"class": "_v1"
+		},
+		{
+			"icon": "2",
+			"class": "_v2"
+		},
+		{
+			"icon": "3",
+			"class": "_v3"
+		},
+		{
+			"icon": "4",
+			"class": "_v4"
+		},
+		{
+			"icon": "5",
+			"class": "_v5"
+		}
+	]
+}

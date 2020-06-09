@@ -1,0 +1,24 @@
+.intro
+	background: linear-gradient(360deg, #A4C1BC -56.39%, #35475D 100%)
+	&__background
+		background: url('../img/intro/tree.svg') no-repeat bottom 50% left 125%
+		background-size: auto 108%
+		opacity: 1
+	&-leafs
+		&__item
+			position: absolute
+			animation-timing-function: ease-in-out
+			animation: falling 5s 0s infinite 
+			&._v1
+				top: -100px
+				left: 50%
+				animation: falling 5s 0s infinite 
+			&._v2
+				top: -10%
+				left: 20%
+				animation: falling2 6s 2s infinite 
+			&._v3
+				top: -10%
+				left: 50%
+				animation: falling3 6s 3s infinite 
+

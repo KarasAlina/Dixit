@@ -1,0 +1,28 @@
+{% macro register() %}
+	<section class="section register">
+    <div class="section__wrapper">
+        <div class="motion-wrapper">     
+            {% for item in clouds %}
+                <div class="motion-element motion-element-{{ item.prefix }} {{ item.wrapperClass }} {{ item.level }}">
+                    <img class="motion-element-{{ item.prefix }}__item" src="media/img/register/{{ item.prefix }}-{{ item.icon }}.svg" alt="{{ item.prefix }}">
+                </div>
+            {% endfor %}
+            {% for item in motionElementsRegister %}
+                <div class="motion-element motion-element-{{ item.prefix }} {{ item.wrapperClass }}">
+                    <div class="motion-element-wrapper {{ item.level }}">
+                        <svg class="motion-element__item motion-element-{{ item.prefix }}__item "><use xlink:href="#icon-{{ item.prefix }}-{{ item.icon }}"></use></svg>
+                    </div>
+                </div>
+            {% endfor %}
+            
+        </div>
+        <div class="section__background register__background _animated _visible"></div>
+        <button data-slider-prev style="position: absolute; top: 50%;left:50%; z-ondex: 1000;">prev</button>
+    </div>
+    <div class="register-pollen">
+        {% for item in pollens %}
+            <img class="register-pollen__item {{ item.class }}" src="media/img/register/pollen-{{ item.icon }}.svg" alt="">
+        {% endfor %}
+    </div>
+    </section>
+{% endmacro %}

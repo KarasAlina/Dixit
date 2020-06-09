@@ -1,0 +1,31 @@
+.register
+	background: linear-gradient(180deg, #87AAA4 0%, #E9DAB4 102.89%)
+	&__background
+		background: url('../img/dandelion.svg') no-repeat bottom left
+		background-size: auto 90%
+	&-pollen
+		&__item
+			position: absolute
+			top: 50%
+			left: -10%
+			animation-timing-function: ease-in-out
+			&._v1
+				width: 17vh 
+				height: 24vh
+				animation: pollen 6s 0s infinite 
+			&._v2
+				width: 7.7vh
+				height: 7.3vh
+				animation: pollen2 7s 2s infinite 
+			&._v3
+				width: 16.7vh
+				height: 25.3vh
+				animation: pollen3 7s 3s infinite 
+			&._v4
+				width: 18.7vh
+				height: 10vh
+				animation: pollen2 8s 1s infinite 
+			&._v5
+				width: 15vh
+				height: 24.2vh
+				animation: pollen 7s 3.5s infinite 
