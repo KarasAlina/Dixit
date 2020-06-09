@@ -16,7 +16,7 @@
             {% endfor %}
             
         </div>
-        <div class="section__background register__background _animated _visible"></div>
+        <div class="section__background register__background _animated"></div>
         <button data-slider-prev style="position: absolute; top: 50%;left:50%; z-ondex: 1000;">prev</button>
     </div>
     <div class="register-pollen">

@@ -1,0 +1,30 @@
+{% macro language() %}
+	<section class="section language">
+    <div class="section__wrapper">
+        <div class="motion-wrapper">   
+             <div class="motion-element motion-element-column _v2 level-2-reverse">
+                <div class="motion-element-column__item">
+                </div>
+            </div>  
+            <div class="motion-element motion-element-column _v1 level-1">
+                <div class="motion-element-column__item">
+                </div>
+            </div>
+           
+            
+        </div>
+        <div class="section__background language__background"></div>
+        <div class="language-bubbles">     
+            {% for item in bubbles %}
+                <svg class="language-bubbles__item {{ item.class }}"><use xlink:href="#icon-round-{{ item.icon }}"></use></svg>
+            {% endfor %}
+        </div>
+        <button data-slider-prev style="position: absolute; top: 50%;left:50%; z-ondex: 1000;">prev</button>
+    </div>
+    <div class="language-plants">
+        {% for item in plants %}
+            <img class="language-plants__item {{ item.class }}" src="media/img/register/pollen-{{ item.icon }}.svg" alt="">
+        {% endfor %}
+    </div>
+    </section>
+{% endmacro %}
