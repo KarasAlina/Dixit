@@ -16,7 +16,12 @@
             {% endfor %}
             
         </div>
-        <div class="section__background register__background _animated"></div>
+        <div class="register-dandelions">
+            <img src="media/img/register/dandelion-1.svg" alt="" class="register-dandelions__item _v1">
+            <img src="media/img/register/dandelion-3.svg" alt="" class="register-dandelions__item _v2">
+            <img src="media/img/register/dandelion-2.svg" alt="" class="register-dandelions__item _v3">
+        </div>
+        {# <div class="section__background register__background _animated"></div> #}
         <button data-slider-prev style="position: absolute; top: 50%;left:50%; z-ondex: 1000;">prev</button>
     </div>
     <div class="register-pollen">
