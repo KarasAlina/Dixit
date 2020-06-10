@@ -6,6 +6,7 @@
                 {% for item in stars %}
                     <svg class="create-game-stars__item"><use xlink:href="#icon-star-{{ item.icon }}"></use></svg>
                 {% endfor %}
+                <img src="media/img/create-game/constellation.svg" class="create-game-stars__item _constellation" alt="">
             </div>
         </div>
     </section>
