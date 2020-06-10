@@ -4,6 +4,8 @@
 {% from "../parts/_intro.nunj" import intro %}
 {% from "../parts/_register.nunj" import register %}
 {% from "../parts/_language.nunj" import language %}
+{% from "../parts/_start.nunj" import start %}
+{% from "../parts/_create-game.nunj" import createGame %}
 
 
 {# Пример расширения существующего блока #}
@@ -16,6 +18,8 @@
 			{{ intro() }}
 			{{ register() }}
 			{{ language() }}
+			{{ start() }}
+			{{ createGame() }}
 		</div>
 		
 		

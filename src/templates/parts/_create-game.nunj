@@ -1,0 +1,12 @@
+{% macro createGame() %}
+	<section class="section create-game">
+        <div class="section__wrapper">
+            <div class="section__background create-game__background _animated _visible"></div>
+            <div class="create-game-stars">
+                {% for item in stars %}
+                    <svg class="create-game-stars__item"><use xlink:href="#icon-star-{{ item.icon }}"></use></svg>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endmacro %}

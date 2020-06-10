@@ -1,0 +1,58 @@
+.start
+	background: linear-gradient(216.38deg, #591F60 14.24%, #873C6A 52.49%, #A8616E 89.96%)
+	&__background
+		background: url('../img/start/start-bg.svg') no-repeat center
+		background-size: cover
+		opacity: 1
+	&-bubbles
+		&__item
+			position: absolute
+			opacity: 0
+			&:nth-of-type(n) 
+				top: 33%
+				left: 10%
+				width: 0.7vw
+				height: 0.7vw
+				animation: start-bubbles calc(#{$buble-duration} + 8s) 0s infinite alternate
+				animation-timing-function: ease-in-out
+			&:nth-of-type(2n)
+				top: 66%
+				left: 15%
+				width: 0.5vw
+				height: 0.5vw
+				animation: start-bubbles2 calc(#{$buble-duration} + 5s) 1s infinite alternate-reverse
+			&:nth-of-type(3n)
+				top: 22%
+				left: 20%
+				animation: start-bubbles3 calc(#{$buble-duration} + 0s) 0s infinite alternate
+			&:nth-of-type(4n)
+				top: 70%
+				left: 25%
+				animation-direction: alternate-reverse
+				animation-duration: calc(#{$buble-duration} + 5s)
+			&:nth-of-type(5n)
+				top: 65%
+				left: 90%
+				animation-direction: alternate
+				animation-duration: calc(#{$buble-duration} + 7s)
+			&:nth-of-type(6n)
+				top: 90%
+				left: 85%
+				animation-direction: alternate-reverse
+				animation-duration: calc(#{$buble-duration} + 10s)
+			&:nth-of-type(7n)
+				top: 10%
+				animation-direction: alternate-reverse
+				animation-duration: calc(#{$buble-duration} + 5s)
+				left: 60%
+			&:nth-of-type(8n)
+				animation-direction: alternate
+				top: 40%
+				left: 75%
+				width: 0.3vw
+				height: 0.3vw
+				animation-duration: calc(#{$buble-duration} + 2s)
+			&:nth-of-type(9n)
+				top: 5%
+				left: 50%
+				animation-duration: calc(#{$buble-duration} + 9s)

@@ -22,9 +22,8 @@
         <button data-slider-prev style="position: absolute; top: 50%;left:50%; z-ondex: 1000;">prev</button>
     </div>
     <div class="language-plants">
-        {% for item in plants %}
-            <img class="language-plants__item {{ item.class }}" src="media/img/register/pollen-{{ item.icon }}.svg" alt="">
-        {% endfor %}
+        <img class="language-plants__item _v1" src="media/img/language/plant-1.svg" alt="">
+        <img class="language-plants__item _v2" src="media/img/language/plant-2.svg" alt="">
     </div>
     </section>
 {% endmacro %}

@@ -10,7 +10,7 @@ const OPTIONS_BY_TYPE = {
 		infinite: false,
 		draggable: false,
 		fade: true,
-		initialSlide: 2,
+		initialSlide: 4,
 	},
 	galleryNav: {
 		slidesToShow: 3,
