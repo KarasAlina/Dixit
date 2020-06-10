@@ -1,0 +1,22 @@
+{% macro lobby() %}
+	<section class="section lobby">
+        <div class="section__wrapper">
+            <div class="section__background lobby__background _animated _visible"></div>
+                <div class="stars">
+                    {% for item in starsLobby %}
+                        <svg class="stars__item"><use xlink:href="#icon-{% if item.prefix %}{{ item.prefix }}{% else %}star{% endif %}-{{ item.icon }}"></use></svg>
+                    {% endfor %}
+                </div>
+                <div class="motion-wrapper">     
+                    {% for item in lobbyClouds %}
+                        <div class="motion-element motion-element-{{ item.prefix }} {{ item.wrapperClass }} {{ item.level }}">
+                            <img class="motion-element-{{ item.prefix }}__item" src="media/img/lobby/{{ item.prefix }}-{{ item.icon }}.svg" alt="{{ item.prefix }}">
+                        </div>
+                    {% endfor %}
+                </div>
+                <button data-slider-prev style="position: absolute; top: 50%;left:50%; z-ondex: 1000;">prev</button>
+                
+            </div>
+        </div>
+    </section>
+{% endmacro %}

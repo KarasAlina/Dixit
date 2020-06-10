@@ -2,12 +2,14 @@
 	<section class="section create-game">
         <div class="section__wrapper">
             <div class="section__background create-game__background _animated _visible"></div>
-            <div class="create-game-stars">
+            <div class="stars">
                 {% for item in stars %}
-                    <svg class="create-game-stars__item"><use xlink:href="#icon-star-{{ item.icon }}"></use></svg>
+                    <svg class="stars__item"><use xlink:href="#icon-star-{{ item.icon }}"></use></svg>
                 {% endfor %}
                 <img src="media/img/create-game/constellation.svg" class="create-game-stars__item _constellation" alt="">
             </div>
         </div>
+         <button data-slider-prev style="position: absolute; top: 50%;left:50%; z-ondex: 1000;">prev</button>
+
     </section>
 {% endmacro %}

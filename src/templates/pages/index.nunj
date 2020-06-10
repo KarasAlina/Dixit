@@ -6,6 +6,7 @@
 {% from "../parts/_language.nunj" import language %}
 {% from "../parts/_start.nunj" import start %}
 {% from "../parts/_create-game.nunj" import createGame %}
+{% from "../parts/_lobby.nunj" import lobby %}
 
 
 {# Пример расширения существующего блока #}
@@ -20,6 +21,7 @@
 			{{ language() }}
 			{{ start() }}
 			{{ createGame() }}
+			{{ lobby() }}
 		</div>
 		
 		

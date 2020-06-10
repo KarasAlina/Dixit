@@ -18,6 +18,8 @@ function callParallax(e) {
 	parallaxIt(e, '.level-4-reverse', 25);
 	parallaxIt(e, '.level-5-reverse', 30);
 	parallaxIt(e, '.level-6-reverse', 35);
+	parallaxItHorizontal(e, '.level-1-horizontal', -10);
+	parallaxItHorizontal(e, '.level-1-horizontal-reverse', 10);
 }
 
 function parallaxIt(e, target, movement) {
@@ -28,6 +30,15 @@ function parallaxIt(e, target, movement) {
 	TweenMax.to(target, 1, {
 		x: ((relX - $this.width() / 2) / $this.width()) * movement,
 		y: ((relY - $this.height() / 2) / $this.height()) * movement,
+		ease: Power3.easeOut,
+	});
+}
+function parallaxItHorizontal(e, target, movement) {
+	var $this = $section;
+	var relX = e.pageX - $this.offset().left;
+
+	TweenMax.to(target, 1, {
+		x: ((relX - $this.width() / 2) / $this.width()) * movement,
 		ease: Power3.easeOut,
 	});
 }
