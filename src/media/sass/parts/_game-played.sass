@@ -1,0 +1,39 @@
+.game-played
+    padding-top: 10px
+    color: #FFF
+    margin-bottom: 10px
+    &__top-row
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+    &__row
+        margin: 0 0 15px
+        flex-wrap: nowrap
+    &__name
+        font-size: 24px
+        +min-screen($screen-lg)
+            font-size: 44px
+    &__date
+        font-size: 18px
+        +min-screen($screen-lg)
+            font-size: 24px
+    &-win
+        display: flex
+        flex-wrap: wrap
+        &__icon
+            margin-right: 5px
+        &__text
+            font-size: 16px
+            font-family: "BloggerSans"
+        &-score
+            display: flex
+            align-items: center
+            width: 100%
+            padding-left: 27px
+            font-size: 16px
+            line-height: 1
+            +min-screen($screen-lg)
+                font-size: 24px
+            &__icon
+                margin-left: 4px
+                margin-top: -2px

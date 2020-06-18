@@ -4,10 +4,23 @@
 		background: url('../img/start/start-bg.svg') no-repeat center
 		background-size: cover
 		opacity: 1
+	&-nav
+		display: flex
+		width: 100%
+		flex-direction: column
+		@extend .bordered-block
+		padding-top: 45px
+		padding-bottom: 45px
+		&__button
+			&:not(:last-of-type)
+				margin-bottom: 20px
+				+min-screen($screen-lg)
+					margin-bottom: 30px
 	&-bubbles
 		&__item
 			position: absolute
 			opacity: 0
+			pointer-events: none
 			&:nth-of-type(n) 
 				top: 33%
 				left: 10%

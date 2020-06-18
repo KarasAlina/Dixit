@@ -1,12 +1,14 @@
 {% extends "../ext/base.nunj" %}
 
 {% from "../parts/_menu.nunj" import menu %}
+{% from "../parts/_header.nunj" import header %}
 {% from "../parts/_intro.nunj" import intro %}
 {% from "../parts/_register.nunj" import register %}
 {% from "../parts/_language.nunj" import language %}
 {% from "../parts/_start.nunj" import start %}
 {% from "../parts/_create-game.nunj" import createGame %}
 {% from "../parts/_lobby.nunj" import lobby %}
+{% from "../parts/_statistics.nunj" import statistics %}
 
 
 {# Пример расширения существующего блока #}
@@ -22,6 +24,7 @@
 			{{ start() }}
 			{{ createGame() }}
 			{{ lobby() }}
+			{{ statistics() }}
 		</div>
 		
 		

@@ -1,0 +1,13 @@
+{% macro cards(props) %}
+    {% for card in cardsItem %}
+        <div class="card {{ props.class }}">
+            <div class="card__inner">
+                <div class="card__face _front">
+                    <img src="media/img/cards/card-{{ card.front }}.png" class="card__img" alt="">
+                </div>
+                <div class="card__face _back"></div>
+            </div>
+               
+        </div>
+    {% endfor %}
+{% endmacro %}

@@ -4,10 +4,31 @@
         background: url('../img/language/column-2.svg') no-repeat center top 5%
         background-size: 100% auto
         opacity: 1
+    &-form
+        width: 100%
+        &__text
+            margin-bottom: 20px
+            color: #FFF
+            text-align: center
+            font-size: 32px
+            line-height: 38px
+            +min-screen($screen-lg)
+                margin-bottom: 10px
+                font-size: 44px
+        &__select
+            margin-bottom: 30px
+            +min-screen($screen-lg)
+                margin-bottom: 50px
+            &:last-of-type
+                +min-screen($screen-lg)
+                    margin-bottom: 110px
+            
+
     &-bubbles
         &__item
             position: absolute
             top: 100%
+            pointer-events: none
             &:nth-of-type(n) 
                 left: 10%
                 +size(4vw)
@@ -77,6 +98,7 @@
             animation: plant 5s 0s infinite alternate
             transform: rotate(-10deg)
             transform-origin: 50% 100%
+            pointer-events: none
             &._v1
                 left: 2%
             &._v2

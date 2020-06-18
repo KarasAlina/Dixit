@@ -1,0 +1,665 @@
+{
+	"headerItem": {
+		"rules": "Game rules"
+	},
+	"languages": [
+		{
+			"name": "rus",
+			"title": "Russian",
+			"attr": "_selected",
+			"value": "1"
+		},
+		{
+			"name": "eng",
+			"title": "English",
+			"value": "2"
+		},
+		{
+			"name": "ukr",
+			"title": "Ukranian",
+			"value": "3"
+		},
+		{
+			"name": "itl",
+			"title": "Italian",
+			"value": "4"
+		},
+		{
+			"name": "dch",
+			"title": "Dutch",
+			"value": "5"
+		}
+	],
+	"introContent": {
+		"title": "Is an online multiplayer board game",
+		"text": "Our collection includes more than 1000 cards",
+		"button": "Register now",
+		"videoPreview": {
+			"watch": "watch",
+			"trailer": "trailer",
+			"videoId": "Lq8bpo9KWa8"
+		}
+	},
+	"registerContent": {
+		"title": "Создать<br> учётную<br> запись"
+	},
+	"terms": {
+		"link": "/",
+		"text": "Agree with",
+		"linkText": "terms & conditions"
+	},
+	"footerContent": {
+		"links": [
+			{
+				"link": "/",
+				"text": "Политика конфиденциальности"
+			},
+			{
+				"link": "/",
+				"text": "Условия использования"
+			}
+		],
+		"apps": [
+			{
+				"link": "/",
+				"img": "app-store"
+			},
+			{
+				"link": "/",
+				"img": "google-play"
+			}
+		]
+	},
+	"languageContent": {
+		"appLanguage": "App language",
+		"playrs": "Play with users who speak"
+	},
+	"createGameContent": {
+		"title": "New Game",
+		"label1": "Waiting time for other players to join the game (min)",
+		"label2": "Number of players <br>(max 11)",
+		"label3": "Point to win <br>(max 1000)",
+		"button": "Create game",
+		"usePin": "Use pin"
+	},
+	"lobbyContent": {
+		"title": "Join Game"
+	},
+	"rooms": [
+		{
+			"name": "Gamename-data-1234567890",
+			"time": "5:12",
+			"wins": "1000",
+			"players": "3",
+			"playersTotal": "5",
+			"lang": "rus",
+			"pin": true,
+			"button": "Join"
+		},
+		{
+			"name": "Gamename-data-1234567890",
+			"time": "5:12",
+			"wins": "1000",
+			"players": "3",
+			"playersTotal": "5",
+			"lang": "rus",
+			"pin": false,
+			"button": "Join"
+		},
+		{
+			"name": "Gamename-data-1234567890",
+			"time": "5:12",
+			"wins": "1000",
+			"players": "3",
+			"playersTotal": "5",
+			"lang": "rus",
+			"pin": true,
+			"button": "Join"
+		},
+		{
+			"name": "Gamename-data-1234567890",
+			"time": "5:12",
+			"wins": "1000",
+			"players": "3",
+			"playersTotal": "5",
+			"lang": "rus",
+			"pin": false,
+			"button": "Join"
+		},
+		{
+			"name": "Gamename-data-1234567890",
+			"time": "5:12",
+			"wins": "1000",
+			"players": "3",
+			"playersTotal": "5",
+			"lang": "rus",
+			"pin": true,
+			"button": "Join"
+		},
+		{
+			"name": "Gamename-data-1234567890",
+			"time": "5:12",
+			"wins": "1000",
+			"players": "3",
+			"playersTotal": "5",
+			"lang": "rus",
+			"pin": true,
+			"button": "Join"
+		},
+		{
+			"name": "Gamename-data-1234567890",
+			"time": "5:12",
+			"wins": "1000",
+			"players": "3",
+			"playersTotal": "5",
+			"lang": "rus",
+			"pin": true,
+			"button": "Join"
+		}
+	],
+	"statisticsContent": {
+		"title": "163 game played"
+	},
+	"games": [
+		{
+			"name": "Dixit_12312456",
+			"date": "10.05.2020",
+			"gold": {
+				"name": "Nickname123",
+				"score": "51"
+			},
+			"silver": {
+				"name": "Nickname123",
+				"score": "44"
+			},
+			"bronze": {
+				"name": "Nickname123",
+				"score": "50"
+			},
+			"iron": {
+				"name": "Nickname123",
+				"score": "31"
+			}
+		},
+		{
+			"name": "Dixit_12312456",
+			"date": "10.05.2020",
+			"gold": {
+				"name": "Nickname123",
+				"score": "51"
+			},
+			"silver": {
+				"name": "Nickname123",
+				"score": "44"
+			},
+			"bronze": {
+				"name": "Nickname123",
+				"score": "50"
+			},
+			"iron": {
+				"name": "Nickname123",
+				"score": "31"
+			}
+		},
+		{
+			"name": "Dixit_12312456",
+			"date": "10.05.2020",
+			"gold": {
+				"name": "Nickname123",
+				"score": "51"
+			},
+			"silver": {
+				"name": "Nickname123",
+				"score": "44"
+			},
+			"bronze": {
+				"name": "Nickname123",
+				"score": "50"
+			},
+			"iron": {
+				"name": "Nickname123",
+				"score": "31"
+			}
+		},
+		{
+			"name": "Dixit_12312456",
+			"date": "10.05.2020",
+			"gold": {
+				"name": "Nickname123",
+				"score": "51"
+			},
+			"silver": {
+				"name": "Nickname123",
+				"score": "44"
+			},
+			"bronze": {
+				"name": "Nickname123",
+				"score": "50"
+			},
+			"iron": {
+				"name": "Nickname123",
+				"score": "31"
+			}
+		},
+		{
+			"name": "Dixit_12312456",
+			"date": "10.05.2020",
+			"gold": {
+				"name": "Nickname123",
+				"score": "51"
+			},
+			"silver": {
+				"name": "Nickname123",
+				"score": "44"
+			},
+			"bronze": {
+				"name": "Nickname123",
+				"score": "50"
+			},
+			"iron": {
+				"name": "Nickname123",
+				"score": "31"
+			}
+		},
+		{
+			"name": "Dixit_12312456",
+			"date": "10.05.2020",
+			"gold": {
+				"name": "Nickname123",
+				"score": "51"
+			},
+			"silver": {
+				"name": "Nickname123",
+				"score": "44"
+			},
+			"bronze": {
+				"name": "Nickname123",
+				"score": "50"
+			},
+			"iron": {
+				"name": "Nickname123",
+				"score": "31"
+			}
+		}
+	],
+	"motionElements": [
+		{
+			"prefix": "hexagon",
+			"icon": "1",
+			"level": "level-1",
+			"wrapperClass": " _v1"
+		},
+		{
+			"prefix": "hexagon",
+			"icon": "2",
+			"level": " level-2-reverse",
+			"wrapperClass": "_ratate _v2"
+		},
+		{
+			"prefix": "hexagon",
+			"icon": "3",
+			"level": "level-3",
+			"wrapperClass": "_ratate _v3"
+		},
+		{
+			"prefix": "hexagon",
+			"icon": "4",
+			"level": "level-4",
+			"wrapperClass": "_ratate _v4"
+		},
+		{
+			"prefix": "hexagon",
+			"icon": "5",
+			"level": "level-5",
+			"wrapperClass": "_ratate _v5"
+		},
+		{
+			"prefix": "hexagon",
+			"icon": "6",
+			"level": "level-6-reverse",
+			"wrapperClass": "_ratate _v6"
+		},
+		{
+			"prefix": "rhombus",
+			"icon": "1",
+			"level": "level-6",
+			"wrapperClass": " _v1"
+		},
+		{
+			"prefix": "rhombus",
+			"icon": "2",
+			"level": "level-3-reverse",
+			"wrapperClass": " _v2"
+		},
+		{
+			"prefix": "rhombus",
+			"icon": "3",
+			"level": "level-2",
+			"wrapperClass": " _v3"
+		},
+		{
+			"prefix": "rhombus",
+			"icon": "4",
+			"level": "level-1-reverse",
+			"wrapperClass": " _v4"
+		}
+	],
+	"leafs": [
+		{
+			"icon": "1",
+			"class": "_v1"
+		},
+		{
+			"icon": "2",
+			"class": "_v2"
+		},
+		{
+			"icon": "3",
+			"class": "_v3"
+		}
+	],
+	"clouds": [
+		{
+			"prefix": "cloud",
+			"icon": "1",
+			"level": "level-3",
+			"wrapperClass": " _v1"
+		},
+		{
+			"prefix": "cloud",
+			"icon": "2",
+			"level": " level-2-reverse",
+			"wrapperClass": " _v2"
+		}
+	],
+	"motionElementsRegister": [
+		{
+			"prefix": "round",
+			"icon": "2",
+			"level": "level-1-reverse",
+			"wrapperClass": " _v1"
+		},
+		{
+			"prefix": "round",
+			"icon": "2",
+			"level": " level-2-reverse",
+			"wrapperClass": "_v2"
+		},
+		{
+			"prefix": "round",
+			"icon": "1",
+			"level": "level-3",
+			"wrapperClass": " _v3"
+		},
+		{
+			"prefix": "round",
+			"icon": "2",
+			"level": "level-4-reverse",
+			"wrapperClass": " _v4"
+		},
+		{
+			"prefix": "round",
+			"icon": "1",
+			"level": "level-5",
+			"wrapperClass": " _v5"
+		},
+		{
+			"prefix": "round",
+			"icon": "2",
+			"level": "level-2-reverse",
+			"wrapperClass": " _v6"
+		},
+		{
+			"prefix": "round",
+			"icon": "1",
+			"level": "level-6",
+			"wrapperClass": " _v7"
+		}
+	],
+	"pollens": [
+		{
+			"icon": "1",
+			"class": "_v1"
+		},
+		{
+			"icon": "2",
+			"class": "_v2"
+		},
+		{
+			"icon": "3",
+			"class": "_v3"
+		},
+		{
+			"icon": "4",
+			"class": "_v4"
+		},
+		{
+			"icon": "5",
+			"class": "_v5"
+		}
+	],
+	"bubbles": [
+		{
+			"icon": "3"
+		},
+		{
+			"icon": "3"
+		},
+		{
+			"icon": "4"
+		},
+		{
+			"icon": "4"
+		},
+		{
+			"icon": "3"
+		},
+		{
+			"icon": "4"
+		},
+		{
+			"icon": "3"
+		},
+		{
+			"icon": "3"
+		},
+		{
+			"icon": "4"
+		},
+		{
+			"icon": "3"
+		},
+		{
+			"icon": "4"
+		},
+		{
+			"icon": "3"
+		},
+		{
+			"icon": "3"
+		},
+		{
+			"icon": "4"
+		},
+		{
+			"icon": "4"
+		},
+		{
+			"icon": "3"
+		},
+		{
+			"icon": "4"
+		}
+	],
+	"startBubbles": [
+		{
+			"icon": "5"
+		},
+		{
+			"icon": "5"
+		},
+		{
+			"icon": "5"
+		},
+		{
+			"icon": "5"
+		},
+		{
+			"icon": "5"
+		},
+		{
+			"icon": "5"
+		},
+		{
+			"icon": "5"
+		},
+		{
+			"icon": "5"
+		},
+		{
+			"icon": "5"
+		},
+		{
+			"icon": "5"
+		}
+	],
+	"stars": [
+		{
+			"icon": "1"
+		},
+		{
+			"icon": "1"
+		},
+		{
+			"icon": "1"
+		},
+		{
+			"icon": "1"
+		},
+		{
+			"icon": "1"
+		},
+		{
+			"icon": "1"
+		},
+		{
+			"icon": "1"
+		},
+		{
+			"icon": "1"
+		},
+		{
+			"icon": "1"
+		},
+		{
+			"icon": "1"
+		},
+		{
+			"icon": "1"
+		},
+		{
+			"icon": "1"
+		},
+		{
+			"icon": "1"
+		},
+		{
+			"icon": "1"
+		},
+		{
+			"icon": "1"
+		}
+	],
+	"lobbyClouds": [
+		{
+			"prefix": "cloud",
+			"icon": "2",
+			"level": "level-1-horizontal",
+			"wrapperClass": " _v3"
+		},
+		{
+			"prefix": "cloud",
+			"icon": "1",
+			"level": "level-1-horizontal-reverse",
+			"wrapperClass": " _v4"
+		}
+	],
+	"starsLobby": [
+		{
+			"icon": "2"
+		},
+		{
+			"prefix": "round",
+			"icon": "2"
+		},
+		{
+			"icon": "2"
+		},
+		{
+			"icon": "2"
+		},
+		{
+			"prefix": "round",
+			"icon": "2"
+		},
+		{
+			"icon": "2"
+		},
+		{
+			"icon": "2"
+		},
+		{
+			"icon": "2"
+		},
+		{
+			"prefix": "round",
+			"icon": "4"
+		},
+		{
+			"prefix": "round",
+			"icon": "4"
+		},
+		{
+			"icon": "2"
+		},
+		{
+			"icon": "2"
+		},
+		{
+			"icon": "2"
+		},
+		{
+			"icon": "2"
+		},
+		{
+			"icon": "2"
+		},
+		{
+			"icon": "2"
+		},
+		{
+			"prefix": "round",
+			"icon": "4"
+		}
+	],
+	"cardsItem": [
+		{
+			"front": "1"
+		},
+		{
+			"front": "2"
+		},
+		{
+			"front": "3"
+		},
+		{
+			"front": "4"
+		},
+		{
+			"front": "5"
+		},
+		{
+			"front": "6"
+		}
+	]
+}

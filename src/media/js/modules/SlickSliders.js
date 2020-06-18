@@ -10,25 +10,7 @@ const OPTIONS_BY_TYPE = {
 		infinite: false,
 		draggable: false,
 		fade: true,
-		initialSlide: 1,
-	},
-	galleryNav: {
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		mobileFirst: true,
-		asNavFor: 'galleryMain',
-		focusOnSelect: true,
-		infinite: true,
-		/*responsive: [
-			{
-				breakpoint: 767,
-				settings: {
-					slidesToShow: 4,
-					asNavFor: 'galleryMain',
-					focusOnSelect: true,
-				},
-			},
-		],*/
+		initialSlide: 6,
 	},
 };
 
@@ -202,7 +184,12 @@ SlickSliders.prototype = {
 						.addClass(ACTIVE);
 				});
 			}
-
+			$slides.on('beforeChange', function(e, slick, currentSlide) {
+				if (currentSlide == 1) {
+					$('body').addClass('_authorized');
+					console.log(currentSlide);
+				}
+			});
 			$slides.on('afterChange', function(e, slick, currentSlide) {
 				$('._animated').addClass('_visible');
 			});

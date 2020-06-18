@@ -8,15 +8,15 @@ import gulpif from 'gulp-if';
 import log from 'fancy-log';
 import colors from 'ansi-colors';
 
-import { PRODUCTION } from '../config';
+import { PRODUCTION, defaultLocale } from '../config';
 import PATHS from '../paths';
 import * as extensions from '../src/templates/lib/extensions.js';
 import filters from '../src/templates/lib/filters.js';
 import functions from '../src/templates/lib/functions.js';
 
 export default function html() {
-	delete require.cache[require.resolve('../global-data.json')];
-	const globalData = require('../global-data.json');
+	delete require.cache[require.resolve(`../i18n/${defaultLocale}.json`)];
+	const globalData = require(`../i18n/${defaultLocale}.json`);
 
 	return gulp
 		.src(PATHS.src.nunj)

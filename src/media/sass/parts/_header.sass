@@ -4,4 +4,49 @@
 	left: 0
 	width: 100%
 	padding: 20px 0
-	z-index: 100
+	background: none
+	z-index: 1000
+	&-rules
+		display: flex
+		align-items: center
+		font-family: "BloggerSans"
+		color: #fff
+		font-size: 22px
+		line-height: 1
+		@extend .transition-active
+		&__icon
+			margin-right: 5px					
+		&:hover
+			color: $yellow
+			path
+				fill: $yellow
+	&-unauthorized
+		display: flex
+		._authorized &
+			display: none
+	&-authorized
+		display: none
+		._authorized &
+			display: flex
+	&-avatar
+		+size($button-height-sm)
+		@extend .gradient-border
+		padding: 2px
+		overflow: hidden
+		box-sizing: border-box
+		+min-screen($screen-lg)
+			+size($button-height-md)
+		&__img
+			+size(105%)
+			object-fit: cover
+			border-radius: 18px
+			+min-screen($screen-lg)
+				border-radius: 22px
+	&-coins
+		&__quantity
+			margin-left: 5px
+			font-size: 24px
+			color: #FFF
+			+min-screen($screen-lg)
+				margin-left: 10px
+				font-size: 32px

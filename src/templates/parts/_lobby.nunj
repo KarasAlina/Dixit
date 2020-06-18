@@ -1,22 +1,103 @@
+{% from "../parts/_closer-button.nunj" import closerButton %}
+{% from "../parts/_button.nunj" import button %}
+{% from "../parts/_icon.nunj" import icon %}
+
+
 {% macro lobby() %}
 	<section class="section lobby">
         <div class="section__wrapper">
             <div class="section__background lobby__background _animated _visible"></div>
-                <div class="stars">
-                    {% for item in starsLobby %}
-                        <svg class="stars__item"><use xlink:href="#icon-{% if item.prefix %}{{ item.prefix }}{% else %}star{% endif %}-{{ item.icon }}"></use></svg>
-                    {% endfor %}
-                </div>
-                <div class="motion-wrapper">     
-                    {% for item in lobbyClouds %}
-                        <div class="motion-element motion-element-{{ item.prefix }} {{ item.wrapperClass }} {{ item.level }}">
-                            <img class="motion-element-{{ item.prefix }}__item" src="media/img/lobby/{{ item.prefix }}-{{ item.icon }}.svg" alt="{{ item.prefix }}">
+            <div class="stars">
+                {% for item in starsLobby %}
+                    <svg class="stars__item"><use xlink:href="#icon-{% if item.prefix %}{{ item.prefix }}{% else %}star{% endif %}-{{ item.icon }}"></use></svg>
+                {% endfor %}
+            </div>
+            <div class="motion-wrapper">     
+                {% for item in lobbyClouds %}
+                    <div class="motion-element motion-element-{{ item.prefix }} {{ item.wrapperClass }} {{ item.level }}">
+                        <img class="motion-element-{{ item.prefix }}__item" src="media/img/lobby/{{ item.prefix }}-{{ item.icon }}.svg" alt="{{ item.prefix }}">
+                    </div>
+                {% endfor %}
+            </div>
+            <button data-slider-prev style="position: absolute; top: 50%;left:50%; z-ondex: 1000;">prev</button>
+            <div class="container lobby__container _max-height-full">
+                <div class="row _max-height-full">
+                    <div class="col-xs-12 col-md-8 col-lg-8 _centered _max-height-full">
+                        <div class="lobby-table bordered-block">
+                            {{ closerButton( {
+                                class: "_in-bordered-block",
+                                attr: "data-slider-prev"
+                            }) }}
+                            <div class="bordered-block__title lobby-table__title">{{ lobbyContent.title }}</div>
+                            <div class="scroll-block-wrapper">
+                                <div class="scroll-block">
+                                    {% for room in rooms %}
+                                        <div class="room grey-block">
+                                            <div class="room__name">{{ room.name }}</div>
+                                            <div class="row room__row">
+                                                <div class="room__block">
+                                                    {{ icon({
+                                                        name: "time",
+                                                        class: "room__icon",
+                                                        width: "29",
+                                                        height: "24"
+                                                    })}}
+                                                    <div class="room__text">{{ room.time }}</div>
+                                                </div>
+                                                <div class="room__block">
+                                                    {{ icon({
+                                                        name: "win",
+                                                        class: "room__icon",
+                                                        width: "26",
+                                                        height: "24"
+                                                    })}}
+                                                    <div class="room__text">{{ room.wins }}</div>
+                                                </div>
+                                                <div class="room__block">
+                                                    {{ icon({
+                                                        name: "players",
+                                                        class: "room__icon",
+                                                        width: "33",
+                                                        height: "24"
+                                                    })}}
+                                                    <div class="room__text">{{ room.players }}/{{ room.playersTotal }}</div>
+                                                </div>
+                                                <div class="room__block">
+                                                    {{ icon({
+                                                        name: room.lang,
+                                                        class: "room__icon",
+                                                        width: "24",
+                                                        height: "24"
+                                                    })}}
+                                                    <div class="room__text">{{ room.lang }}</div>
+                                                </div>
+                                                <div class="room__block _jcfe">
+                                                    {{ button({
+                                                        text: room.button,
+                                                        class: "room__button"
+                                                    })}}
+                                                </div>
+                                            </div>
+                                            {% if room.pin == true %}
+                                                <div class="room-lock">
+                                                    {{ icon({
+                                                        name: "lock",
+                                                        class: "room-lock__icon",
+                                                        width: "18",
+                                                        height: "24"
+                                                    })}}
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            
                         </div>
-                    {% endfor %}
+                    </div>
                 </div>
-                <button data-slider-prev style="position: absolute; top: 50%;left:50%; z-ondex: 1000;">prev</button>
-                
             </div>
         </div>
+
     </section>
 {% endmacro %}

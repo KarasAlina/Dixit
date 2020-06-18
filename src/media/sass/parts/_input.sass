@@ -1,0 +1,104 @@
+.input
+    display: block
+    padding: 0 18px
+    +size(100%,$button-height-sm)
+    font-family: "BloggerSans"
+    font-size: 16px
+    border: none
+    background: $grey-light
+    border-radius: 12px
+    box-sizing: border-box
+    +min-screen($screen-lg)
+        +size(100%,$button-height-md)
+        padding: 0 30px
+        border-right: 16px
+    &::placeholder
+        color: $grey-dark
+        @extend .transition-active
+    &:focus,
+    &[disabled]
+        &::placeholder
+            color: $grey-middle
+    &-wrapper
+        position: relative
+        &._full-width
+            width: 100%
+    &-visibility
+        display: block
+        position: absolute
+        top: 50%
+        right: 30px
+        transform: translateY(-50%)
+        &__icon
+            width: 23px
+            @extend .transition-active
+            cursor: pointer
+            path
+                @extend .transition-active
+            &._show
+                height: 25px
+                ._not-show &
+                    opacity: 0
+            &._hide
+                height: 25px
+                position: absolute
+                top: 0
+                left: 0
+                opacity: 0
+                pointer-events: none
+                ._not-show &
+                    opacity: 1
+                    pointer-events: all
+            &:hover
+                path
+                    fill: $yellow
+    &-number
+        padding-left: calc(#{$button-height-sm} + 19px)
+        border-top-left-radius: 50px
+        border-bottom-left-radius: 50px
+        text-align: center
+        font-family: "Paperfiller"
+        font-size: 24px
+        +min-screen($screen-lg)
+            width: 150px
+            padding-left: calc(#{$button-height-md} + 19px)
+        &__icon
+            position: absolute
+            top: 0
+            left: 0
+            +size($button-height-sm)
+            +min-screen($screen-lg)
+                +size($button-height-md)
+    &__nav
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        background: none
+        border: none
+        cursor: pointer
+        &._sub
+            left: calc(#{$button-height-sm} + 3px)
+            +min-screen($screen-lg)
+                left: calc(#{$button-height-md} + 3px)
+        &._add
+            right: 16px
+    &-check-pin
+        width: 125px
+        padding-left: 36px
+        padding-right: 25px
+        font-size: 16px
+        +min-screen($screen-lg)
+            font-size: 22px
+            line-height: 24px
+            padding-left: 43px
+        &[disabled]
+            + .input-pin__icon
+                opacity: 0.7
+        &__icon
+            position: absolute
+            top: 50%
+            left: 10px
+            transform: translateY(-50%)
+            +size(18px,24px)
+            +min-screen($screen-lg)
+                left: 17px

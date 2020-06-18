@@ -1,3 +1,7 @@
+{% from "../parts/_icon.nunj" import icon %}
+{% from "../parts/_input.nunj" import input %}
+{% from "../parts/_button.nunj" import button %}
+
 {% macro register() %}
 	<section class="section register">
     <div class="section__wrapper">
@@ -22,7 +26,85 @@
             <img src="media/img/register/dandelion-2.svg" alt="" class="register-dandelions__item _v3">
         </div>
         {# <div class="section__background register__background _animated"></div> #}
-        <button data-slider-prev style="position: absolute; top: 50%;left:50%; z-ondex: 1000;">prev</button>
+        <button data-slider-next style="position: absolute; top: 50%;left:50%; z-ondex: 1000;">next</button>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-5 col-lg-5 offset-lg-1">
+                    <h2 class="register__title">{{ registerContent.title }}</h2>
+                </div>
+                <div class="col-xs-12 col-md-4 col-lg-4 offset-lg-1 offset-xs-0">
+                    <form  action="" class="register-form">
+                        <div class="register-form-avatar">
+                            <label class="register-form-avatar__label">
+                                <input type="file" class="register-form-avatar__input">
+                                <div class="edit-button register-form-avatar__edit-button">
+                                    {{ icon({
+                                        name: "pen",
+                                        class: "edit-button__icon"
+                                    }) }}
+                                </div>
+                            </label>
+                        </div>
+                        {{ input({
+                            class: "register-form__input",
+                            wrapper: "register-form__input-wrapper",
+                            placeholder: "Username",
+                            params: "required",
+                            fullWidth: true
+                        })}}
+                        {{ input({
+                            type: "email",
+                            class: "register-form__input",
+                            wrapper: "register-form__input-wrapper",
+                            placeholder: "Email",
+                            params: "required",
+                            fullWidth: true
+                        })}}
+                        {{ input({
+                            password: true,
+                            class: "register-form__input",
+                            wrapper: "register-form__input-wrapper",
+                            placeholder: "Password",
+                            params: "required",
+                            fullWidth: true
+                        })}}
+                        {{ input({
+                            password: true,
+                            class: "register-form__input",
+                            wrapper: "register-form__input-wrapper",
+                            placeholder: "Confirm password",
+                            params: "required",
+                            fullWidth: true
+                        })}}
+                        {{ button({
+                            attr: "data-slider-next",
+                            text: "Register",
+                            class: "register-form__button _full-width"
+                        })}}
+                        <div class="register-form__terms">
+                            {{ terms.text }} <a href="{{ terms.link }}">{{ terms.linkText }}</a>
+                        </div>
+                        <div class="register-corners">
+                            <img src="media/img/corner.png" alt="" class="register-corners__corner">
+                            <img src="media/img/corner.png" alt="" class="register-corners__corner">
+                            <img src="media/img/corner.png" alt="" class="register-corners__corner">
+                            <img src="media/img/corner.png" alt="" class="register-corners__corner">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="row _aic">
+                    <div class="col-md-12 col-lg-12 _jcc">
+                        {% for link in footerContent.links %}
+                            <a href="{{link.link}}" class="footer__link">{{ link.text }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="register-pollen">
         {% for item in pollens %}

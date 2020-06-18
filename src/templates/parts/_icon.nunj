@@ -1,0 +1,5 @@
+{% macro icon(props) %}
+	<svg class="icon{% if props.class %} {{ props.class }}{% endif %}" {% if props.width %} width="{{ props.width }}"{% endif %}  {% if props.height %} height="{{ props.height }}"{% endif %}{% if props.height and props.width %} viewBox="0 0 {{ props.width }} {{ props.height }}" {% endif %}>
+		<use xlink:href="media/svg/sprite.svg#icon-{{ props.name }}"></use>
+	</svg>
+{% endmacro %}

@@ -1,4 +1,24 @@
 .footer
-	position: relative
-	padding: 20px 0
-	background: #CCC
+	position: absolute
+	width: 100%
+	bottom: 0
+	padding: 15px 0
+	color: #FFF
+	font-family: "BloggerSans"
+	font-size: 16px
+	&__link
+		&:first-of-type
+			margin-right: 6.2vw
+	&__apps
+		width: 165px
+		margin-right: calc(27px + 9.722vw)
+		&:first-of-type
+			margin-right: 10px
+		&:hover
+			& ~ .footer__phone
+				transform: translateY(-50px)
+	&__phone
+		position: absolute
+		top: -15px
+		width: 9.722vw
+		@extend .transition-active

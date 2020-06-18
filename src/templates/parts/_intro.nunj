@@ -1,3 +1,6 @@
+{% from "../parts/_icon.nunj" import icon %}
+{% from "../parts/_cards.nunj" import cards %}
+
 {% macro intro() %}
 	<section class="section intro">
         <div class="section__wrapper">
@@ -10,11 +13,65 @@
                         </div>
                     </div>
                 {% endfor %}
-                
             </div>
-
-        
-            <button data-slider-next style="position: absolute; top: 50%;left:50%; z-ondex: 1000;">next</button>
+            <div class="container">
+                <div class="row _aifs">
+                    <div class="col-xs-12 col-lg-6 intro-col-left _aic">
+                        <img class="intro__logo" src="media/img/logo.svg" alt="">
+                        <h1 class="intro__title">{{ introContent.title }}</h1>
+                        <div class="intro__text">{{ introContent.text }}</div>
+                        <button class="button intro__button _big" data-slider-next>{{ introContent.button }}</button>
+                    </div>
+                    <div class="col-xs-12 col-lg-4 col-md-4 offset-md-1 offset-lg-1 intro-col-right _jcc">
+                        <div class="intro-video-preview">
+                            <img src="media/img/intro/video.png" alt="" class="intro-video-preview__img">
+                            <div class="intro-video-preview-overlay"  data-yt-video-popup="{{ introContent.videoPreview.videoId }}" >
+                                <div class="intro-video-preview-overlay__text">{{ introContent.videoPreview.watch }}</div>
+                                {{ icon({
+                                    class: "intro-video-preview-overlay__icon",
+                                    name: "play",
+                                    width: "79",
+                                    height: "79"
+                                }) }}
+                                <div class="intro-video-preview-overlay__text">{{ introContent.videoPreview.trailer }}</div>
+                            </div>
+                        </div>
+                        <div class="intro-cards">
+                            {% for card in cardsItem.slice(0,5) %}
+                                <div class="intro-card-wrapper">
+                                    <div class="card intro-card">
+                                        <div class="card__inner intro-card__inner">
+                                            <div class="card__face _front">
+                                                <img src="media/img/cards/card-{{ card.front }}.png" class="card__img" alt="">
+                                            </div>
+                                            <div class="card__face _back"></div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                   
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="container">
+                    <div class="row _aic">
+                        <div class="col-md-6 col-lg-6">
+                            {% for link in footerContent.links %}
+                                <a href="{{link.link}}" class="footer__link">{{ link.text }}</a>
+                            {% endfor %}
+                        </div>
+                        <div class="col-md-6 col-lg-6 _jcfe">
+                            {% for apps in footerContent.apps %}
+                                <a href="{{apps.link}}" class="footer__apps"><img src="media/img/{{ apps.img }}.png" alt=""></a>
+                            {% endfor %}
+                            <img src="media/img/phone.png" alt="" class="footer__phone">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="intro-leafs">
             {% for item in leafs %}

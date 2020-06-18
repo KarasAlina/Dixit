@@ -20,12 +20,16 @@ global.ProjectName = new function ProjectName() { // eslint-disable-line
 	this.modules = {
 		SlickSliders: require('./modules/SlickSliders'),
 		MotionEffect: require('./modules/MotionEffect'),
+		Select: require('./modules/Select'),
+		Popups: require('./modules/Popups'),
+		Inputs: require('./modules/Inputs'),
 	};
 
 	// Startup
 	$(() => {
 		// Remove _loading modificator
 		this.dom.$html.removeClass('_loading');
+		
 	});
 }();
 

@@ -1,3 +1,7 @@
+{% from "../parts/_icon.nunj" import icon %}
+{% from "../parts/_button.nunj" import button %}
+
+
 {% macro language() %}
 	<section class="section language">
     <div class="section__wrapper">
@@ -10,8 +14,6 @@
                 <div class="motion-element-column__item">
                 </div>
             </div>
-           
-            
         </div>
         <div class="section__background language__background"></div>
         <div class="language-bubbles">     
@@ -19,7 +21,61 @@
                 <svg class="language-bubbles__item {{ item.class }}"><use xlink:href="#icon-round-{{ item.icon }}"></use></svg>
             {% endfor %}
         </div>
-        <button data-slider-prev style="position: absolute; top: 50%;left:50%; z-ondex: 1000;">prev</button>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-4 col-lg-4 _centered">
+                    <div class="language-form">
+                        <div class="language-form__text">{{ languageContent.appLanguage }}</div>
+                        <div class="select select-languages">
+                            <div class="select__init select-languages__init language-form__select" data-value="-1">
+                                <span>Russian</span>
+                            </div>
+                            {{ icon({
+                                class: "select__arrow",
+                                name: "arrow-down-black",
+                                width: "18",
+                                height: "14"
+                            }) }}
+                            <div class="select-options select-languages-options">
+                                {% for item in languages %}
+                                    <div data-value="value {{ item.value }}" data-title="{{ item.name }}" class="select-options__item select-languages-options__item {{ item.attr }}"> 
+                                        <div class="select-languages__text">
+                                            {{ item.title }}
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="language-form__text">{{ languageContent.playrs }}</div>
+                        <div class="select select-languages language-form__select">
+                            <div class="select__init select-languages__init language-form__select" data-value="-1">
+                                <span>Select languages</span>
+                            </div>
+                            {{ icon({
+                                class: "select__arrow",
+                                name: "arrow-down-black",
+                                width: "18",
+                                height: "14"
+                            }) }}
+                            <div class="select-options select-languages-options">
+                                {% for item in languages %}
+                                    <div data-value="value {{ item.value }}" data-title="{{ item.name }}" class="select-options__item select-languages-options__item {{ item.attr }}"> 
+                                        <div class="select-languages__text">
+                                            {{ item.title }}
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {{ button({
+                            text: "Start game",
+                            class: "language-form__button _full-width",
+                            attr: "data-slider-next"
+                        })}}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="language-plants">
         <img class="language-plants__item _v1" src="media/img/language/plant-1.svg" alt="">

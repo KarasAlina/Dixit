@@ -9,6 +9,8 @@
 			position: absolute
 			animation-timing-function: ease-in-out
 			animation: falling 5s 0s infinite 
+			pointer-events: none
+			will-change: transform
 			&._v1
 				top: -100px
 				left: 50%
@@ -21,4 +23,129 @@
 				top: -10%
 				left: 50%
 				animation: falling3 6s 3s infinite 
+	&__logo
+		margin-bottom: 14px
+	&__title
+		margin-bottom: 10px
+		font-size: 40px
+		line-height: 40px
+		text-transform: uppercase
+		letter-spacing: 0.8px
+		text-align: center
+		+min-screen($screen-md)
+			width: 60%
+			margin: auto
+			font-size: 46px
+			line-height: 50px
+		+min-screen($screen-lg)
+			width: 80%
+			margin-bottom: 20px
+			font-size: 64px
+			line-height: 60px
+	&__text
+		margin-bottom: 11px
+		font-size: 16px
+		line-height: 24px
+		font-family: "BloggerSans"
+		+min-screen($screen-md)
+			margin-bottom: 20px
+		+min-screen($screen-lg)
+			margin-bottom: 48px
+			font-size: 22px
+	&__button
+		width: 248px
+		+min-screen($screen-md)
+			width: 240px
+	&-video-preview
+		position: relative
+		width: 100%
+		margin: 0 auto
+		border: 12px solid $grey-dark
+		border-radius: 25px
+		overflow: hidden
+		z-index: 2
+		&-overlay
+			position: absolute
+			top: 0
+			left: 0
+			+size(100%)
+			display: flex
+			align-items: center
+			justify-content: center
+			padding-left: 7px
+			background: rgba(#000,0.5)
+			box-sizing: border-box
+			cursor: pointer
+			@extend .transition-active
+			+min-screen($screen-md)
+				padding-left: 16px
+			&:hover
+				background: rgba(#000,0.7)
+			&__text
+				font-size: 24px
+				text-transform: uppercase
+				color: #FFF
+				+min-screen($screen-md)
+					font-size: 44px
+			&__icon
+				+size(40px)
+				margin: 0 5px
+				+min-screen($screen-md)
+					+size(79px)
+					margin: 0 10px
+
+	&-col
+		&-left
+			flex-direction: column
+			color: #FFF
+		&-right
+			position: relative
+			align-items: flex-start
+
+	&-card
+		perspective: none
+		will-change: transform
+		transform-style: preserve-3d
+		transform-origin: center right
+		transition: transform 1s
+		&-wrapper
+			perspective: 700px
+			position: absolute
+			&:nth-of-type(1)
+				top: 80%
+				right: 0
+				z-index: 3
+				.intro-card
+					transform: rotateX(50deg) rotateY(-10deg) rotateZ(50deg)
+					animation: card 5s 0s infinite alternate-reverse ease-in-out forwards
+			&:nth-of-type(2)
+				top: 50%
+				left: -30%
+				z-index: 1
+				.intro-card
+					transform: rotateX(50deg) rotateY(10deg) rotateZ(-50deg)
+					animation: card2 4s 0s infinite alternate-reverse ease-in-out forwards
+			&:nth-of-type(3)
+				top: -20%
+				left: -20%
+				z-index: 3
+				.intro-card__inner
+					animation: card3 4s 0s infinite alternate-reverse ease-in-out forwards
+			&:nth-of-type(4)
+				top: -45%
+				right: 0%
+				z-index: 1
+				.intro-card__inner
+					animation: card4 3s 0s infinite alternate-reverse ease-in-out forwards
+			&:nth-of-type(5)
+				top: 5%
+				right: -20%
+				z-index: 1
+				.intro-card__inner
+					animation: card5 3s 0s infinite alternate-reverse ease-in-out forwards
+		&:hover
+			.intro-card__inner
+				transform: rotateX(-80deg) rotateY(-70deg)
+				
+
 

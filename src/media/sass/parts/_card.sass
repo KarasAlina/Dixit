@@ -1,0 +1,31 @@
+.card
+    +size(124px,186px)
+    perspective: 500px
+    &__inner
+        position: relative
+        +size(100%)
+        transform-style: preserve-3d
+        transform-origin: center right
+        transition: transform 1s
+        
+        ._active &
+            transform: translateX(-100%) rotateY(-180deg)
+    &__face
+        position: absolute
+        +size(100%)
+        display: block
+        box-sizing: border-box
+        backface-visibility: hidden
+        border-radius: 16px
+        &._front
+            border: 6px solid #FFF
+            overflow: hidden
+        &._back
+            transform: rotateY(180deg)
+            background: url('../img/cards/back.png') no-repeat center
+            background-size: contain
+    &__img
+        +size(100%)
+        object-fit: cover
+    
+

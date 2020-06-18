@@ -1,0 +1,23 @@
+.closer-button
+	position: absolute
+	right: 0
+	top: 0
+	+size(50px,50px)
+	border: none
+	background: none
+	cursor: pointer
+	z-index: 10
+	&__background
+		fill: $grey-middle
+		@extend .transition-active
+	&__cross
+		fill: #FFF
+		@extend .transition-active
+	&:hover 
+		.popup-closer-button__background
+			fill: $yellow
+		.popup-closer-button__cross
+			fill: $grey-dark
+	&._in-bordered-block
+		top: -40px
+		right: -40px

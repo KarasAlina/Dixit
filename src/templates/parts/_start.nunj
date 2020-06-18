@@ -1,3 +1,5 @@
+{% from "../parts/_button.nunj" import button %}
+
 {% macro start() %}
 	<section class="section start">
         <div class="section__wrapper">
@@ -23,7 +25,33 @@
                     <svg class="start-bubbles__item {{ item.class }}"><use xlink:href="#icon-round-{{ item.icon }}"></use></svg>
                 {% endfor %}
             </div>
-            <button data-slider-prev style="position: absolute; top: 50%;left:50%; z-ondex: 1000;">prev</button>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-4 col-lg-4 _centered">
+                        <div class="start-nav">
+                            {{ button({
+                                text: "Create a game",
+                                class: "start-nav__button",
+                                attr: "data-slider-next"
+                            })}}
+                            {{ button({
+                                text: "Join a game",
+                                class: "start-nav__button"
+                            })}}
+                            {{ button({
+                                text: "Resume",
+                                smallText: "to the existing game",
+                                class: "start-nav__button"
+                            })}}
+                            {{ button({
+                                text: "Exit",
+                                class: "start-nav__button _bordered",
+                                attr: "data-slider-next"
+                            })}}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
            
     </section>

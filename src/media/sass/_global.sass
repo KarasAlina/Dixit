@@ -8,6 +8,8 @@
 
 body
 	font-family: 'Paperfiller'
+	font-weight: normal
+	color: $grey-dark
 
 .clearfix
 	// zoom: 1
@@ -93,7 +95,7 @@ body
 		opacity: 1
 
 .transition-active
-	transition: color $default-transition-duration $default-transition-function, background $default-transition-duration $default-transition-function, border-color $default-transition-duration $default-transition-function, opacity $default-transition-duration $default-transition-function
+	transition: color $default-transition-duration $default-transition-function, background $default-transition-duration $default-transition-function, border-color $default-transition-duration $default-transition-function, opacity $default-transition-duration $default-transition-function, transform $default-transition-duration $default-transition-function, fill $default-transition-duration $default-transition-function
 
 .transition-hover
 	transition: none
@@ -107,3 +109,78 @@ body
 	overflow-x: hidden
 	overflow-y: auto
 	-webkit-overflow-scrolling: touch
+
+._flex
+	display: flex
+
+._jcsb
+	justify-content: space-between
+
+._jcc
+	justify-content: center
+
+._jcfe
+	justify-content: flex-end
+
+._aic
+	align-items: center
+
+._aifs
+	align-items: flex-start
+
+.gradient-border
+	display: flex
+	align-items: center
+	background: url('../img/button-border.svg') no-repeat center
+	background-color: rgba($grey-dark, 0.3)
+	background-size: contain
+	border-radius: 18px
+	border: none
+	cursor: pointer
+	@extend .transition-active
+	+min-screen($screen-lg)
+		border-radius: 22px
+	&:hover
+		background-color: rgba($grey-dark, 0.6)
+		@extend .transition-hover
+
+._full-width
+	width: 100%
+
+._centered
+	margin: 0 auto
+
+.bordered-block
+	width: 100%
+	position: relative
+	background: $grey-dark url('../img/section-bg.png') repeat center
+	background-size: 70%
+	border-radius: 18px
+	border: 40px solid $grey-dark
+	border-image: url('../img/bg-image.png') 40 round round
+	+min-screen($screen-lg)
+		padding: 10px 30px
+		border-radius: 24px
+		border: 40px solid $grey-dark
+		border-image: url('../img/bg-image.png') 40 round round
+	&__title
+		margin-bottom: 20px
+		font-size: 40px
+		line-height: 40px
+		color: #FFF
+		text-align: center
+		+min-screen($screen-lg)
+			margin-bottom: 40px
+			font-size: 8.87vh
+			line-height: 8.3vh
+
+.grey-block
+	padding: 20px 10px 10px
+	background: #424655
+	border-radius: 12px
+	+min-screen($screen-lg)
+		padding: 22px 30px 17px
+		border-right: 18px
+
+._max-height-full
+	max-height: 100%

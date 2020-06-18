@@ -4,8 +4,9 @@
 	<head>
 		<!-- Client-side programming by sborkaproject.com -->
 		<meta charset="utf-8" />
-		<title>{% block title %}Project{% endblock %}</title>
+		<title>{% block title %}Dixit{% endblock %}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="shortcut icon" href="media/img/favicon.ico" type="image/x-icon">
 
 		{{ headScripts() }}
 
@@ -16,11 +17,7 @@
 	<body>
 
 		<div class="wrapper">
-			<header class="header">
-				<div class="container">
-					{{ menu() }}
-				</div>
-			</header>
+			{{ header() }}
 
 			<div class="wrapper__content">
 				{% block content %}
@@ -35,7 +32,7 @@
 				</div>
 			</div> #}
 		</div>
-
+		{% include '../parts/_popups.nunj' %}
 		{% block scripts %}
 			<script src="media/js/bundle.js?hash"></script>
 		{% endblock scripts %}

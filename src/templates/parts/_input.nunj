@@ -1,0 +1,39 @@
+{% from "../parts/_icon.nunj" import icon %}
+
+{% macro input(props, params = false, fullWidth = false) %}
+    <div class="input-wrapper {% if props.wrapper %} {{ props.wrapper }}{% endif %}{% if props.fullWidth == true %} _full-width{% endif %}"> 
+        <input 
+            type="{% if props.type %}{{ props.type }}{% else %}text{% endif %}" 
+            class="input{% if props.type %} input-{{ props.type }}{% endif %}{% if props.class %} {{ props.class }}{% endif %}" 
+            {% if props.placeholder %} placeholder="{{ props.placeholder }}"{% endif %}
+            {% if props.params != false %}{{ props.params }}{% endif %} 
+            {% if props.steps %} step="{{ props.steps }}"{% endif %}>
+        {% if props.password == true %}
+            <div class="input-visibility">
+                <svg class="input-visibility__icon _show" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.5556 4.8C9.81696 4.8 8.40405 6.23465 8.40405 8C8.40405 9.76535 9.81696 11.2 11.5556 11.2C13.2942 11.2 14.7071 9.76535 14.7071 8C14.7071 6.23465 13.2941 4.8 11.5556 4.8Z" fill="#AFB5C9"/>
+                    <path d="M11.5556 0C6.30302 0 1.81739 3.3173 0 8C1.81739 12.6827 6.30302 16 11.5556 16C16.8133 16 21.2937 12.6827 23.1111 8C21.2937 3.3173 16.8133 0 11.5556 0ZM11.5556 13.3333C8.65617 13.3333 6.30302 10.9439 6.30302 7.99995C6.30302 5.05595 8.65617 2.66665 11.5556 2.66665C14.4549 2.66665 16.8081 5.056 16.8081 8C16.8081 10.944 14.4549 13.3333 11.5556 13.3333Z" fill="#AFB5C9"/>
+                </svg>
+                <svg class="input-visibility__icon _hide" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 1.5L4.59808 0L18.0981 23.3827L15.5 24.8827L2 1.5Z" fill="#AFB5C9"/>
+                    <path d="M7.57836 5.16199C4.11388 6.35321 1.33599 9.05768 0 12.5C1.81739 17.1826 6.30302 20.5 11.5556 20.5C13.1082 20.5 14.5932 20.2107 15.9617 19.6823L14.4026 16.9819C13.5821 17.5205 12.6046 17.8333 11.5556 17.8333C8.65617 17.8333 6.30302 15.444 6.30302 12.5C6.30302 10.4588 7.43422 8.68423 9.09438 7.78782L7.57836 5.16199Z" fill="#AFB5C9"/>
+                    <path d="M16.4291 14.4919C16.6735 13.8764 16.8081 13.204 16.8081 12.5C16.8081 9.78614 14.8085 7.5436 12.2246 7.20958L10.6782 4.53104C10.968 4.51046 11.2606 4.5 11.5556 4.5C16.8133 4.5 21.2937 7.8173 23.1111 12.5C22.2001 14.8472 20.6201 16.8513 18.6084 18.2666L16.4291 14.4919Z" fill="#AFB5C9"/>
+                </svg>
+            </div>
+        {% endif %}
+        {% if props.type == "number" %}
+            {% if props.icon %}<img src="media/img/{{ props.icon }}.svg" class="input-number__icon" alt="">{% endif %}
+            <button type="button" data-sub class="input__nav _sub">
+                <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.7194 0L15.8849 4.17318L4.14389 8.64804V8.84916L16 15.0838L13.9281 18L0.230217 10.3575L0 7.03911L12.7194 0Z" fill="#2F323E"/>
+                </svg>
+            </button>
+            <button type="button" data-add class="input__nav _add">
+                <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.28058 0L0.115108 4.17318L11.8561 8.64804V8.84916L0 15.0838L2.07194 18L15.7698 10.3575L16 7.03911L3.28058 0Z" fill="#2F323E"/>
+                </svg>
+            </button>
+        {% endif %}
+    </div>
+   
+{% endmacro %}

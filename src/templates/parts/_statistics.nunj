@@ -1,0 +1,127 @@
+{% from "../parts/_closer-button.nunj" import closerButton %}
+{% from "../parts/_button.nunj" import button %}
+{% from "../parts/_icon.nunj" import icon %}
+
+
+{% macro statistics() %}
+	<section class="section lobby">
+        <div class="section__wrapper">
+            <div class="section__background lobby__background _animated _visible"></div>
+            <div class="stars">
+                {% for item in starsLobby %}
+                    <svg class="stars__item"><use xlink:href="#icon-{% if item.prefix %}{{ item.prefix }}{% else %}star{% endif %}-{{ item.icon }}"></use></svg>
+                {% endfor %}
+            </div>
+            <div class="motion-wrapper">     
+                {% for item in lobbyClouds %}
+                    <div class="motion-element motion-element-{{ item.prefix }} {{ item.wrapperClass }} {{ item.level }}">
+                        <img class="motion-element-{{ item.prefix }}__item" src="media/img/lobby/{{ item.prefix }}-{{ item.icon }}.svg" alt="{{ item.prefix }}">
+                    </div>
+                {% endfor %}
+            </div>
+            <button data-slider-prev style="position: absolute; top: 50%;left:50%; z-ondex: 1000;">prev</button>
+            <div class="container lobby__container _max-height-full">
+                <div class="row _max-height-full">
+                    <div class="col-xs-12 col-md-8 col-lg-8 _centered _max-height-full">
+                        <div class="lobby-table bordered-block">
+                            {{ closerButton( {
+                                class: "_in-bordered-block",
+                                attr: "data-slider-prev"
+                            }) }}
+                            <div class="bordered-block__title lobby-table__title">{{ statisticsContent.title }}</div>
+                            <div class="scroll-block-wrapper">
+                                <div class="scroll-block">
+                                    {% for game in games %}
+                                        <div class="game-played grey-block">
+                                            <div class="game-played__top-row">
+                                                <div class="game-played__name">{{ game.name }}</div>
+                                                <div class="game-played__date">{{ game.date }}</div>
+                                            </div>
+                                           
+                                            <div class="row game-played__row">
+                                                <div class="game-played-win">
+                                                    {{ icon({
+                                                        name: "win",
+                                                        class: "game-played-win__icon",
+                                                        width: "22",
+                                                        height: "20"
+                                                    })}}
+                                                    <div class="game-played-win__text">{{ game.gold.name }}</div>
+                                                    <div class="game-played-win-score">
+                                                        {{ game.gold.score }}
+                                                        {{ icon({
+                                                            name: "star",
+                                                            class: "game-played-win-score__icon",
+                                                            width: "15",
+                                                            height: "14"
+                                                        })}}
+                                                    </div>
+                                                </div>
+                                                <div class="game-played-win">
+                                                    {{ icon({
+                                                        name: "win-silver",
+                                                        class: "game-played-win__icon",
+                                                        width: "22",
+                                                        height: "20"
+                                                    })}}
+                                                    <div class="game-played-win__text">{{ game.silver.name }}</div>
+                                                    <div class="game-played-win-score">
+                                                        {{ game.silver.score }}
+                                                        {{ icon({
+                                                            name: "star",
+                                                            class: "game-played-win-score__icon",
+                                                            width: "15",
+                                                            height: "14"
+                                                        })}}
+                                                    </div>
+                                                </div>
+                                                <div class="game-played-win">
+                                                    {{ icon({
+                                                        name: "win-bronze",
+                                                        class: "game-played-win__icon",
+                                                        width: "22",
+                                                        height: "20"
+                                                    })}}
+                                                    <div class="game-played-win__text">{{ game.bronze.name }}</div>
+                                                    <div class="game-played-win-score">
+                                                        {{ game.bronze.score }}
+                                                        {{ icon({
+                                                            name: "star",
+                                                            class: "game-played-win-score__icon",
+                                                            width: "15",
+                                                            height: "14"
+                                                        })}}
+                                                    </div>
+                                                </div>
+                                                <div class="game-played-win">
+                                                    {{ icon({
+                                                        name: "win-iron",
+                                                        class: "game-played-win__icon",
+                                                        width: "22",
+                                                        height: "20"
+                                                    })}}
+                                                    <div class="game-played-win__text">{{ game.iron.name }}</div>
+                                                    <div class="game-played-win-score">
+                                                        {{ game.iron.score }}
+                                                        {{ icon({
+                                                            name: "star",
+                                                            class: "game-played-win-score__icon",
+                                                            width: "15",
+                                                            height: "14"
+                                                        })}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+{% endmacro %}

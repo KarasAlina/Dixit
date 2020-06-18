@@ -1,0 +1,13 @@
+{% macro button(props) %}
+<button class="button{% if props.type %}-{{ props.type }}{% endif %}{% if props.class %} {{ props.class }}{% endif %}{% if props.smallText %} _small-text{% endif %}" {% if props.submit == true %} type="submit"{% endif %} {% if props.attr %}{{ props.attr }}{% endif %}>
+	{% if props.icon %}
+        <svg class="button-square__icon _{{ props.icon }}"><use xlink:href="#icon-{{ props.icon }}"></use>
+	{% endif %}
+	{% if props.text %}
+		{{ props.text }}
+	{% endif %}
+	{% if props.smallText %}
+		<span class="button__small-text">{{ props.smallText }}<span>
+	{% endif %}
+</button>
+{% endmacro %}

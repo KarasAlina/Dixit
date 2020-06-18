@@ -1,5 +1,6 @@
 var timeout;
 const $section = $('.section__wrapper');
+
 $section.mousemove(function(e) {
 	if (timeout) clearTimeout(timeout);
 	setTimeout(callParallax.bind(null, e), 300);
@@ -21,7 +22,6 @@ function callParallax(e) {
 	parallaxItHorizontal(e, '.level-1-horizontal', -10);
 	parallaxItHorizontal(e, '.level-1-horizontal-reverse', 10);
 }
-
 function parallaxIt(e, target, movement) {
 	var $this = $section;
 	var relX = e.pageX - $this.offset().left;

@@ -1,3 +1,9 @@
+{% from "../parts/_input.nunj" import input %}
+{% from "../parts/_icon.nunj" import icon %}
+{% from "../parts/_button.nunj" import button %}
+{% from "../parts/_closer-button.nunj" import closerButton %}
+
+
 {% macro createGame() %}
 	<section class="section create-game">
         <div class="section__wrapper">
@@ -8,8 +14,109 @@
                 {% endfor %}
                 <img src="media/img/create-game/constellation.svg" class="create-game-stars__item _constellation" alt="">
             </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 col-lg-6 _centered">
+                        <div class="create-game-form bordered-block">
+                            {{ closerButton( {
+                                class: "_in-bordered-block",
+                                attr: "data-slider-prev"
+                            }) }}
+                            <div class="bordered-block__title create-game-form__title">{{ createGameContent.title }}</div>
+                            <div class="create-game-form-row">
+                                {{ input({
+                                    class: "create-game-form__input",
+                                    wrapper: "create-game-form__input-wrapper",
+                                    placeholder: "Username",
+                                    params: "required value='Gamename-data-1234567890'",
+                                    fullWidth: true
+                                })}}
+                            </div>
+                            <div class="create-game-form-row _flex _jcsb">
+                                <div class="create-game-form-row__col">
+                                    <div class="create-game-form__text">{{ createGameContent.label1 }}</div>
+                                    {{ input({
+                                        type: "number",
+                                        class: "create-game-form__number",
+                                        wrapper: "create-game-form__number-wrapper",
+                                        params: 'value="10" min="1" max="10"',
+                                        steps: "1",
+                                        icon: "time"
+                                    })}}
+                                </div>
+                                <div class="create-game-form-row__col">
+                                    <div class="create-game-form__text">{{ createGameContent.label2 }}</div>
+                                    {{ input({
+                                        type: "number",
+                                        class: "create-game-form__number",
+                                        wrapper: "create-game-form__number-wrapper",
+                                        params: 'value="1" min="1" max="11"',
+                                        steps: "1",
+                                        icon: "players"
+                                    })}}
+                                </div>
+                                <div class="create-game-form-row__col">
+                                    <div class="create-game-form__text">{{ createGameContent.label3 }}</div>
+                                    {{ input({
+                                        type: "number",
+                                        class: "create-game-form__number",
+                                        wrapper: "create-game-form__number-wrapper",
+                                        params: 'value="100" min="1" max="1000"',
+                                        steps: "100",
+                                        icon: "win"
+                                    })}}
+                                </div>
+                            </div>
+                            <div class="create-game-form-row _flex _jcsb _aic">
+                                <div class="col">
+                                    <div class="select select-languages create-game-form__select">
+                                        <div class="select__init select-languages__init" data-value="-1">
+                                            <span>Language</span>
+                                        </div>
+                                        {{ icon({
+                                            class: "select__arrow",
+                                            name: "arrow-down-black",
+                                            width: "18",
+                                            height: "14"
+                                        }) }}
+                                        <div class="select-options select-languages-options">
+                                            {% for item in languages %}
+                                                <div data-value="value {{ item.value }}" data-title="{{ item.name }}" class="select-options__item select-languages-options__item {{ item.attr }}"> 
+                                                    <div class="select-languages__text">
+                                                        {{ item.title }}
+                                                    </div>
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col _flex _aic _jcfe">
+                                    <div class="checkbox create-game-form__checkbox">
+                                        <input type="checkbox" id="pin" data-check-pin>
+                                        <label for="pin" class="checkbox__label">{{ createGameContent.usePin }}</label>
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <input type="number" placeholder="12345" max="5" class="input input-check-pin" disabled>
+                                        {{ icon({
+                                            name: "lock",
+                                            class: "input-check-pin__icon"
+                                        })}}
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            {{ button({
+                                class: "create-game-form__button _big",
+                                text: createGameContent.button,
+                                attr: "data-slider-next"
+                            }) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-         <button data-slider-prev style="position: absolute; top: 50%;left:50%; z-ondex: 1000;">prev</button>
+        
+         <button data-slider-next style="position: absolute; top: 50%;left:50%; z-ondex: 1000;">next</button>
 
     </section>
 {% endmacro %}
