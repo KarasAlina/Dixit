@@ -6,6 +6,8 @@
 	padding: 20px 0
 	background: none
 	z-index: 1000
+	&._in-game 
+		z-index: 0
 	&-rules
 		display: flex
 		align-items: center
@@ -13,9 +15,13 @@
 		color: #fff
 		font-size: 22px
 		line-height: 1
+		cursor: pointer
 		@extend .transition-active
+		path
+			@extend .transition-active
 		&__icon
-			margin-right: 5px					
+			margin-right: 5px	
+			margin-top: -4px				
 		&:hover
 			color: $yellow
 			path
@@ -28,12 +34,28 @@
 		display: none
 		._authorized &
 			display: flex
+	&-offside
+		+max-screen($screen-sm)
+			display: none
+		._in-game &
+			display: none
+	&-results
+		display: none
+		align-items: center
+		&__text
+			margin-left: 10px
+			font-size: 24px
+			line-height: 1
+			color: #FFF
+		._in-game &
+			display: flex
+			
 	&-avatar
 		+size($button-height-sm)
 		@extend .gradient-border
 		padding: 2px
 		overflow: hidden
-		box-sizing: border-box
+		
 		+min-screen($screen-lg)
 			+size($button-height-md)
 		&__img
@@ -50,3 +72,42 @@
 			+min-screen($screen-lg)
 				margin-left: 10px
 				font-size: 32px
+	&-menu
+		position: fixed
+		top: 0
+		left: 0
+		display: flex
+		flex-direction: column
+		+size(100%)
+		padding: 20px
+		background: url('../img/game-bg.png') no-repeat center
+		background-size: cover
+		transform: translateX(100%)
+		@extend .transition-active
+		._menu-opened &
+			transform: translateX(0%)
+		&-button
+			+min-screen($screen-md)
+				display: none
+		&-close
+			display: flex
+			+size(50px)
+			align-items: center
+			justify-content: center
+			background: url('../img/close-bg.svg') no-repeat center
+			background-size: contain
+		&-nav
+			padding-top: 50px
+			flex: auto
+			&__item
+				display: flex
+				align-items: center
+				margin-bottom: 30px
+				font-size: 44px
+				line-height: 38px
+				color: #FFF
+		&__simple-link
+			display: inline-block
+			margin-bottom: 20px
+			font-family: "BloggerSans"
+			color: #FFF

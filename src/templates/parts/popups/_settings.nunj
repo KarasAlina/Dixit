@@ -1,0 +1,196 @@
+<div class="popup popup-settings" data-tabs data-popup="settings">
+    <div class="tabs">
+        <div class="tabs__item _active" data-tab-opener="settings">{{ settingsPopup.tabs.settings }}</div>
+        <div class="tabs__item" data-tab-opener="info">{{ settingsPopup.tabs.info }}</div>
+
+    </div>
+
+    <div class="tabs-content" data-tab="settings">
+        <div class="sound-option">
+            <input type="checkbox" id="sound-option" class="sound-option__input">
+            <label for="sound-option" class="sound-option__label">
+                <svg class="sound-option__icon" width="70" height="50" viewBox="0 0 70 50" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M48.7415 6.52634C47.4688 7.25656 47.0327 8.87424 47.7673 10.1394C48.5022 11.4043 50.1299 11.8379 51.4026 11.1074L62.1575 4.93601C63.4302 4.20554 63.8665 2.58786 63.1316 1.32297C62.3967 0.057833 60.769 -0.375517 59.4963 0.354708L48.7415 6.52634Z"
+                        fill="#2F323E" />
+                    <path
+                        d="M5.32227 12.343H11.5315L30.0823 1.28025C33.6296 -0.835233 38.1428 1.70456 38.1428 5.81613V15.8957C41.5981 17.4707 44 20.9548 44 25C44 29.0451 41.5981 32.5293 38.1428 34.1042V44.7024C38.1428 48.7556 33.7446 51.303 30.1965 49.3047L11.5315 38.7922H5.32227C2.38281 38.7922 0 36.4238 0 33.5022V17.6328C0 14.7112 2.38281 12.343 5.32227 12.343Z"
+                        fill="#2F323E" />
+                    <path
+                        d="M47.7673 38.3518C47.0327 39.6167 47.4688 41.2343 48.7415 41.9648L59.4963 48.1362C60.769 48.8667 62.3967 48.4331 63.1316 47.1682C63.8665 45.903 63.4302 44.2854 62.1575 43.5551L51.4026 37.3835C50.1299 36.6533 48.5022 37.0866 47.7673 38.3518Z"
+                        fill="#2F323E" />
+                    <path
+                        d="M54.4202 27.2448C52.9507 27.2448 51.759 26.0605 51.759 24.5998C51.759 23.1391 52.9507 21.955 54.4202 21.955H66.8389C68.3086 21.955 69.5 23.1391 69.5 24.5998C69.5 26.0605 68.3086 27.2448 66.8389 27.2448H54.4202Z"
+                        fill="#2F323E" />
+                </svg>
+                <div class="sound-option__tumbler"></div>
+            </label>
+        </div>
+        <div class="language-wrapper _flex _jcsb _aic">
+            <div class="tabs-content__label">{{ settingsPopup.appLanguage }}</div>
+            <div class="select select-languages tabs-content__select">
+                <div class="select__init select-languages__init" data-value="-1">
+                    <span>Russian</span>
+                </div>
+                {{ icon({
+                    class: "select__arrow",
+                    name: "arrow-down-black",
+                    width: "18",
+                    height: "14"
+                }) }}
+                <div class="select-options select-languages-options">
+                    {% for item in languages %}
+                    <div data-value="value {{ item.value }}" data-title="{{ item.name }}"
+                        class="select-options__item select-languages-options__item {{ item.attr }}">
+                        <div class="select-languages__text">
+                            {{ item.title }}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="language-wrapper _flex _jcsb _aic">
+            <div class="tabs-content__label">{{ settingsPopup.playrsLanguage }}</div>
+            <div class="dropdown tabs-content__dropdown">
+                <div class="dropdown__init">
+                    <span>Select languages</span>
+                    {{ icon({
+                        class: "dropdown__arrow",
+                        name: "arrow-down-black",
+                        width: "18",
+                        height: "14"
+                    }) }}
+                </div>
+                
+                <div class="dropdown-content">
+                    <div class="scroll-block">
+                        <div class="dropdown-content__title">
+                            {{ dropdown.popularLanguages}}
+                        </div>
+                        <div class="dropdown-content-languages">
+                            {% for lang in dropdown.languages %}
+                                <div class="dropdown-content-languages-check">
+                                    <input type="checkbox" id="{{ lang.name }}-3">
+                                    <label for="{{ lang.name }}-3" class="dropdown-content-languages-check__label">
+                                        {{ lang.title }}
+                                    </label>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="dropdown-content__title">
+                            {{ dropdown.otherLanguages}}
+                        </div>
+                        <div class="dropdown-content-languages">
+                            {% for lang in dropdown.languages %}
+                                <div class="dropdown-content-languages-check">
+                                    <input type="checkbox" id="{{ lang.name }}-4">
+                                    <label for="{{ lang.name }}-4" class="dropdown-content-languages-check__label">
+                                        {{ lang.title }}
+                                    </label>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tabs-content__label">{{ settingsPopup.background }}</div>
+        <div class="backgrounds" data-slider="backgrounds">
+            <div class="backgrounds-slider" data-slider-slides>
+                {% for slide in settingsPopup.backgroundsSlider %}
+                <div class="backgrounds-slider__slide">
+                    <input type="radio" id="{{ loop.index }}" name="backgrounds"
+                        class="backgrounds-slider__input">
+                    <label for="{{ loop.index }}" class="backgrounds-slider__label">
+                        <img src="media/img/backgrounds/background-{{ slide.img }}.png" alt=""
+                            class="backgrounds-slider__img">
+                    </label>
+                </div>
+                {% endfor %}
+
+            </div>
+            <div class="backgrounds-nav _next" data-slider-next>
+                <svg class="backgrounds-nav__icon" width="24" height="21" viewBox="0 0 24 21" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M4.44408 4.4227H12.4792L12.7511 1.18167C12.831 0.229303 13.8661 -0.316453 14.6773 0.197488C18.5541 2.65375 24.429 7.26568 23.9752 10.5711C23.5324 13.7964 18.2346 18.2654 14.7374 20.7621C13.9265 21.3411 12.8256 20.801 12.746 19.8122L12.4792 16.5H4.30075C2.16036 16.5 0.362257 14.9014 0.125891 12.7885C-0.0389824 11.3146 -0.0419197 9.82733 0.117132 8.35284L0.125278 8.27734C0.361753 6.0851 2.22433 4.4227 4.44408 4.4227Z"
+                        fill="white" />
+                </svg>
+            </div>
+            <div class="backgrounds-nav _prev" data-slider-prev>
+                <svg class="backgrounds-nav__icon" width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M19.5559 4.4227H11.5208L11.2489 1.18167C11.169 0.229303 10.1339 -0.316453 9.32273 0.197488C5.4459 2.65375 -0.428999 7.26568 0.024803 10.5711C0.467589 13.7964 5.76542 18.2654 9.2626 20.7621C10.0735 21.3411 11.1744 20.801 11.254 19.8122L11.5208 16.5H19.6992C21.8396 16.5 23.6377 14.9014 23.8741 12.7885C24.039 11.3146 24.0419 9.82733 23.8829 8.35284L23.8747 8.27734C23.6382 6.0851 21.7757 4.4227 19.5559 4.4227Z"
+                        fill="white" />
+                </svg>
+
+            </div>
+        </div>
+    </div>
+    <div class="tabs-content" data-tab="info">
+        <form class="_flex info-wrapper">
+            <div class="settings-avatar info-settings-avatar">
+                <label class="settings-avatar__label">
+                    <input type="file" class="settings-avatar__input">
+                    <img src="media/img/avatars/avatar-2.png" class="settings-avatar__img" alt="">
+                    <div class="edit-button settings-avatar__edit-button">
+                        {{ icon({
+                            name: "pen",
+                            class: "edit-button__icon"
+                        }) }}
+                    </div>
+                </label>
+            </div>
+            <div class="info-inputs">
+                {{ input({
+                    placeholder: settingsPopup.name,
+                    class: "info-inputs__input"
+                })}}
+                {{ input({
+                    placeholder: settingsPopup.password,
+                    type: "password",
+                    class: "info-inputs__input"
+                })}}
+                <div class="info-inputs-gender">
+                    <div class="info-inputs-gender-radio _male">
+                        <input type="radio" id="male" name="gender" class="info-inputs-gender-radio__input" checked>
+                        <label for="male" class="info-inputs-gender-radio__label">
+                            <svg class="info-inputs-gender-radio__icon" viewBox="0 0 29 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M15.5676 12.88L20.6464 4.81785L15.6272 5.54217C15.3293 5.58516 15.0908 5.29642 15.1859 5.00801L16.1811 1.99209C16.2511 1.78013 16.4296 1.62335 16.6471 1.58283L24.9759 0.0308311C25.9462 -0.149976 26.8826 0.482405 27.0881 1.45725L28.9911 10.4838C29.0248 10.6438 28.9609 10.8087 28.8286 10.9031L26.4048 12.6314C26.0369 12.8938 25.5242 12.6745 25.4546 12.225L24.6726 7.16929L19.5725 15.3188C22.1977 17.6405 23.9863 21.0032 23.9863 24.5495C23.9863 31.0428 17.9899 36 11.8413 36C5.69282 36 0 31.0428 0 24.5495C0 18.0562 5.69282 12.1789 11.8413 12.1789C13.1069 12.1789 14.3659 12.4279 15.5676 12.88ZM19.0271 24.3148C19.0271 28.2163 15.4849 31.1949 11.8529 31.1949C8.22083 31.1949 4.85799 28.2163 4.85799 24.3148C4.85799 20.4132 8.22083 16.8818 11.8529 16.8818C15.4849 16.8818 19.0271 20.4132 19.0271 24.3148Z" />
+                            </svg>
+                            {{ settingsPopup.male }}
+                        </label>
+                    </div>
+                    <div class="info-inputs-gender-radio _female">
+                        <input type="radio" id="female" name="gender" class="info-inputs-gender-radio__input">
+                        <label for="female" class="info-inputs-gender-radio__label">
+                            <svg class="info-inputs-gender-radio__icon" viewBox="0 0 24 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M13.7417 23.0119C18.9901 22.061 23.6001 17.6395 23.6001 12.049C23.6001 5.72448 17.7002 0 11.6507 0C5.60115 0 0 5.72448 0 12.049C0 17.8487 4.71015 22.3901 10.1569 23.1039V27.4837H6.4603C5.36532 27.4837 4.52624 28.4569 4.68741 29.54C4.81812 30.4183 5.57227 31.0686 6.4603 31.0686H10.1569V34.5925C10.1569 35.3073 10.6944 35.9079 11.4049 35.9868C12.6515 36.1253 13.7417 35.1495 13.7417 33.8953V31.0686H18.0869C18.5458 31.0686 18.9323 30.7254 18.9865 30.2697C19.163 28.7874 18.0053 27.4837 16.5126 27.4837H13.7417V23.0119ZM18.7207 11.8203C18.7207 15.6204 15.2356 18.5215 11.662 18.5215C8.08847 18.5215 4.77977 15.6204 4.77977 11.8203C4.77977 8.02018 8.08847 4.58058 11.662 4.58058C15.2356 4.58058 18.7207 8.02018 18.7207 11.8203Z"
+                                    fill="#AFB5C9" />
+                            </svg>
+
+                            {{ settingsPopup.female }}
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="popup-settings-buttons">
+        {{ button({
+            text: settingsPopup.cancel,
+            class: "popup-settings-buttons__button _dark-border",
+            attr: "data-popup-closer"
+        })}}
+        {{ button({
+            text: settingsPopup.save,
+            class: "popup-settings-buttons__button"
+        })}}
+    </div>
+</div>

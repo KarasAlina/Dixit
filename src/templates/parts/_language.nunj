@@ -47,24 +47,48 @@
                             </div>
                         </div>
                         <div class="language-form__text">{{ languageContent.playrs }}</div>
-                        <div class="select select-languages language-form__select">
-                            <div class="select__init select-languages__init language-form__select" data-value="-1">
+                        <div class="dropdown language-form-dropdown">
+                            <div class="dropdown__init">
                                 <span>Select languages</span>
+                                {{ icon({
+                                    class: "dropdown__arrow",
+                                    name: "arrow-down-black",
+                                    width: "18",
+                                    height: "14"
+                                }) }}
                             </div>
-                            {{ icon({
-                                class: "select__arrow",
-                                name: "arrow-down-black",
-                                width: "18",
-                                height: "14"
-                            }) }}
-                            <div class="select-options select-languages-options">
-                                {% for item in languages %}
-                                    <div data-value="value {{ item.value }}" data-title="{{ item.name }}" class="select-options__item select-languages-options__item {{ item.attr }}"> 
-                                        <div class="select-languages__text">
-                                            {{ item.title }}
-                                        </div>
+                            
+                            <div class="dropdown-content">
+                                <div class="scroll-block">
+                                    <div class="dropdown-content__title">
+                                        {{ dropdown.popularLanguages}}
                                     </div>
-                                {% endfor %}
+                                    <div class="dropdown-content-languages">
+                                        {% for lang in dropdown.languages %}
+                                            <div class="dropdown-content-languages-check">
+                                                <input type="checkbox" id="{{ lang.name }}-1">
+                                                <label for="{{ lang.name }}-1" class="dropdown-content-languages-check__label">
+                                                    {{ lang.title }}
+                                                </label>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="dropdown-content__title">
+                                        {{ dropdown.otherLanguages}}
+                                    </div>
+                                    <div class="dropdown-content-languages">
+                                        {% for lang in dropdown.languages %}
+                                            <div class="dropdown-content-languages-check">
+                                                <input type="checkbox" id="{{ lang.name }}-2">
+                                                <label for="{{ lang.name }}-2" class="dropdown-content-languages-check__label">
+                                                    {{ lang.title }}
+                                                </label>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                
+                                
                             </div>
                         </div>
                         {{ button({

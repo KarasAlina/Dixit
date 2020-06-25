@@ -1,6 +1,13 @@
 {
 	"headerItem": {
-		"rules": "Game rules"
+		"rules": "Game rules",
+		"results": "Previous<br> results",
+		"home": "Home",
+		"support": "Support",
+		"privacyPolicy": "Политика конфиденциальности",
+		"privacyPolicyLink": "/",
+		"termsOfUse": "Terms of Use",
+		"termsOfUseLink": "/"
 	},
 	"languages": [
 		{
@@ -41,7 +48,59 @@
 		}
 	},
 	"registerContent": {
-		"title": "Создать<br> учётную<br> запись"
+		"title": "Создать<br> учeтную<br> запись"
+	},
+	"chatContent": {
+		"label": "chat",
+		"labelHide": "HIDE",
+		"labelShow": "Show",
+		"inputText": "Type here",
+		"replicas": [
+			{
+				"time": "13:23",
+				"color": "#FF6A3A",
+				"name": "Player 1",
+				"text": " Рецензия на 9 серию 4 сезона «Рика и Морти». Возможно, худший эпизод во всем сериале"
+			},
+			{
+				"time": "13:23",
+				"color": "#853AFF",
+				"name": "Player 2",
+				"text": "Креативный всплеск, который демонстрировали последние 2-3 серии «Рика и Морти»"
+			},
+			{
+				"ownReplica": true,
+				"time": "13:23",
+				"color": "#40EDAE",
+				"name": "You say",
+				"text": "Новый, предпоследний в сезоне эпизод Childrick of Mort"
+			},
+			{
+				"time": "13:23",
+				"color": "#FF6392",
+				"name": "Player 3",
+				"text": "Собственно, я даже выписал себе имя сценариста серии "
+			},
+			{
+				"time": "13:23",
+				"color": "#853AFF",
+				"name": "Player 2",
+				"text": "Креативный всплеск, который демонстрировали последние 2-3 серии «Рика и Морти»"
+			},
+			{
+				"ownReplica": true,
+				"time": "13:23",
+				"color": "#40EDAE",
+				"name": "You say",
+				"text": "Новый, предпоследний в сезоне эпизод Childrick of Mort"
+			},
+			{
+				"time": "13:23",
+				"color": "#FF6392",
+				"name": "Player 3",
+				"text": "Собственно, я даже выписал себе имя сценариста серии "
+			}
+		]
 	},
 	"terms": {
 		"link": "/",
@@ -280,6 +339,418 @@
 				"name": "Nickname123",
 				"score": "31"
 			}
+		}
+	],
+	"startGame": {
+		"players": "5",
+		"text1": " players out of ",
+		"playersTotal": "11",
+		"text2": " are ready",
+		"button": "start game",
+		"winningScore": "1000"
+	},
+	"players": [
+		{
+			"name": "Username_123",
+			"avatar": "1",
+			"leader": true,
+			"score": "530"
+		},
+		{
+			"name": "Username_123",
+			"avatar": "2",
+			"loading": true,
+			"percent": "60"
+		},
+		{
+			"name": "Username_123",
+			"avatar": "3"
+		},
+		{
+			"name": "Username_123",
+			"avatar": "4",
+			"loading": true,
+			"percent": "30"
+		},
+		{
+			"name": "Username_123",
+			"avatar": "5"
+		},
+		{
+			"name": "Username_123",
+			"avatar": "6",
+			"score": "530"
+		},
+		{
+			"name": "Username_123",
+			"avatar": "1"
+		},
+		{
+			"name": "Username_123",
+			"avatar": "2",
+			"loading": true,
+			"percent": "56"
+		},
+		{
+			"name": "Username_123",
+			"avatar": "3"
+		},
+		{
+			"name": "Username_123",
+			"avatar": "4",
+			"loading": true,
+			"percent": "34"
+		},
+		{
+			"name": "Username_123",
+			"avatar": "5"
+		},
+		{
+			"name": "Username_123",
+			"avatar": "6"
+		}
+	],
+	"gameTurn": {
+		"suptitle": "Your turn:",
+		"title": "choose your association",
+		"send": "Send"
+	},
+	"associations": {
+		"suptitle": "Association:",
+		"title": "120 million curious readers and growing",
+		"selected": [
+			{
+				"name": "Username 1",
+				"card": "1"
+			},
+			{
+				"name": "Username 2",
+				"card": "2",
+				"class": "_active"
+			},
+			{
+				"name": "Username 3",
+				"card": "3"
+			},
+			{
+				"name": "Username 4",
+				"card": "4"
+			},
+			{
+				"name": "Username 5",
+				"card": "5",
+				"class": "_active"
+			},
+			{
+				"name": "Username 6",
+				"card": "6"
+			}
+		],
+		"yourCards": "Your<br> Cards"
+	},
+	"userAssociation": {
+		"suptitle": "Username",
+		"suptitleWhite": "association:",
+		"title": "120 million curious readers and growing",
+		"button": "COnfirm",
+		"text": "Select a card that most fits the associations",
+		"text2": "Guess the card selected by PLAYER-XXX"
+	},
+	"roundFinished": {
+		"title": "Round finished",
+		"winningCards": [
+			{
+				"name": "Username_123",
+				"card": "3",
+				"score": "+70",
+				"users": [
+					{
+						"avatar": "1"
+					},
+					{
+						"avatar": "3"
+					}
+				]
+			},
+			{
+				"name": "Username_123",
+				"card": "4",
+				"score": "+100",
+				"winner": true,
+				"users": [
+					{
+						"avatar": "5"
+					},
+					{
+						"avatar": "1"
+					},
+					{
+						"avatar": "3"
+					},
+					{
+						"avatar": "4"
+					}
+				]
+			},
+			{
+				"name": "Username_123",
+				"card": "6",
+				"score": "+40",
+				"users": [
+					{
+						"avatar": "2"
+					},
+					{
+						"avatar": "4"
+					},
+					{
+						"avatar": "6"
+					}
+				]
+			}
+		],
+		"buttonText": "Start next round"
+	},
+	"score": {
+		"title": "Score",
+		"button": "Play again",
+		"thinkingTime": "thinking time:"
+	},
+	"rules": {
+		"title1": "Цель в настольной игре Диксит",
+		"text1": "Игра оканчивается, когда все карты исчерпаны. По окончанию игры выигрывает тот у кого больше всех очков.",
+		"title2": "Настольная игра Диксит: правила игры",
+		"list1": [
+			{
+				"text": "У каждого игрока в начале игры по шесть карт."
+			},
+			{
+				"text": "Выбирается один игрок, который будет рассказывать (загадывать). Он берет одну карту, кладет перед собой карту рубашкой вверх, пытается ее описать так, чтоб было понятно другим игрокам. Он может показать жесты или издавать какие-то звуки, показать мимикой или говорит какую то фразу которая вызывает ассоциации с этой картой. Его карту остальным игрокам показывать нельзя."
+			},
+			{
+				"text": "Оставшиеся игроки среди карт, которые у них, должны найти что-нибудь такое, что схоже с описанием, что загадывается и тоже кладут на стол рубашкой вверх."
+			},
+			{
+				"text": "После все карты, которые окажутся на столе, тасуются и выкладываются в ряд рубашкой вниз."
+			},
+			{
+				"text": "Задание игроков — угадать карту, которая выпала у Рассказчика. Производится это при помощи жетонов с номерами, все игроки выкладывают перед собой жетон решкой вниз с номером карты, которую, по его мнению, выбрал рассказчик."
+			},
+			{
+				"text": "В последующем все жетоны в одно время вскрываются, считаются очки, которые заработали игроки в течении игры. Выигравший тур ставит свою фишку-кролемипла вперёд."
+			},
+			{
+				"text": "Игроки своими фишками ходят по игровому полю на столько шагов, сколько выпало очков."
+			}
+		],
+		"title3": "Комплектация игры Диксит",
+		"list2": [
+			{
+				"text": "84 карты"
+			},
+			{
+				"text": "жетоны"
+			},
+			{
+				"text": "6 деревянных фишек-кролемиплов"
+			},
+			{
+				"text": "счётчик очков"
+			}
+		],
+		"images": [
+			{
+				"img": "1"
+			},
+			{
+				"img": "2"
+			},
+			{
+				"img": "3"
+			}
+		],
+		"file": "/",
+		"fileText": "Скачать правила в PDF"
+	},
+	"thanksPopup": {
+		"title": "Thanks for the registration!",
+		"text": "Please check your email to activate the account",
+		"button": "Enter the game"
+	},
+	"loginPopup": {
+		"title": "Log in",
+		"button": "Enter",
+		"email": "Email",
+		"password": "Password",
+		"resetLink": "/",
+		"resetText": "Reset the password"
+	},
+	"avatarUpload": {
+		"title": "Upload your avatar",
+		"button": "choose f<span></span>ile",
+		"file": "disc C/folder/filename.jpg"
+	},
+	"avatarImage": {
+		"cancel": "Cancel",
+		"save": "Save"
+	},
+	"forgetPassword": {
+		"title": "Forget your password?",
+		"text": "We will send a password recovery link to the specified mail",
+		"email": "Email",
+		"button": "Sends"
+	},
+	"pinCode": {
+		"title": "PIN code",
+		"input": "Pin",
+		"button": "Join",
+		"errorText": "Wrong pin, try again"
+	},
+	"attentionPopup": {
+		"title": "Внимание!",
+		"text": "При досрочном выходе вам будет начислено -10 штрафных очков в карму , т.к. игра закончится и остальные игроки не смогут её продолжить",
+		"cancel": "Cancel",
+		"exit": "Exit"
+	},
+	"settingsPopup": {
+		"tabs": {
+			"settings": "settings",
+			"info": "info"
+		},
+		"appLanguage": "App language",
+		"playrsLanguage": "Play with users who speak",
+		"background": "Background",
+		"backgroundsSlider": [
+			{
+				"img": "1"
+			},
+			{
+				"img": "2"
+			},
+			{
+				"img": "3"
+			},
+			{
+				"img": "1"
+			}
+		],
+		"save": "Save settings",
+		"cancel": "cancel",
+		"name": "Name",
+		"password": "Password",
+		"male": "male",
+		"female": "female"
+	},
+	"aboutPlayer": {
+		"name": "ShaggyY",
+		"memberSince": "Member since:",
+		"date": "04 Feb 2020",
+		"country": "Country:",
+		"countryName": "Russia",
+		"reputation": "Reputation",
+		"popup": {
+			"title": "Reputation",
+			"text": "A player's reputation is Karma, numbered between 0 (very bad) and 100 (perfect)",
+			"list": [
+				{
+					"text": "Playing a game within the time limit: +1"
+				},
+				{
+					"text": "Leaving a game in progress: -10"
+				},
+				{
+					"text": "Playing a game within the time limit: +1"
+				},
+				{
+					"text": "Leaving a game in progress: -10"
+				}
+			]
+		},
+		"recentPenalties": "Recent penalties",
+		"recentGames": "on 164 recent games",
+		"statistic": [
+			{
+				"icon": "out",
+				"width": "22",
+				"height": "23",
+				"number": "10"
+			},
+			{
+				"icon": "time-yellow",
+				"width": "23",
+				"height": "25",
+				"number": "10"
+			},
+			{
+				"icon": "like",
+				"width": "27",
+				"height": "25",
+				"number": "100"
+			},
+			{
+				"icon": "dislike",
+				"width": "27",
+				"height": "25",
+				"number": "1"
+			}
+		],
+		"gamesPlayed": "Games played",
+		"gamesPlayedNum": "1000",
+		"numberOfWins": "Number of wins",
+		"numberOfWinsNum": "1000",
+		"winningPoints": "Winning Points",
+		"winningPointsNum": "2131312"
+	},
+	"dropdown": {
+		"popularLanguages": "Popular languages",
+		"otherLanguages": "other languages",
+		"languages": [
+			{
+				"name": "rus",
+				"title": "Russian"
+			},
+			{
+				"name": "eng",
+				"title": "English"
+			},
+			{
+				"name": "ukr",
+				"title": "Ukranian"
+			},
+			{
+				"name": "itl",
+				"title": "Italian"
+			},
+			{
+				"name": "dch",
+				"title": "Dutch"
+			}
+		]
+	},
+	"winners": [
+		{
+			"name": "Username_123",
+			"avatar": "1",
+			"score": "1000",
+			"time": "1:20"
+		},
+		{
+			"name": "Username_123",
+			"avatar": "2",
+			"score": "900",
+			"time": "1:20"
+		},
+		{
+			"name": "Username_123",
+			"avatar": "3",
+			"score": "800",
+			"time": "1:20"
+		},
+		{
+			"name": "Username_123",
+			"avatar": "4",
+			"score": "700",
+			"time": "1:20"
 		}
 	],
 	"motionElements": [

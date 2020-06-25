@@ -11,11 +11,8 @@
 {% from "../parts/_statistics.nunj" import statistics %}
 
 
-{# Пример расширения существующего блока #}
-{# Например можно использовать для добавления уникальных тайтлов для каждой страницы #}
-{# {% block title %}Home {{ super() }}{% endblock title %} #}
-
 {% block content %}
+	{{ header() }}
 	<div class="wrapper" data-slider="main">
 		<div class="section-slider" data-slider-slides>
 			{{ intro() }}

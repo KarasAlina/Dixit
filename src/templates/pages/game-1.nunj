@@ -1,0 +1,43 @@
+{% extends "../ext/game.nunj" %}
+{% from "../parts/_header.nunj" import header %}
+{% from "../parts/_button.nunj" import button %}
+{% from "../parts/_icon.nunj" import icon %}
+{% from "../parts/_players.nunj" import playersBlock %}
+
+
+{% block content %}
+    <div class="game-content _aic _fdc">
+        <div class="game-title-block">
+            {{ startGame.players }}
+            {{ startGame.text1 }}
+            {{ startGame.playersTotal }}
+            {{ startGame.text2 }}
+        </div>
+        <div class="game-winning-score">
+            {{ startGame.winningScore }}
+            {{ icon({
+                name: "star",
+                width: "25",
+                height: "24"
+            })}}
+        </div>
+        <div class="loading-game-cards">
+            {% for card in cardsItem.slice(0,3) %}
+                <div class="loading-game-card-wrapper">
+                    <div class="card loading-game-card ">
+                        <div class="card__inner loading-game-card__inner">
+                            <div class="card__face _front">
+                                <img src="media/img/cards/card-{{ card.front }}.png" class="card__img" alt="">
+                            </div>
+                            <div class="card__face _back"></div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        {{ button({
+            text: startGame.button,
+            class: "game__button _big"
+        })}}
+    </div>
+{% endblock content %}

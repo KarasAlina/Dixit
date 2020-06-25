@@ -1,0 +1,11 @@
+<div class="popup popup-thanks" data-popup="thanks">
+	{{ closerButton({
+        attr: "data-popup-closer"
+    })}}
+	<div class="popup__title popup-thanks__title">{{ thanksPopup.title }}</div>
+	<div class="popup__text popup-thanks__text">{{ thanksPopup.text }}</div>
+	{{ button({
+        text: thanksPopup.button,
+        class: "popup-thanks__button"
+    })}}
+</div>

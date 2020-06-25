@@ -10,7 +10,26 @@ const OPTIONS_BY_TYPE = {
 		infinite: false,
 		draggable: false,
 		fade: true,
-		initialSlide: 6,
+		initialSlide: 0,
+	},
+	gallery: {
+		slidesToShow: 3,
+		centerMode: true,
+		infinite: false,
+		focusOnSelect: true,
+	},
+	backgrounds: {
+		slidesToShow: 3,
+		infinite: false,
+		focusOnSelect: true,
+		responsive: [
+			{
+				breakpoint: 560,
+				settings: {
+					slidesToShow: 2,
+				},
+			},
+		],
 	},
 };
 

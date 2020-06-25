@@ -10,6 +10,7 @@ body
 	font-family: 'Paperfiller'
 	font-weight: normal
 	color: $grey-dark
+	letter-spacing: 0.1px
 
 .clearfix
 	// zoom: 1
@@ -95,7 +96,7 @@ body
 		opacity: 1
 
 .transition-active
-	transition: color $default-transition-duration $default-transition-function, background $default-transition-duration $default-transition-function, border-color $default-transition-duration $default-transition-function, opacity $default-transition-duration $default-transition-function, transform $default-transition-duration $default-transition-function, fill $default-transition-duration $default-transition-function
+	transition: border-color $default-transition-duration $default-transition-function, color $default-transition-duration $default-transition-function, background $default-transition-duration $default-transition-function, border-color $default-transition-duration $default-transition-function, opacity $default-transition-duration $default-transition-function, transform $default-transition-duration $default-transition-function, fill $default-transition-duration $default-transition-function
 
 .transition-hover
 	transition: none
@@ -121,6 +122,9 @@ body
 
 ._jcfe
 	justify-content: flex-end
+
+._fdc
+	flex-direction: column
 
 ._aic
 	align-items: center
@@ -184,3 +188,6 @@ body
 
 ._max-height-full
 	max-height: 100%
+
+._p0
+	padding: 0

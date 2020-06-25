@@ -1,0 +1,143 @@
+<div class="popup popup-about-player" data-tabs data-popup="about-player">
+	{{ closerButton({
+        attr: "data-popup-closer"
+    })}}
+
+	<div class="_flex about-player-wrapper">
+		<div class="settings-avatar hidden-xs">
+			<label class="settings-avatar__label">
+				<input type="file" class="settings-avatar__input">
+				<img src="media/img/avatars/avatar-2.png" class="settings-avatar__img" alt="">
+			</label>
+		</div>
+		<div class="about-player">
+            <div class="_flex _aic">
+                <div class="settings-avatar visible-xs">
+                    <label class="settings-avatar__label">
+                        <input type="file" class="settings-avatar__input">
+                        <img src="media/img/avatars/avatar-2.png" class="settings-avatar__img" alt="">
+                    </label>
+                </div>
+                <div class="about-player__name">{{ aboutPlayer.name }}</div>
+            </div>
+			
+			<div class="about-player-row _nowrap">
+				<div class="about-player-col _left _half-xs">
+					<div class="about-player__title">
+						{{ aboutPlayer.memberSince }}
+					</div>
+					<div class="about-player__text">{{ aboutPlayer.date }}</div>
+				</div>
+				<div class="about-player-col _right _half-xs">
+					<div class="about-player__title">
+						{{ aboutPlayer.country }}
+					</div>
+					<div class="about-player__text">
+						{{ aboutPlayer.countryName }}
+						{{ icon({
+                            name: "rus",
+                            width: "30",
+                            height: "30",
+                            class: "about-player__country"
+                        })}}
+					</div>
+				</div>
+			</div>
+			<div class="about-player-row">
+				<div class="about-player-col _left">
+					<div class="about-player__text">
+						{{ aboutPlayer.reputation }}
+						<div class="about-player-info">
+							<svg class="about-player-info__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 0C5.38329 0 0 5.38329 0 12C0 18.6167 5.38329 24 12 24C18.6167 24 24 18.6167 24 12C24 5.38329 18.6167 0 12 0ZM12.7806 19.1199C12.2105 19.2149 11.076 19.4523 10.5 19.5C10.0124 19.5404 9.55223 19.2613 9.27173 18.8606C8.9905 18.46 8.92311 17.9473 9.09007 17.4873L11.3584 11.25H8.99998C8.99796 9.95034 9.97282 8.99471 11.2197 8.62796C11.8147 8.4529 12.9233 8.21332 13.5 8.25004C13.8455 8.27201 14.4477 8.48879 14.7282 8.88946C15.0095 9.29009 15.0768 9.80279 14.9099 10.2628L12.6416 16.5H14.9992C14.9997 17.7982 14.0612 18.9065 12.7806 19.1199ZM13.5 7.50001C12.6715 7.50001 12 6.82836 12 6C12 5.17155 12.6715 4.49999 13.5 4.49999C14.3284 4.49999 15 5.17155 15 6C15 6.82841 14.3285 7.50001 13.5 7.50001Z"
+									fill="#AFB5C9" />
+							</svg>
+							<div class="about-player-info-popup">
+								<div class="about-player-info-popup__title">{{ aboutPlayer.popup.title }}</div>
+								<div class="about-player-info-popup__text">{{ aboutPlayer.popup.text }}</div>
+								<ul class="about-player-info-popup-list">
+									{% for item in aboutPlayer.popup.list %}
+									<li class="about-player-info-popup-list__item">
+										{{ item.text }}
+										{{ icon({
+                                            name: "karma",
+                                            width: "14",
+                                            height: "14"
+                                        })}}
+									</li>
+									{% endfor %}
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="about-player-col _right">
+					<div class="progress">
+						<div class="progress__bar" name="progress" role="progressbar" aria-valuenow="57"></div>
+                        <div class="progress__text"></div>
+                        {{ icon({
+                            name: "karma-fill",
+                            class: "progress__icon",
+                            width: "24",
+                            height: "24"
+                        })}}
+					</div>
+				</div>
+			</div>
+            <div class="about-player-row">
+				<div class="about-player-col _left">
+                    <div class="about-player__text">
+                        {{ aboutPlayer.recentPenalties }}
+                    </div>
+                    <div class="about-player__title">
+                        {{ aboutPlayer.recentGames }}
+                    </div>
+                </div>
+                <div class="about-player-col _right">
+                    <div class="about-player-statistic">
+                        {% for item in aboutPlayer.statistic %}
+                            <div class="about-player-statistic__item">
+                                {{ icon({
+                                    name: item.icon,
+                                    width: item.width,
+                                    height: item.height,
+                                    class: "about-player-statistic__icon"
+                                })}}
+                                {{ item.number }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="about-player-row about-player-game-played">
+				<div class="about-player-col">
+                    <div class="about-player__title">
+                        {{ aboutPlayer.gamesPlayed }}
+                    </div>
+                    <div class="about-player__text about-player-game-played__text">
+                        {{ aboutPlayer.gamesPlayedNum }}
+                        <img src="media/img/view.svg" class="about-player-game-played__icon" alt="">
+                    </div>
+                </div>
+                <div class="about-player-col">
+                    <div class="about-player__title">
+                        {{ aboutPlayer.numberOfWins }}
+                    </div>
+                    <div class="about-player__text about-player-game-played__text">
+                        {{ aboutPlayer.numberOfWinsNum }}
+                    </div>
+                </div>
+                <div class="about-player-col">
+                    <div class="about-player__title">
+                        {{ aboutPlayer.winningPoints }}
+                    </div>
+                    <div class="about-player__text about-player-game-played__text">
+                        {{ aboutPlayer.winningPointsNum }}
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+</div>

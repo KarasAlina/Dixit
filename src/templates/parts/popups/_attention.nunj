@@ -1,0 +1,15 @@
+<div class="popup popup-attention" data-popup="attention">
+    <div class="popup__title popup-attention__title">{{ attentionPopup.title }}</div>
+    <div class="popup__text popup-attention__text">{{ attentionPopup.text }}</div>
+    <div class="popup-attention-buttons">
+        {{ button({
+            text: attentionPopup.cancel,
+            class: "popup-attention-buttons__button _bordered",
+            attr: "data-popup-closer"
+        })}}
+        {{ button({
+            text: attentionPopup.exit,
+            class: "popup-attention-buttons__button"
+        })}}
+    </div>
+</div>

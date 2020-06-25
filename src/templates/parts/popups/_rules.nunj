@@ -1,0 +1,25 @@
+<div class="popup popup-rules" data-popup="rules">
+	{{ closerButton({
+				attr: "data-popup-closer"
+			})}}
+	<div class="popup__title popup-rules__title">{{ rules.title1 }}</div>
+	<div class="popup__text">{{ rules.text1 }}</div>
+	<div class="popup__title popup-rules__title">{{ rules.title2 }}</div>
+	<ul class="popup-list">
+		{% for item in rules.list1 %}
+		<li class="popup-list__item">{{ item.text }}</li>
+		{% endfor %}
+	</ul>
+	<div class="popup__title popup-rules__title">{{ rules.title3 }}</div>
+	<ul class="popup-list">
+		{% for item in rules.list2 %}
+		<li class="popup-list__item">{{ item.text }}</li>
+		{% endfor %}
+	</ul>
+	<div class="popup-dixit-images">
+		{% for image in rules.images %}
+		<img src="media/img/dixit-{{ image.img }}.png" alt="">
+		{% endfor %}
+	</div>
+	<a href="{{ rules.file }}" class="button popup-button-download" download>{{ rules.fileText }}</a>
+</div>

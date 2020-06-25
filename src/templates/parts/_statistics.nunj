@@ -29,7 +29,7 @@
                                 attr: "data-slider-prev"
                             }) }}
                             <div class="bordered-block__title lobby-table__title">{{ statisticsContent.title }}</div>
-                            <div class="scroll-block-wrapper">
+                            <div class="scroll-block-wrapper _scrollable">
                                 <div class="scroll-block">
                                     {% for game in games %}
                                         <div class="game-played grey-block">

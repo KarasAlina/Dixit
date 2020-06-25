@@ -1,0 +1,53 @@
+.tabs
+	display: flex
+	position: relative
+	height: $button-height-sm
+	margin-bottom: 30px
+	justify-content: space-between
+	border: 1px solid $grey-middle
+	border-radius: 60px
+	+min-screen($screen-md)
+		height: $button-height-md
+	&__item,
+	&__sliding-block
+		display: flex
+		align-items: center
+		justify-content: center
+		flex: 0 0 50%
+		height: 100%
+		font-size: 24px
+		line-height: 1
+		border-radius: 60px
+		color: $grey-middle
+		cursor: pointer
+		+min-screen($screen-md)
+			font-size: 44px
+		&._active
+			color: #FFF
+		&:not(._active)
+			&._disabled
+				color: $grey-dark
+	&__sliding-block
+		position: absolute
+		left: 0
+		top: 0
+		width: 50%
+		background: $grey-dark   
+		z-index: -1 
+	&-content
+		&__select,
+		&__dropdown
+			width: 100%
+			+min-screen($screen-sm)
+				width: 250px
+		&__dropdown
+			.dropdown-content-languages
+				flex-direction: column
+		&__label
+			font-size: 24px
+			line-height: 24px
+			margin-bottom: 4px
+			+min-screen($screen-sm)
+				margin-bottom: 0
+		&:not(:first-of-type)
+			display: none

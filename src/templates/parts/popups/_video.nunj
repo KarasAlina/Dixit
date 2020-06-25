@@ -1,0 +1,6 @@
+<div class="popup popup-video" data-popup="yt-video">
+	{{ closerButton({
+				attr: "data-popup-closer"
+			})}}
+	<div class="video"></div>
+</div>

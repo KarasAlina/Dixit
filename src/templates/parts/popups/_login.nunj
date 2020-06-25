@@ -1,0 +1,23 @@
+<div class="popup popup-login _small" data-popup="login">
+	{{ closerButton({
+        attr: "data-popup-closer"
+    })}}
+	<div class="popup__title popup-login__title">{{ loginPopup.title }}</div>
+	<form action="">
+		{{ input({
+            type: "email",
+            placeholder: loginPopup.email,
+            class: "popup-login__input"
+        })}}
+		{{ input({
+            type: "password",
+            placeholder: loginPopup.password,
+            class: "popup-login__input"
+        })}}
+		{{ button({
+            text: loginPopup.button,
+            class: "popup-login__button"
+        })}}
+		<a href="{{ loginPopup.resetLink }}" class="popup-login__reset">{{ loginPopup.resetText }}</a>
+	</form>
+</div>

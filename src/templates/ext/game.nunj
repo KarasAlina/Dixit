@@ -1,0 +1,63 @@
+{% from "../parts/_head-scripts.nunj" import headScripts %}
+{% from "../parts/_players.nunj" import playersBlock %}
+{% from "../parts/_header.nunj" import header %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta charset="utf-8" />
+		<title>{% block title %}Dixit{% endblock %}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="shortcut icon" href="media/img/favicon.ico" type="image/x-icon">
+
+		{{ headScripts() }}
+
+		{% block stylesheets %}
+			<link rel="stylesheet" href="media/css/screen.css?hash" />
+		{% endblock stylesheets %}
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="wrapper__content">
+                {{ header({ class: "_authorized _in-game"}) }}
+                <div class="game-wrapper">
+                    <div class="container game-wrapper__container">
+                        <div class="row">
+                            {% if players != false %}
+                            <div class="col-md-2 col-lg-2">
+                                {{ playersBlock({
+                                    start: "0",
+                                    end: "5"
+                                })}}
+                            </div>
+                            {% endif %}
+                            {% if players != false %}
+                                <div class="col-xs-12 col-md-8 col-lg-8">
+                                {% elif containerClass != false %}
+                                    <div class="{{ containerClass }}">                                
+                                {% else %}
+                                    <div class="col-xs-12">
+                            {% endif %}
+                                    {% block content %}
+                                    {% endblock content %}
+                                </div>
+                            {% if players != false %}
+                            <div class="col-md-2 col-lg-2 _jcfe">			
+                                {{ playersBlock({
+                                    start: "5",
+                                    end: "10"
+                                })}}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</div>
+		{% include '../parts/_popups.nunj' %}
+		{% block scripts %}
+			<script src="media/js/bundle.js?hash"></script>
+		{% endblock scripts %}
+	</body>
+</html>

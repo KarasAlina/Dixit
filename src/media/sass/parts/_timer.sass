@@ -1,0 +1,38 @@
+.timer
+    display: flex
+    width: 100%
+    margin: 0 auto 10px
+    align-items: center
+    justify-content: center
+    +min-screen($screen-md)
+        width: 60%
+        margin-bottom: 30px
+    &__countdown
+        margin: 0 10px
+        color: $red
+        font-size: 24px
+        +min-screen($screen-md)
+            font-size: 44px
+    &__indicator
+        display: block
+        position: relative
+        width: auto
+        height: 2px
+        background: $red
+        +min-screen($screen-md)
+            width: 200px
+            animation: timerIndicator 90s 0s linear forwards 
+        &:before
+            content: ''
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            right: 100%
+            display: inline-block
+            +size(6px)
+            border: 2px solid $red
+            border-radius: 50%
+        &:last-of-type
+            &:before
+                right: auto
+                left: 100%

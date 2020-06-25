@@ -1,0 +1,51 @@
+{% extends "../ext/game.nunj" %}
+{% from "../parts/_button.nunj" import button %}
+{% from "../parts/_icon.nunj" import icon %}
+{% from "../parts/_input.nunj" import input %}
+{% from "../parts/_cards.nunj" import cards %}
+{% from "../parts/_chat.nunj" import chat %}
+
+
+{% block content %}
+    <div class="game-content _fdc _aic">
+        <div class="game-title-block choose-card-game-title-block">
+            <div class="game-title-block__suptitle">{{ userAssociation.suptitle }}<span>{{ userAssociation.suptitleWhite }}</span></div>
+            {{ userAssociation.title }}
+        </div>
+
+        <div class="choose-card row " data-slider="gallery">
+            <div class="col-xs-12 _flex _jcsb" >
+                {{ cards({
+                    start: "0",
+                    end: "5",
+                    increase: true
+                })}}
+                
+            </div>
+            <div class="col-xs-12">
+                <div class="choose-card-gallery-wrapper">
+                    <div class="choose-card-gallery" data-slider-slides>
+                        {{ cards({
+                            start: "0",
+                            end: "6",
+                            class: "choose-card-gallery__card",
+                            galleryWrapper: true,
+                            close: true,
+                            closeClass: "choose-card-gallery__closer"
+                        })}}
+                    </div>
+                </div>
+                <div class="_flex _aic _fdc _full-width">
+                    <div class="choose-card__text">{{ userAssociation.text }}</div>
+                    {{ button({
+                        text: userAssociation.button,
+                        class: "choose-card__button",
+                        attr: "disabled"
+                    })}}
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    {{ chat() }}
+{% endblock content %}

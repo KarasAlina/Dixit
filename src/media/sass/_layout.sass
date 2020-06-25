@@ -13,30 +13,39 @@
 	max-width: 100%
 	margin: auto
 	flex-wrap: wrap
-	box-sizing: border-box
-	padding: 0 $site-paddings-sm 
+	padding: 0 
 	z-index: 10
-	+max-screen($screen-lg)
-		padding: 0 $site-paddings-sm 
+	padding-left: $site-paddings-sm 
+	padding-right: $site-paddings-sm 
+	+min-screen($screen-sm)
+		padding-left: $indent-col-xs
+		padding-right: $indent-col-xs
+	+min-screen($screen-md)
+		padding-left: $indent-col-sm
+		padding-right: $indent-col-sm
+	+min-screen($screen-lg)
+		padding-left: $indent-col-md
+		padding-right: $indent-col-md
 	&-fluid
 		padding: 0 
 
 .row
 	display: flex
 	flex: 1 1 100%
+	width: 100%
 	flex-wrap: wrap
 	position: relative
 	margin-left: -$site-paddings-sm 
 	margin-right: -$site-paddings-sm 
-	+max-screen($screen-lg)
-		margin-left: -$indent-col-md
-		margin-right: -$indent-col-md
-	+max-screen($screen-md)
-		margin-left: -$indent-col-sm
-		margin-right: -$indent-col-sm
-	+max-screen($screen-sm)
+	+min-screen($screen-sm)
 		margin-left: -$indent-col-xs
 		margin-right: -$indent-col-xs
+	+min-screen($screen-md)
+		margin-left: -$indent-col-sm
+		margin-right: -$indent-col-sm
+	+min-screen($screen-lg)
+		margin-left: -$indent-col-md
+		margin-right: -$indent-col-md
 
 =col($max-cols)
 	@for $i from 1 through $max-cols
@@ -50,32 +59,32 @@
 		@for $i from 1 through $cols-total
 			&-#{$i}
 				+box
-	&-lg
+	&-xs
 		@for $i from 1 through $cols-total
 			&-#{$i}
-				padding-left: $indent-col-lg
-				padding-right: $indent-col-lg
+				padding-right: $indent-col-xs
+				padding-left: $indent-col-xs
 		+col($cols-total)
-	&-md
-		+max-screen($screen-lg)
-			@for $i from 1 through $cols-total
-				&-#{$i}
-					padding-right: $indent-col-md
-					padding-left: $indent-col-md
-			+col($cols-total)
 	&-sm
-		+max-screen($screen-md)
+		+min-screen($screen-sm)
 			@for $i from 1 through $cols-total
 				&-#{$i}
 					padding-right: $indent-col-sm
 					padding-left: $indent-col-sm
 			+col($cols-total)
-	&-xs
-		+max-screen($screen-sm)
+	&-md
+		+min-screen($screen-md)
 			@for $i from 1 through $cols-total
 				&-#{$i}
-					padding-right: $indent-col-xs
-					padding-left: $indent-col-xs
+					padding-right: $indent-col-md
+					padding-left: $indent-col-md
+			+col($cols-total)
+	&-lg
+		+min-screen($screen-lg)
+			@for $i from 1 through $cols-total
+				&-#{$i}
+					padding-left: $indent-col-lg
+					padding-right: $indent-col-lg
 			+col($cols-total)
 
 =offset-width($max-cols)
@@ -87,16 +96,17 @@
 				margin-left: (100%/$max-cols*$i)
 
 .offset
-	&-lg
-		+offset-width($cols-total)
-	&-md
-		+max-screen($screen-lg)
+	&-xs
+		+min-screen($screen-xs)
 			+offset-width($cols-total)
 	&-sm
-		+max-screen($screen-md)
+		+min-screen($screen-sm)
 			+offset-width($cols-total)
-	&-xs
-		+max-screen($screen-sm)
+	&-md
+		+min-screen($screen-md)
+			+offset-width($cols-total)
+	&-lg
+		+min-screen($screen-lg)
 			+offset-width($cols-total)
 
 .hidden-xs

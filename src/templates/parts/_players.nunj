@@ -1,0 +1,39 @@
+{% from "../parts/_icon.nunj" import icon %}
+
+{% macro playersBlock(props) %}
+<div class="players">
+    {% for player in players.slice(props.start,props.end) %}
+        <div class="player{% if player.loading == true %} _loading{% endif %}{% if player.leader == true %} _leader{% endif %}">
+            <div class="player__avatar">
+                <img src="media/img/avatars/avatar-{{ player.avatar }}.png" alt="">
+            </div>
+            {% if player.loading == true %}
+            <div class="player-loading">
+                <div class="player-loading__progress" data-player-loading data-value="0.{{ player.percent }}" data-size="90"
+                    data-thickness="10" data-reverse="false">
+                    <div class="player-loading__inner">
+                        {{ icon({
+                            name: "hourglass",
+                            class: "player-loading__hourglass"
+                        })}}
+                    </div>
+                </div>
+            </div>
+            <div class="player__percents"></div>
+            {% endif %}
+            <div class="player__name">{{ player.name }}</div>
+            {% if player.score %}
+                <div class="player-score">
+                    {{ player.score }}
+                    {{ icon({
+                        name: "star",
+                        class: "player-score__icon",
+                        width: "15",
+                        height: "14"
+                    })}}
+                </div>
+            {% endif %}
+        </div>
+	{% endfor %}
+</div>
+{% endmacro %}

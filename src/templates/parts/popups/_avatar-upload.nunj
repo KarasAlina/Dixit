@@ -1,0 +1,11 @@
+<div class="popup popup-avatar-upload _small" data-popup="avatar-upload">
+    {{ closerButton({
+        attr: "data-popup-closer"
+    })}}
+    <div class="popup__title popup-avatar-upload__title">{{ avatarUpload.title }}</div>
+    <label class="button popup-avatar-upload__button">
+        {{ avatarUpload.button }}
+        <input type="file">
+    </label>
+    <div class="popup-avatar-upload__filename">{{ avatarUpload.file }}</div>
+</div>

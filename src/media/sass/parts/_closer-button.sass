@@ -14,10 +14,12 @@
 		fill: #FFF
 		@extend .transition-active
 	&:hover 
-		.popup-closer-button__background
+		.closer-button__background
 			fill: $yellow
-		.popup-closer-button__cross
+			@extend .transition-hover
+		.closer-button__cross
 			fill: $grey-dark
+			@extend .transition-hover
 	&._in-bordered-block
 		top: -40px
 		right: -40px

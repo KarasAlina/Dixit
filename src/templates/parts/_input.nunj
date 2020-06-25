@@ -8,7 +8,10 @@
             {% if props.placeholder %} placeholder="{{ props.placeholder }}"{% endif %}
             {% if props.params != false %}{{ props.params }}{% endif %} 
             {% if props.steps %} step="{{ props.steps }}"{% endif %}>
-        {% if props.password == true %}
+        {% if props.errorText %}
+            <div class="input-error-block">{{ props.errorText }}</div>
+        {% endif %}
+        {% if props.type == "password" %}
             <div class="input-visibility">
                 <svg class="input-visibility__icon _show" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M11.5556 4.8C9.81696 4.8 8.40405 6.23465 8.40405 8C8.40405 9.76535 9.81696 11.2 11.5556 11.2C13.2942 11.2 14.7071 9.76535 14.7071 8C14.7071 6.23465 13.2941 4.8 11.5556 4.8Z" fill="#AFB5C9"/>

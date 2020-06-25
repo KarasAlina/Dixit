@@ -1,13 +1,37 @@
+{% from "../parts/_icon.nunj" import icon %}
+{% from "../parts/_closer-button.nunj" import closerButton %}
+
 {% macro cards(props) %}
-    {% for card in cardsItem %}
-        <div class="card {{ props.class }}">
-            <div class="card__inner">
-                <div class="card__face _front">
-                    <img src="media/img/cards/card-{{ card.front }}.png" class="card__img" alt="">
-                </div>
-                <div class="card__face _back"></div>
-            </div>
-               
-        </div>
-    {% endfor %}
+{% for card in cardsItem.slice(props.start,props.end) %}
+{% if props.galleryWrapper == true %}
+<div class="card-wrapper">
+
+	{% endif %}
+	<div class="card {{ props.class }}" {% if props.increase == true %} data-card-zooming{% endif %}>
+		{% if props.close == true %}
+		{{ closerButton({
+                        class: props.closeClass
+                    })}}
+		{% endif %}
+		<div class="card__inner">
+			<div class="card__face _front">
+				<img src="media/img/cards/card-{{ card.front }}.png" class="card__img" alt="">
+				{% if props.increase == true %}
+				<div class="card__increase">
+					{{ icon({
+                        name: "zoom",
+                        width: "10",
+                        height: "13"
+                    })}}
+				</div>
+				{% endif %}
+			</div>
+			<div class="card__face _back"></div>
+		</div>
+
+	</div>
+	{% if props.galleryWrapper == true %}
+</div>
+{% endif %}
+{% endfor %}
 {% endmacro %}

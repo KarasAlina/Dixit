@@ -22,6 +22,7 @@ function Popups() {
 	this.activePopupName = '';
 
 	let self = this;
+	self.open('about-player');
 	dom.$body.on('click', '[data-popup-opener]', function(e) {
 		e.preventDefault();
 
@@ -39,7 +40,7 @@ function Popups() {
 
 		self.open('yt-video');
 		//$this.addClass('_active');
-		self.$ytPopup.html(`
+		self.$ytPopup.find('.video').html(`
 		<iframe
 			id="player"
 			type="text/html"

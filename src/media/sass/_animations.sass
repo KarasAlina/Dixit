@@ -179,3 +179,26 @@
 		transform: scale(1.2) rotateX(10deg) rotateY(-35deg) rotateZ(40deg)
 	100% 
 		transform: scale(1.2) rotateX(15deg) rotateY(-40deg) rotateZ(45deg)
+
+@keyframes hourglass
+	0% 
+		transform: rotate(0deg)
+	100% 
+		transform: rotate(180deg)
+
+@keyframes cardsLoading
+	0%,
+	20%,
+	80%,
+	100% 
+		transform: translateX(0%) rotateY(0deg)
+		
+	40%,
+	60%
+		transform: translateX(-100%) rotateY(-180deg)
+	
+@keyframes timerIndicator
+	0% 
+		width: 200px
+	100% 
+		width: 0

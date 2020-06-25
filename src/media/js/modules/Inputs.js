@@ -34,7 +34,7 @@ function Inputs() {
 		}
 	});
 	$('[data-check-pin]').change(function() {
-		var inputPin = $()('.input-check-pin');
+		var inputPin = $('.input-check-pin');
 		inputPin.attr('disabled', !inputPin.attr('disabled'));
 	});
 }

@@ -1,0 +1,19 @@
+<div class="popup _small popup-pin-code" data-popup="pin-code">
+    {{ closerButton({
+        attr: "data-popup-closer"
+    })}}
+    <div class="popup__title popup-pin-code__title">{{ pinCode.title }}</div>
+    <form action="">
+        {{ input({
+            type: "email",
+            placeholder: pinCode.input,
+            class: "popup-pin-code__input _error",
+            errorText: pinCode.errorText
+        })}}
+
+        {{ button({
+            text: pinCode.button,
+            class: "popup-pin-code__button"
+        })}}
+    </form>
+</div>

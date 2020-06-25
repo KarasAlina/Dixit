@@ -1,0 +1,20 @@
+<div class="popup popup-avatar-image _small" data-popup="avatar-image">
+    <img src="media/img/avatars/avatar-2-2.png" masking class="popup-avatar-image__img" alt="">
+    <svg class="popup-avatar-image__mask" viewBox="0 0 400 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M24 0C10.7452 0 0 10.7452 0 24V436C0 449.255 10.7452 460 24 460H376C389.255 460 400 449.255 400 436V24C400 10.7452 389.255 0 376 0H24ZM184.5 23C107.456 23 45 85.4563 45 162.5V193.5C45 270.544 107.456 333 184.5 333H215.5C292.544 333 355 270.544 355 193.5V162.5C355 85.4563 292.544 23 215.5 23H184.5Z"
+            fill="black" fill-opacity="0.5" />
+        <rect x="44" y="22" width="312" height="312" rx="140.5" stroke="#FFCD45" stroke-width="2" />
+    </svg>
+    <div class="popup-avatar-image-buttons">
+        {{ button({
+            text: avatarImage.cancel,
+            class: "popup-avatar-image-buttons__button _bordered",
+            attr: "data-popup-closer"
+        })}}
+        {{ button({
+            text: avatarImage.save,
+            class: "popup-avatar-image-buttons__button"
+        })}}
+    </div>
+</div>

@@ -5,6 +5,7 @@ global.$ = global.jQuery = require('jquery');
 global.Draggable = Draggable;
 require('./utils/jqExtensions');
 require('slick-carousel');
+require('jquery-circle-progress');
 
 // prettier-ignore
 global.ProjectName = new function ProjectName() { // eslint-disable-line
@@ -23,13 +24,35 @@ global.ProjectName = new function ProjectName() { // eslint-disable-line
 		Select: require('./modules/Select'),
 		Popups: require('./modules/Popups'),
 		Inputs: require('./modules/Inputs'),
+		Progressbar: require('./modules/Progressbar'),
+		Timer: require('./modules/Timer'),
+		Cards: require('./modules/Cards'),
+		Tabs: require('./modules/Tabs'),
 	};
 
 	// Startup
 	$(() => {
 		// Remove _loading modificator
 		this.dom.$html.removeClass('_loading');
-		
+		var label = $('.chat__label');
+		label.on('click', function(){
+			label.parents('.chat').toggleClass('_show').toggleClass('_hide');
+		});
+
+		var dropdown = $('.dropdown');
+		var trigger = dropdown.find('.dropdown__init');
+		trigger.on('click', function(){
+			$(this).parent(dropdown).toggleClass('_opened');
+		});
+
+		var menu = $('.header-menu-button');
+		var close = $('.header-menu-close')
+		menu.on('click', function(){
+			$(this).parents('.header').toggleClass('_menu-opened');
+		});
+		close.on('click', function(){
+			$(this).parents('.header').toggleClass('_menu-opened');
+		});
 	});
 }();
 

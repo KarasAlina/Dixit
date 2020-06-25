@@ -1,0 +1,59 @@
+{% extends "../ext/game.nunj" %}
+{% from "../parts/_header.nunj" import header %}
+{% from "../parts/_button.nunj" import button %}
+{% from "../parts/_icon.nunj" import icon %}
+{% from "../parts/_input.nunj" import input %}
+{% from "../parts/_cards.nunj" import cards %}
+{% from "../parts/_chat.nunj" import chat %}
+
+
+{% block content %}
+<div class="game-content _fdc _aic _p0">
+	<div class="game-title-block">
+		<div class="game-title-block__suptitle">{{ associations.suptitle }}</div>
+		{{ associations.title }}
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12 selected-associations">
+			{% for item in associations.selected %}
+			<div class="selected-associations-card-wrapper">
+				<div class="selected-associations__name">{{ item.name }}</div>
+				<div class="card selected-associations-card {{ item.class }}" data-card-zooming>
+					<div class="card__inner">
+						<div class="card__face _front">
+							<img src="media/img/cards/card-{{ item.card }}.png" class="card__img" alt="">
+							<div class="card__increase">
+								{{ icon({
+                                    name: "zoom",
+                                    width: "10",
+                                    height: "13"
+                                })}}
+							</div>
+						</div>
+						<div class="card__face _back _back-waiting"></div>
+					</div>
+
+				</div>
+			</div>
+
+			{% endfor %}
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12 _aic _jcfe">
+            <div class="selected-associations__your-cards">
+                {{ associations.yourCards}}
+            </div>
+            
+			{{ cards({
+                start: 0,
+                end: 3,
+                class: "selected-associations__small-cards _small"
+            })}}
+		</div>
+	</div>
+</div>
+{{ chat() }}
+{% endblock content %}

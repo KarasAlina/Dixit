@@ -1,0 +1,35 @@
+.selected-associations
+    width: 100%
+    justify-content: space-between
+    flex-wrap: wrap
+    &::after 
+        content: ""
+        flex: auto
+    &__name
+        display: block
+        font-size: 24px
+        text-align: center
+        color: #FFF
+    &-card
+        &-wrapper
+            flex: 0 0 124px
+            margin-bottom: 30px
+            margin-left: 2%
+            margin-right: 2%
+            &:nth-child(5n+1)
+                margin-left: 0 
+            &:nth-child(5n)
+                margin-right: 0 
+                
+    &__small-cards
+        margin-left: 10px
+    &__your-cards
+        font-size: 24px
+        line-height: 1
+        color: #FFF
+        +min-screen($screen-lg)
+            font-size: 44px
+            margin-right: 25px
+            line-height: 38px
+  
+            

@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<!-- Client-side programming by sborkaproject.com -->
 		<meta charset="utf-8" />
 		<title>{% block title %}Dixit{% endblock %}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -17,7 +16,6 @@
 	<body>
 
 		<div class="wrapper">
-			{{ header() }}
 
 			<div class="wrapper__content">
 				{% block content %}

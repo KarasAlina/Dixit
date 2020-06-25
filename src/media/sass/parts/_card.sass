@@ -1,31 +1,61 @@
 .card
-    +size(124px,186px)
-    perspective: 500px
-    &__inner
-        position: relative
-        +size(100%)
-        transform-style: preserve-3d
-        transform-origin: center right
-        transition: transform 1s
-        
-        ._active &
-            transform: translateX(-100%) rotateY(-180deg)
-    &__face
-        position: absolute
-        +size(100%)
-        display: block
-        box-sizing: border-box
-        backface-visibility: hidden
-        border-radius: 16px
-        &._front
-            border: 6px solid #FFF
-            overflow: hidden
-        &._back
-            transform: rotateY(180deg)
-            background: url('../img/cards/back.png') no-repeat center
-            background-size: contain
-    &__img
-        +size(100%)
-        object-fit: cover
-    
-
+	+size(124px,186px)
+	perspective: 500px
+	transition: transform 0.5s
+	user-select: none
+	&[data-card-zooming]
+		cursor: pointer
+	&._focus
+		transform: scale(1.3)
+	&._disabled
+		filter: grayscale(100%)
+	&._small
+		+size(73px,110px)
+	&__inner
+		position: relative
+		+size(100%)
+		transform-style: preserve-3d
+		transform-origin: center right
+		transition: transform 1s
+		border-radius: 16px
+		._active &
+			transform: translateX(-100%) rotateY(-180deg)
+	&__face
+		position: absolute
+		+size(100%)
+		display: block
+		backface-visibility: hidden
+		border-radius: 16px
+		z-index: 1
+		&._front
+			border: 4px solid #FFF
+			overflow: hidden
+			._focus &
+				border-color: $yellow
+			._small &
+				border-width: 2px
+				border-radius: 6px
+		&._back
+			transform: rotateY(180deg)
+			background: url('../img/cards/back.png') no-repeat center
+			background-size: contain
+		&._back-waiting
+			background-image: url('../img/cards/back-waiting.png')
+	&__img
+		+size(100%)
+		object-fit: cover
+	&__increase
+		position: absolute
+		bottom: 10px
+		right: 10px
+		+size(28px)
+		display: flex
+		align-items: center
+		justify-content: center
+		background: $yellow
+		border-radius: 50%
+		@extend .transition-active
+		cursor: pointer
+		._disabled &
+			opacity: 0
+	

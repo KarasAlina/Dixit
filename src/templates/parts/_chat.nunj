@@ -1,0 +1,27 @@
+{% macro chat()%}
+    <div class="chat _hide">
+        <div class="chat-wrapper">
+            <div class="chat__label" data-show-text="{{ chatContent.labelShow }}" data-hide-text="{{ chatContent.labelHide }}">
+                <div class="chat__label-wrapper">
+                    {{ chatContent.label }}
+                </div>
+                <div class="chat__bubble">+300</div>
+            </div>
+            <div class="scroll-block">
+                <ul class="chat-list">
+                    {% for item in chatContent.replicas %}
+                        <li class="chat-list-item {% if item.ownReplica == true %} _own-replica{% endif %}">
+                            <div class="chat-list-item__time">{{ item.time }}/</div>
+                            <div class="chat-list-item__name" style="color: {{ item.color }}">{{ item.name }}:</div>
+                            <div class="chat-list-item__text">{{ item.text }}</div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="chat-text-field">
+                <input type="text" class="chat-text-field__input" placeholder="{{ chatContent.inputText }}">
+                <button class="chat-text-field__button" type="submit"></button>
+            </div>
+        </div>
+    </div>
+{% endmacro %}

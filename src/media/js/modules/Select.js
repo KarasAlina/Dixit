@@ -37,7 +37,3 @@ option.on('click', function() {
 		.siblings()
 		.removeClass('_selected');
 });
-
-$('.card').on('click', function() {
-	$(this).toggleClass('_active');
-});
