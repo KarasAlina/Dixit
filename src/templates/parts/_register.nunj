@@ -25,8 +25,6 @@
             <img src="media/img/register/dandelion-3.svg" alt="" class="register-dandelions__item _v2">
             <img src="media/img/register/dandelion-2.svg" alt="" class="register-dandelions__item _v3">
         </div>
-        {# <div class="section__background register__background _animated"></div> #}
-        <button data-slider-next style="position: absolute; top: 50%;left:50%; z-ondex: 1000;">next</button>
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-5 col-lg-5 offset-lg-1">
