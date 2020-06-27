@@ -1,22 +1,26 @@
 .players
     display: flex
     flex-direction: column
-    align-items: center
+    +min-screen($screen-md)
+        align-items: center
 .player
     display: flex
-    flex-direction: column
     align-items: center
     color: #FFF
     &:not(:last-of-type)
         margin-bottom: 20px
+    +min-screen($screen-md)
+        flex-direction: column
     &__avatar
         position: relative
         display: block
         +size(60px)
-        margin-bottom: 5px
+        margin-right: 20px
         border-radius: 36px
         +min-screen($screen-md)
             +size(80px)
+            margin-right: 0
+            margin-bottom: 5px
         ._loading &
             display: none
         ._leader &
@@ -37,7 +41,11 @@
             border: 3px solid rgba(255, 255, 255, 0.2)
             ._leader &
                 border-color: $yellow
-
+    &-row
+        display: flex
+        flex-direction: column
+        +min-screen($screen-md)
+            align-items: center 
     &__name
         font-size: 3.3vh
         line-height: 1
@@ -55,13 +63,17 @@
         align-items: center
         justify-content: center
         +size(60px)
-        transform: scale(0.9)
-        margin-bottom: 5px
+        margin-right: 20px
         border-radius: 36px
         overflow: hidden
         +min-screen($screen-md)
             +size(80px)
             transform: scale(1)
+            margin-right: 0
+            margin-bottom: 5px
+        canvas,
+        &__progress
+            +size(100% !important)
         ._loading &
             display: flex
         &__inner
@@ -77,7 +89,7 @@
             background-size: cover
             border-radius: 36px
             +min-screen($screen-md)
-                 +size(76px)
+                +size(76px)
         &__hourglass
             +size(18px,27px)
             transition: 0.3s

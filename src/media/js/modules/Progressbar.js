@@ -10,7 +10,7 @@ function Progressbar() {
 		.on('circle-animation-progress', function(event, progress, stepValue) {
 			$(this)
 				.parents('.player')
-				.children('.player__percents')
+				.find('.player__percents')
 				.text(String(stepValue.toFixed(2)).substr(2) + '%');
 		});
 

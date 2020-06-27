@@ -1,25 +1,39 @@
 .game-played
-    padding-top: 10px
     color: #FFF
     margin-bottom: 10px
+    +min-screen($screen-md)
+        padding: 10px 30px 20px
     &__top-row
         display: flex
         justify-content: space-between
         align-items: flex-end
     &__row
         margin: 0 0 15px
-        flex-wrap: nowrap
+        &:last-of-type
+            flex-wrap: wrap
+        +min-screen($screen-md)
+            flex-wrap: nowrap
+            &:last-of-type
+                flex-wrap: nowrap
     &__name
+        margin-bottom: 20px
         font-size: 24px
-        +min-screen($screen-lg)
+        +min-screen($screen-md)
+            margin-bottom: 0
             font-size: 44px
     &__date
+        margin-bottom: 20px
         font-size: 18px
-        +min-screen($screen-lg)
+        +min-screen($screen-md)
+            margin-bottom: 0
             font-size: 24px
     &-win
         display: flex
-        flex-wrap: wrap
+        +max-screen($screen-sm)
+            width: 100%
+            margin-bottom: 10px 
+        +min-screen($screen-md)
+            flex-wrap: wrap
         &__icon
             margin-right: 5px
         &__text
@@ -28,12 +42,14 @@
         &-score
             display: flex
             align-items: center
-            width: 100%
+            margin-left: auto
             padding-left: 27px
             font-size: 16px
             line-height: 1
-            +min-screen($screen-lg)
+            +min-screen($screen-md)
+                width: 100%
                 font-size: 24px
+                margin-left: 0
             &__icon
                 margin-left: 4px
                 margin-top: -2px

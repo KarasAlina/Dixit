@@ -1,8 +1,32 @@
 .choose-card
-	max-width: 100%
-	width: 100%
 	+min-screen($screen-md)
 		margin-bottom: 50px
+	&-wrapper
+		flex-wrap: wrap
+		justify-content: space-between
+		
+		+max-screen($screen-xs)
+			width: 100%
+		+max-screen($screen-sm)
+			&:after
+				content: ''
+				flex: auto
+			.card-wrapper
+				display: flex
+				flex: 0 0 33.3333%
+				justify-content: center
+				&:nth-child(3n+1)
+					justify-content: flex-start
+				&:nth-child(3n)
+					justify-content: flex-end
+		+min-screen($screen-md)
+			flex-wrap: nowrap
+	&__card
+		+screen($screen-sm, $screen-ipad - 1px)
+			width: 21.813vw
+			height: 34.375vw			
+		+max-screen($screen-sm)
+			margin: 0 0 20px		
 	&-gallery
 		width: 100%
 		&-wrapper
@@ -35,30 +59,47 @@
 				// 	.card
 				// 		transform: scale(1)
 		&__card
-			width: 42.5vh
-			height: 63.8vh
+			+size(53.750vw,81.250vw)
+			margin: auto
+			.card__inner,
+			.card__face
+				border-radius: 20px
+			+screen($screen-sm, $screen-ipad)
+				width: 23.813vw
+				height: 35.375vw
+			+min-screen($screen-md)
+				width: 42.5vh
+				height: 63.8vh
+				.card__inner,
+				.card__face
+					border-radius: $border-radius-1
 		&__closer
 			top: -5px
 			right: -5px
 			transform: scale(0.78)
 			opacity: 0
+			background: #FFF
 			@extend .transition-active
 			.closer-button__background
 				fill: #FFF
 			.closer-button__cross
 				fill: $grey-middle
 	&__text
-		margin-top: 20px
 		margin-bottom: 20px
 		font-size: 18px
-		+min-screen($screen-md)
+		color: #FFF
+		+min-screen($screen-sm)
+			font-size: 36px
+		+min-screen($screen-ipad)
 			margin-top: 11vh
 			margin-bottom: 4.16vh
 			font-size: 44px
-			color: #FFF
+			
 	&-game-title-block.game-title-block
 		margin-bottom: 23px
 		+min-screen($screen-md)
 			margin-bottom: 14.8vh
+		+max-screen($screen-sm)
+			padding: 16px 0 7px
 	&__button
 		width: 180px

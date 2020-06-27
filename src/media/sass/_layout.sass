@@ -8,18 +8,16 @@
 		flex: 1 1 auto
 
 .container
-	display: flex
+	display: block
 	width: 1280px
 	max-width: 100%
-	margin: auto
-	flex-wrap: wrap
 	padding: 0 
 	z-index: 10
 	padding-left: $site-paddings-sm 
 	padding-right: $site-paddings-sm 
 	+min-screen($screen-sm)
-		padding-left: $indent-col-xs
-		padding-right: $indent-col-xs
+		padding-left: $indent-col-sm
+		padding-right: $indent-col-sm
 	+min-screen($screen-md)
 		padding-left: $indent-col-sm
 		padding-right: $indent-col-sm
@@ -31,21 +29,19 @@
 
 .row
 	display: flex
-	flex: 1 1 100%
-	width: 100%
 	flex-wrap: wrap
 	position: relative
-	margin-left: -$site-paddings-sm 
-	margin-right: -$site-paddings-sm 
+	margin-left: -$indent-col-xs 
+	margin-right: -$indent-col-xs
 	+min-screen($screen-sm)
 		margin-left: -$indent-col-xs
 		margin-right: -$indent-col-xs
 	+min-screen($screen-md)
-		margin-left: -$indent-col-sm
-		margin-right: -$indent-col-sm
-	+min-screen($screen-lg)
 		margin-left: -$indent-col-md
 		margin-right: -$indent-col-md
+	+min-screen($screen-lg)
+		margin-left: -$indent-col-lg
+		margin-right: -$indent-col-lg
 
 =col($max-cols)
 	@for $i from 1 through $max-cols
@@ -69,8 +65,8 @@
 		+min-screen($screen-sm)
 			@for $i from 1 through $cols-total
 				&-#{$i}
-					padding-right: $indent-col-sm
-					padding-left: $indent-col-sm
+					padding-right: $indent-col-xs
+					padding-left: $indent-col-xs
 			+col($cols-total)
 	&-md
 		+min-screen($screen-md)
@@ -97,7 +93,7 @@
 
 .offset
 	&-xs
-		+min-screen($screen-xs)
+		+screen($screen-xs, $screen-sm)
 			+offset-width($cols-total)
 	&-sm
 		+min-screen($screen-sm)
@@ -110,11 +106,11 @@
 			+offset-width($cols-total)
 
 .hidden-xs
-	+max-screen($screen-sm)
+	+max-screen($screen-md - 1px)
 		display: none !important
 
 .visible-xs
 	display: none !important 
-	+max-screen($screen-sm)
+	+max-screen($screen-ipad)
 		display: flex !important 
 		

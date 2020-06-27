@@ -3,11 +3,22 @@
 	&__background
 		background: url('../img/dandelion.svg') no-repeat bottom left
 		background-size: auto 90%
+	&-container
+		+max-screen($screen-md)
+			margin-top: 90px
 	&__title
-		font-size: 16.64vh
-		line-height: 13.86vh
+		margin: 0 auto 8.3vh
+		font-size: 40px
+		line-height: 1
 		font-weight: normal
-		word-spacing: 60px
+		text-align: center
+		+min-screen($screen-md)
+			font-size: 16.64vh
+			line-height: 13.86vh
+			margin: 0
+			font-weight: normal
+			word-spacing: 60px
+			text-align: left
 	&-form
 		position: relative
 		display: flex
@@ -17,7 +28,7 @@
 		padding: 54px 26px 30px
 		background: $grey-dark url('../img/section-bg.png') repeat center
 		background-size: 70%
-		border-radius: 18px
+		border-radius: $border-radius-2
 		+min-screen($screen-lg)
 			padding: 89px 50px 30px
 			border-radius: 32px
@@ -64,7 +75,9 @@
 			font-family: "BloggerSans"
 			a
 				border-bottom: 1px solid  $grey-middle
-
+	&-footer
+		+max-screen($screen-md)
+			display: none
 	&-corners
 		&__corner
 			position: absolute

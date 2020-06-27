@@ -2,8 +2,10 @@
     background: linear-gradient(57.84deg, #C9BEC8 -110.48%, #7A8AC9 107.38%)
     &__background
         background: url('../img/language/column-2.svg') no-repeat center top 5%
-        background-size: 100% auto
+        background-size: cover
         opacity: 1
+        +min-screen($screen-md)
+            background-size: 100% auto
     &-form
         width: 100%
         &__text

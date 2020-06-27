@@ -10,10 +10,15 @@
 		&:first-of-type
 			margin-right: 6.2vw
 	&__apps
-		width: 165px
-		margin-right: calc(27px + 9.722vw)
+		display: inline-block
+		width: 114px
+		+min-screen($screen-md)
+			width: 165px
+			margin-right: calc(27px + 9.722vw)
 		&:first-of-type
-			margin-right: 10px
+			margin-right: auto
+			+min-screen($screen-md)
+				margin-right: 10px
 		&:hover
 			& ~ .footer__phone
 				transform: translateY(-50px)

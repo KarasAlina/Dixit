@@ -7,52 +7,52 @@
 
 
 {% block content %}
-    <div class="game-content _fdc _aic">
+    <div class="game-content _aic _block-xs">
         <div class="game-title-block">
             <div class="game-title-block__suptitle">{{ gameTurn.suptitle }}</div>
             {{ gameTurn.title }}
         </div>
-        <div class="timer" data-timer="1:30">
+        <div class="timer" data-timer="1:30" data-timing="90s">
             <div class="timer__indicator"></div>
             <div class="timer__countdown" data-indicator></div>
             <div class="timer__indicator"></div>
         </div>
-        <div class="choose-card row " data-slider="gallery">
-            <div class="col-xs-12 _flex _jcsb" >
+        <div class="row choose-card _flex" data-slider="gallery">
+            <div class="col-xs-12 col-sm-9 _centered col-md-12 _flex _jcsb choose-card-wrapper" >
                 {{ cards({
                     start: "0",
                     end: "5",
-                    increase: true
+                    increase: true,
+                    galleryWrapper: true,
+                    class: "choose-card__card"
                 })}}
                 
             </div>
-            <div class="col-xs-12">
-                <div class="choose-card-gallery-wrapper">
-                    <div class="choose-card-gallery" data-slider-slides>
-                        {{ cards({
-                            start: "0",
-                            end: "6",
-                            class: "choose-card-gallery__card",
-                            galleryWrapper: true,
-                            close: true,
-                            closeClass: "choose-card-gallery__closer"
-                        })}}
-                    </div>
+            <div class="choose-card-gallery-wrapper">
+                <div class="choose-card-gallery" data-slider-slides>
+                    {{ cards({
+                        start: "0",
+                        end: "6",
+                        class: "choose-card-gallery__card",
+                        galleryWrapper: true,
+                        close: true,
+                        closeClass: "choose-card-gallery__closer"
+                    })}}
                 </div>
             </div>
         </div>
         
-        <div class="row _flex _full-width">
-            <div class="col-xs-9">
+        <div class="row">
+            <div class="col-xs-9 col-sm-6 offset-sm-2 offset-md-0 col-md-9">
                 {{ input({
                     placeholder: "Write your association",
                     fullWidth: true
                 })}}
             </div>
-            <div class="col-xs-3">
+            <div class="col-xs-3 col-sm-2 col-md-3 _jcfe">
                 {{ button({
                     text: gameTurn.send,
-                    class: "_full-width"
+                    class: "button-send-association _full-width"
                 })}}
             </div>
         </div>

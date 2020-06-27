@@ -17,6 +17,14 @@ const OPTIONS_BY_TYPE = {
 		centerMode: true,
 		infinite: false,
 		focusOnSelect: true,
+		responsive: [
+			{
+				breakpoint: 560,
+				settings: {
+					slidesToShow: 1,
+				},
+			},
+		],
 	},
 	backgrounds: {
 		slidesToShow: 3,

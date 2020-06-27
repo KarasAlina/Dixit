@@ -20,7 +20,7 @@
                 {% endfor %}
             </div>
             <button data-slider-prev style="position: absolute; top: 50%;left:50%; z-ondex: 1000;">prev</button>
-            <div class="container lobby__container _max-height-full">
+            <div class="container lobby__container _max-height-full section-container">
                 <div class="row _max-height-full">
                     <div class="col-xs-12 col-md-8 col-lg-8 _centered _max-height-full">
                         <div class="lobby-table bordered-block">

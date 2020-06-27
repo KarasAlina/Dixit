@@ -3,10 +3,21 @@
     &__background
         background: url('../img/lobby/lobby-bg.png') no-repeat top -20vh left -20vw
         background-size: auto 115%
+        +max-screen($screen-sm)
+            background-size: cover
     &__container
         margin: 120px auto 0 
     &-table
         height: calc(100% + 50px)
-        padding-left: 70px
-        padding-right: 22px
+        +min-screen($screen-md)
+            padding-left: 70px
+            padding-right: 22px
+        +max-screen($screen-sm)
+            .scroll-block
+                &-wrapper
+                    width: calc(100% + 20px)
+                    margin-left: -10px
+                padding: 0
+                &::-webkit-scrollbar
+                    display: none
         

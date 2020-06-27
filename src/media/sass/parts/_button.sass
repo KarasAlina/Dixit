@@ -1,88 +1,120 @@
 .button
-    display: flex
-    padding: 0 30px
-    max-width: 100%
-    align-items: center
-    justify-content: center
-    height: $button-height-sm
-    background: $yellow
-    font-size: 24px
-    line-height: 1
-    text-transform: uppercase
-    font-family: 'Paperfiller'
-    color: $grey-dark
-    border-radius: 30px
-    border: none
-    cursor: pointer
-    +min-screen($screen-lg)
-        height: 60px
-        font-size: 32px
-        border-radius: 36px
-    &._big
-        +min-screen($screen-lg)
-            height: 80px
-    &._login
-        width: 100px
-        +min-screen($screen-lg)
-            width: 180px
-            border-radius: 22px
-    &._small-text
-        flex-direction: column
-    &__small-text
-        width: 100%
-        font-family: "BloggerSans"
-        font-size: 16px
-        text-transform: none
-    &-square
-        +size($button-height-sm)
-        justify-content: center
-        @extend .gradient-border
-        background-size: $button-height-sm $button-height-sm
-        +min-screen($screen-lg)
-            +size($button-height-md)
-            background-size: $button-height-md $button-height-md
-        &__icon
-            +size(52%)
-            &._home
-                +size(50%)
-            &._message
-                +size(48%)
-            &._exit
-                +size(45%)
-                margin-left: 8px
-        &._exit
-            display: none
-            ._in-game &
-                display: flex
-    &._bordered
-        color: #FFF
-        background-color: $grey-dark
-        border: 2px solid $grey-middle
-    &._dark-border
-        color: $grey-dark
-        background: none
-        border: 1px solid $grey-middle
-    
-    &[disabled]
-        background: $grey-middle
-        pointer-events: none
-        color: inherit
-        cursor: default
-    &-timer
-        max-width: 100%
-        font-size: 24px
-        +min-screen($screen-md)
-            width: 27.778vw
-        +min-screen($screen-lg)
-            font-size: 32px
-        span
-            margin-left: 5px
+	display: flex
+	padding: 0 30px
+	max-width: 100%
+	align-items: center
+	justify-content: center
+	height: $button-height-sm
+	background: $yellow
+	font-size: 24px
+	line-height: 1
+	text-transform: uppercase
+	font-family: 'Paperfiller'
+	color: $grey-dark
+	border-radius: 30px
+	border: none
+	@extend .transition-active
+	cursor: pointer
+	+screen($screen-sm, $screen-ipad)
+		height: 60px
+		font-size: 32px
+		border-radius: 36px
+	+min-screen($screen-lg)
+		height: 60px
+		font-size: 32px
+		border-radius: 36px
+	&:hover
+		background: #FFAD29
+	&._big
+		+screen($screen-sm, $screen-ipad)
+			height: 80px
+		+min-screen($screen-lg)
+			height: 80px
+	&._login
+		width: 100px
+		+screen($screen-sm, $screen-ipad)
+			width: 180px
+			border-radius: 22px
+		+min-screen($screen-lg)
+			width: 180px
+			border-radius: 22px
+	&._small-text
+		flex-direction: column
+	&__small-text
+		width: 100%
+		font-family: "BloggerSans"
+		font-size: 16px
+		text-transform: none
+	&-square
+		+size($button-height-sm)
+		justify-content: center
+		@extend .gradient-border
+		background-size: $button-height-sm $button-height-sm
+		+screen($screen-sm, $screen-ipad)
+			+size($button-height-md)
+			background-size: $button-height-md $button-height-md
+		+min-screen($screen-lg)
+			+size($button-height-md)
+			background-size: $button-height-md $button-height-md
+		&__icon
+			+size(52%)
+			&._home
+				+size(50%)
+			&._message
+				+size(48%)
+			&._exit
+				+size(45%)
+				margin-left: 8px
+		&._exit
+			display: none
+			._in-game &
+				display: flex
+		&._settings
+			+max-screen($screen-sm)
+				&._margin-left
+					margin-left: 10px
+	&._bordered
+		color: #FFF
+		background-color: $grey-dark
+		border: 2px solid $grey-middle
+	&._dark-border
+		color: $grey-dark
+		background: none
+		border: 1px solid $grey-middle
+	
+	&[disabled]
+		background: $grey-middle
+		pointer-events: none
+		color: inherit
+		cursor: default
+	&-timer
+		max-width: 100%
+		font-size: 24px
+		+min-screen($screen-md)
+			width: 27.778vw
+		+min-screen($screen-lg)
+			font-size: 32px
+		span
+			margin-left: 5px
+	&-send-association
+		+max-screen($screen-sm)
+			+size(54px,50px)
+			border-radius: 12px
+			font-size: 0
+			background-image: url('../img/send-2.svg')
+			background-repeat: no-repeat
+			background-position: center
+			background-size: 24px
 ._margin-right
-    margin-right: 25px
-    +min-screen($screen-lg)
-        margin-right: 30px
+	margin-right: 25px
+	+screen($screen-sm, $screen-ipad)
+		margin-right: 30px
+	+min-screen($screen-lg)
+		margin-right: 30px
 ._margin-left
-    margin-left: 25px
-    +min-screen($screen-lg)
-        margin-left: 30px
+	margin-left: 25px
+	+screen($screen-sm, $screen-ipad)
+		margin-left: 30px
+	+min-screen($screen-lg)
+		margin-left: 30px
 

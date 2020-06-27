@@ -1,23 +1,31 @@
 .card
-	+size(124px,186px)
+	+size(22.813vw,34.375vw)
 	perspective: 500px
 	transition: transform 0.5s
 	user-select: none
+	+min-screen($screen-ipad)
+		+size(124px,186px)
 	&[data-card-zooming]
 		cursor: pointer
 	&._focus
-		transform: scale(1.3)
+		transform: scale(1.2)
+		+min-screen($screen-md)
+			transform: scale(1.3)
 	&._disabled
 		filter: grayscale(100%)
 	&._small
-		+size(73px,110px)
+		+size(33px,50px)
+		+min-screen($screen-sm)
+			+size(73px,110px)
 	&__inner
 		position: relative
 		+size(100%)
 		transform-style: preserve-3d
 		transform-origin: center right
 		transition: transform 1s
-		border-radius: 16px
+		border-radius: 7px
+		+min-screen($screen-md)
+			border-radius: 16px
 		._active &
 			transform: translateX(-100%) rotateY(-180deg)
 	&__face
@@ -25,16 +33,23 @@
 		+size(100%)
 		display: block
 		backface-visibility: hidden
-		border-radius: 16px
+		border-radius: 7px
 		z-index: 1
+		+min-screen($screen-md)
+			border-radius: 16px
 		&._front
-			border: 4px solid #FFF
+			border: 2px solid #FFF
 			overflow: hidden
+			+min-screen($screen-md)
+				border-width: 4px
 			._focus &
 				border-color: $yellow
 			._small &
-				border-width: 2px
-				border-radius: 6px
+				border-width: 1px
+				border-radius: 4px
+				+min-screen($screen-md)
+					border-width: 2px
+					border-radius: 6px
 		&._back
 			transform: rotateY(180deg)
 			background: url('../img/cards/back.png') no-repeat center
@@ -48,7 +63,7 @@
 		position: absolute
 		bottom: 10px
 		right: 10px
-		+size(28px)
+		+size(21px)
 		display: flex
 		align-items: center
 		justify-content: center
@@ -58,4 +73,6 @@
 		cursor: pointer
 		._disabled &
 			opacity: 0
+		+min-screen($screen-md)
+			+size(28px)
 	

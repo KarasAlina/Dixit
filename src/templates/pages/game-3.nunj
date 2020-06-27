@@ -5,17 +5,18 @@
 {% from "../parts/_input.nunj" import input %}
 {% from "../parts/_cards.nunj" import cards %}
 {% from "../parts/_chat.nunj" import chat %}
+{% set containerClass = "col-xs-12 col-sm-12 col-md-4 col-lg-4 _centered" %}
 
 
 {% block content %}
-<div class="game-content _fdc _aic _p0">
+<div class="game-content _fdc _aic _p0 _block-xs">
 	<div class="game-title-block">
 		<div class="game-title-block__suptitle">{{ associations.suptitle }}</div>
 		{{ associations.title }}
 	</div>
 
 	<div class="row">
-		<div class="col-xs-12 selected-associations">
+		<div class="col-xs-12 col-md-12 selected-associations">
 			{% for item in associations.selected %}
 			<div class="selected-associations-card-wrapper">
 				<div class="selected-associations__name">{{ item.name }}</div>
@@ -33,7 +34,17 @@
 						</div>
 						<div class="card__face _back _back-waiting"></div>
 					</div>
-
+					
+				</div>
+				<div class="selected-associations-users">
+					{% for user in item.users %}
+						<div class="player selected-associations-users-player">
+							<div class="player__avatar selected-associations-users-player__avatar">
+								<img src="media/img/avatars/avatar-{{ user.avatar }}.png" alt="">
+							</div>
+							<div class="player__name selected-associations-users-player__name">{{ user.name }}</div>
+						</div>
+					{% endfor %}
 				</div>
 			</div>
 

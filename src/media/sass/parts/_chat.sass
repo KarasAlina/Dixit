@@ -3,10 +3,16 @@
     left: 0
     bottom: 0
     display: block
-    width: 25%
-    height: 33%
+    width: 100%
+    height: 50%
     transform: translateY(100%)
     @extend .transition-active
+    +screen($screen-sm, $screen-ipad)
+        width: 50%
+        height: 33%
+    +min-screen($screen-md)
+        width: 25%
+        height: 33%
     &._show
         transform: translateY(0%)
     &-wrapper

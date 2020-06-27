@@ -46,12 +46,16 @@ global.ProjectName = new function ProjectName() { // eslint-disable-line
 		});
 
 		var menu = $('.header-menu-button');
+		var players = $('.header-players-button');
 		var close = $('.header-menu-close')
 		menu.on('click', function(){
 			$(this).parents('.header').toggleClass('_menu-opened');
 		});
+		players.on('click', function(){
+			$(this).parents('.header').toggleClass('_players-opened');
+		});
 		close.on('click', function(){
-			$(this).parents('.header').toggleClass('_menu-opened');
+			$(this).parents('.header').removeClass('_menu-opened _players-opened');
 		});
 	});
 }();

@@ -20,7 +20,7 @@
                 {% endfor %}
             </div>
             <button data-slider-prev style="position: absolute; top: 50%;left:50%; z-ondex: 1000;">prev</button>
-            <div class="container lobby__container _max-height-full">
+            <div class="container lobby__container _max-height-full section-container">
                 <div class="row _max-height-full">
                     <div class="col-xs-12 col-md-8 col-lg-8 _centered _max-height-full">
                         <div class="lobby-table bordered-block">
@@ -33,7 +33,9 @@
                                 <div class="scroll-block">
                                     {% for room in rooms %}
                                         <div class="room grey-block">
-                                            <div class="room__name">{{ room.name }}</div>
+                                            <div class="room__name">
+                                                {{ room.name }}
+                                            </div>
                                             <div class="row room__row">
                                                 <div class="room__block">
                                                     {{ icon({
@@ -62,7 +64,7 @@
                                                     })}}
                                                     <div class="room__text">{{ room.players }}/{{ room.playersTotal }}</div>
                                                 </div>
-                                                <div class="room__block">
+                                                <div class="room__block _half-width-xs">
                                                     {{ icon({
                                                         name: room.lang,
                                                         class: "room__icon",
@@ -71,7 +73,7 @@
                                                     })}}
                                                     <div class="room__text">{{ room.lang }}</div>
                                                 </div>
-                                                <div class="room__block _jcfe">
+                                                <div class="room__block _jcfe _half-width-xs">
                                                     {{ button({
                                                         text: room.button,
                                                         class: "room__button",

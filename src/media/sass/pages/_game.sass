@@ -1,19 +1,26 @@
 .game
+	overflow: auto
 	&-wrapper
 		display: flex
 		min-height: 100vh
 		background: url('../img/game-bg.png') no-repeat center
 		background-size: cover
 		&__container
-			margin-top: 145px
+			margin-top: 95px
+			+min-screen($screen-md)
+				margin-top: 145px
 	&-content
 		display: flex
 		width: 100%
 		margin: 0 auto
 		flex-wrap: wrap
-		padding: 0 $site-paddings-sm 
-		+min-screen($screen-lg)
+		padding: 0 
+		+min-screen($screen-md)
+			display: block
 			padding: 0 $site-paddings-sm 
+		&._block-xs
+			+max-screen($screen-sm)
+				display: block
 		&._fdc
 			flex-wrap: nowrap
 			> *
@@ -27,26 +34,38 @@
 		align-items: center
 		justify-content: center
 		width: 100%
-		height: 70px
-		margin: 0 auto 20px
-		margin-top: -30px
+		min-height: 70px
+		padding: 7px 0
+		margin: 0 auto 10px
 		background: $grey-dark
 		color: #FFF
 		font-size: 26px
 		line-height: 24px
 		letter-spacing: 0.1px
 		text-align: center
-		border-radius: 24px
+		border-radius: $border-radius-1
 		border: 2px solid $wave
+		+min-screen($screen-sm)
+			min-height: 90px
+			font-size: 4vh
+			line-height: 0.9
+			&:not(._full-width)
+				width: 80%
+		+screen($screen-sm, $screen-ipad)
+			padding: 23px 0
+		+min-screen($screen-ipad)
+			&:not(._full-width)
+				width: 60%
 		+min-screen($screen-md)
 			height: 16.64vh
 			margin-top: -6.4vh
 			font-size: 6.1vh
 			line-height: 5.27vh
 			border-radius: 4.99vh
-			&:not(._full-width)
-				width: 80%
+			
 		&._bigger
+			+min-screen($screen-sm)
+				font-size: 5vh
 			+min-screen($screen-md)
 				font-size: 8.87vh
 				line-height: 8.32vh
@@ -76,14 +95,14 @@
 			position: absolute
 			bottom: 100%
 			left: 50%
-			padding: 6px 15px
+			padding: 6px 15px 0
 			transform: translate(-50%, 50%)
 			color: $yellow
 			font-size: 18px
 			border-bottom: none
 			border-top-left-radius: 18px
 			border-top-right-radius: 18px
-			+min-screen($screen-md)
+			+min-screen($screen-sm)
 				width: 207px
 				padding-top: 8px
 				font-size: 24px
@@ -101,8 +120,10 @@
 				background: $grey-dark
 				border: 2px solid $wave
 				border-bottom: none
+				border-top-left-radius: 18px
+				border-top-right-radius: 18px	
 				z-index: -2
-				+min-screen($screen-md)
+				+min-screen($screen-sm)
 					border-top-left-radius: 20px
 					border-top-right-radius: 20px
 			&:after
@@ -114,10 +135,31 @@
 				+size(calc(100% + 4px),50%)
 				background: $grey-dark
 				z-index: -1
-	&__button
-		width: 100%
-		margin: auto
+	&-player-connected
+		display: flex
+		align-items: center
+		margin-bottom: 20px
+		color: #FFF
+		font-size: 18px
+		line-height: 24px
+		opacity: 0
+		transform: translateY(-100%)
+		@extend .transition-active
+		z-index: -1
+		+min-screen($screen-ipad)
+			display: none
+		span
+			margin: 0 3px
+			color: $yellow
 		+min-screen($screen-md)
+			display: none
+		&._show
+			opacity: 1
+			transform: translateY(0)
+	&__button
+		width: 70%
+		margin: auto
+		+min-screen($screen-sm)
 			width: 400px
 			max-width: 100%
 	&-winning-score
@@ -126,7 +168,7 @@
 		font-size: 32px
 		text-align: center
 		color: #FFF
-		+min-screen($screen-md)
+		+min-screen($screen-sm)
 			width: 120px
 			padding: 58px 0 28px
 			margin-bottom: 25px
@@ -140,6 +182,8 @@
 		margin-bottom: 35px
 		flex-direction: row-reverse
 	&-card
+		+max-screen($screen-sm - 1px)
+			+size(106px,160px)
 		&__inner
 			box-shadow: 0px 10.1491px 10.1491px rgba(0, 0, 0, 0.25)
 			animation: cardsLoading 6s infinite forwards

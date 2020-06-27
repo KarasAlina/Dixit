@@ -17,7 +17,7 @@
 			<link rel="stylesheet" href="media/css/screen.css?hash" />
 		{% endblock stylesheets %}
 	</head>
-	<body>
+	<body class="game">
 		<div class="wrapper">
 			<div class="wrapper__content">
                 {{ header({ class: "_authorized _in-game"}) }}
@@ -25,7 +25,7 @@
                     <div class="container game-wrapper__container">
                         <div class="row">
                             {% if players != false %}
-                            <div class="col-md-2 col-lg-2">
+                            <div class="col-md-2 col-lg-2 hidden-xs">
                                 {{ playersBlock({
                                     start: "0",
                                     end: "5"
@@ -33,7 +33,7 @@
                             </div>
                             {% endif %}
                             {% if players != false %}
-                                <div class="col-xs-12 col-md-8 col-lg-8">
+                                <div class="col-xs-12 col-sm-12 _centered col-md-8 col-lg-8">
                                 {% elif containerClass != false %}
                                     <div class="{{ containerClass }}">                                
                                 {% else %}
@@ -43,7 +43,7 @@
                                     {% endblock content %}
                                 </div>
                             {% if players != false %}
-                            <div class="col-md-2 col-lg-2 _jcfe">			
+                            <div class="col-md-2 col-lg-2 _jcfe hidden-xs">			
                                 {{ playersBlock({
                                     start: "5",
                                     end: "10"
@@ -56,6 +56,7 @@
 			</div>
 		</div>
 		{% include '../parts/_popups.nunj' %}
+        {% include '../parts/_user-time-popup.nunj' %}
 		{% block scripts %}
 			<script src="media/js/bundle.js?hash"></script>
 		{% endblock scripts %}

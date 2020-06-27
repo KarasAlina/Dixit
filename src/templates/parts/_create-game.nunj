@@ -14,7 +14,7 @@
                 {% endfor %}
                 <img src="media/img/create-game/constellation.svg" class="create-game-stars__item _constellation" alt="">
             </div>
-            <div class="container">
+            <div class="container create-game-container">
                 <div class="row">
                     <div class="col-xs-12 col-md-6 col-lg-6 _centered">
                         <div class="create-game-form bordered-block">
@@ -68,7 +68,7 @@
                                 </div>
                             </div>
                             <div class="create-game-form-row _flex _jcsb _aic">
-                                <div class="col">
+                                <div class="col _full-width-xs">
                                     <div class="select select-languages create-game-form__select">
                                         <div class="select__init select-languages__init" data-value="-1">
                                             <span>Language</span>

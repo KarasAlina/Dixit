@@ -14,11 +14,13 @@
         </div>
 
         <div class="choose-card row " data-slider="gallery">
-            <div class="col-xs-12 _flex _jcsb" >
+            <div class="col-xs-12 _flex _jcsb choose-card-wrapper" >
                 {{ cards({
                     start: "0",
                     end: "5",
-                    increase: true
+                    increase: true,
+                    galleryWrapper: true,
+                    class: "choose-card__card"
                 })}}
                 
             </div>

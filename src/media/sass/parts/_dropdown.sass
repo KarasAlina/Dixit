@@ -36,15 +36,17 @@
 		position: absolute
 		width: 100%
 		top: 0
-		height: 300px
+		height: 240px
 		padding: 60px 18px 25px
 		background: $grey-light
 		opacity: 0
 		pointer-events: none
 		will-change: transform
-		border-radius: 18px
+		border-radius: $border-radius-2
 		z-index: 1
 		@extend .transition-active
+		+min-screen($screen-md)
+			height: 300px
 		+min-screen($screen-lg)
 			padding: 60px 30px 25px
 		._opened &
@@ -67,9 +69,11 @@
 				content: ''
 				flex: 1 1 auto
 			&-check
-				flex: 0 0 40%
+				flex: 0 0 47%
 				height: 30px
 				margin-bottom: 10px
+				+min-screen($screen-md)
+					flex: 0 0 40%
 				&__label
 					display: block
 					position: relative
@@ -81,11 +85,13 @@
 					&:after,
 					&:before
 						content: ''
-						+size(30px)
+						+size(20px)
 						display: block
 						position: absolute
 						right: 0
 						top: 0
+						+min-screen($screen-md)
+							+size(30px)
 					&:after
 						background: url('../img/add.svg') no-repeat center
 						background-size: contain

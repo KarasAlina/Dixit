@@ -9,6 +9,10 @@
 	border-radius: 12px
 	border: 1px solid transparent
 	box-sizing: border-box
+	+screen($screen-sm, $screen-ipad)
+		+size(100%,$button-height-md)
+		padding: 0 30px
+		border-radius: 16px
 	+min-screen($screen-lg)
 		+size(100%,$button-height-md)
 		padding: 0 30px
@@ -55,6 +59,7 @@
 					fill: $yellow
 	&-number
 		padding-left: calc(#{$button-height-sm} + 19px)
+		border-radius: 20px
 		border-top-left-radius: 50px
 		border-bottom-left-radius: 50px
 		text-align: center
@@ -78,17 +83,19 @@
 		border: none
 		cursor: pointer
 		&._sub
-			left: calc(#{$button-height-sm} + 3px)
-			+min-screen($screen-lg)
+			left: calc(#{$button-height-sm} + 22px)
+			+min-screen($screen-md)
 				left: calc(#{$button-height-md} + 3px)
 		&._add
-			right: 16px
+			right: 22px
+			+min-screen($screen-md)
+				right: 16px
 	&-check-pin
 		width: 125px
 		padding-left: 36px
 		padding-right: 25px
 		font-size: 16px
-		+min-screen($screen-lg)
+		+min-screen($screen-md)
 			font-size: 22px
 			line-height: 24px
 			padding-left: 43px

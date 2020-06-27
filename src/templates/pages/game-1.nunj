@@ -13,6 +13,15 @@
             {{ startGame.playersTotal }}
             {{ startGame.text2 }}
         </div>
+        <div class="game-player-connected _show">
+            {{ icon({
+                name: "out-yellow",
+                width: "14",
+                height: "14"
+            })}}
+            <span> {{ startGame.playerName }} </span>
+            {{ startGame.connected }}
+        </div>
         <div class="game-winning-score">
             {{ startGame.winningScore }}
             {{ icon({

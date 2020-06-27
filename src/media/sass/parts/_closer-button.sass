@@ -6,20 +6,31 @@
 	border: none
 	background: none
 	cursor: pointer
+	border-radius: $border-radius-2
+	border-top-left-radius: 0
+	border-bottom-right-radius: 0
+	background: $grey-middle
 	z-index: 10
+	+min-screen($screen-md)
+		border-radius: $border-radius-1
+		border-top-left-radius: 0
+		border-bottom-right-radius: 0
 	&__background
 		fill: $grey-middle
 		@extend .transition-active
 	&__cross
 		fill: #FFF
 		@extend .transition-active
-	&:hover 
-		.closer-button__background
-			fill: $yellow
-			@extend .transition-hover
+	&:hover 	
+		background: $yellow
+		@extend .transition-hover
 		.closer-button__cross
 			fill: $grey-dark
 			@extend .transition-hover
 	&._in-bordered-block
-		top: -40px
-		right: -40px
+		top: -30px
+		right: -30px
+		background: $wave
+		+min-screen($screen-md)
+			top: -40px
+			right: -40px

@@ -1,13 +1,14 @@
 {
 	"headerItem": {
 		"rules": "Game rules",
-		"results": "Previous<br> results",
+		"results": "Previous<br class='hidden-xs'> results",
 		"home": "Home",
 		"support": "Support",
 		"privacyPolicy": "Политика конфиденциальности",
 		"privacyPolicyLink": "/",
 		"termsOfUse": "Terms of Use",
-		"termsOfUseLink": "/"
+		"termsOfUseLink": "/",
+		"exit": "exit"
 	},
 	"languages": [
 		{
@@ -48,7 +49,7 @@
 		}
 	},
 	"registerContent": {
-		"title": "Создать<br> учeтную<br> запись"
+		"title": "Создать<br class='hidden-xs'> учeтную<br class='hidden-xs'> запись"
 	},
 	"chatContent": {
 		"label": "chat",
@@ -136,8 +137,8 @@
 	"createGameContent": {
 		"title": "New Game",
 		"label1": "Waiting time for other players to join the game (min)",
-		"label2": "Number of players <br>(max 11)",
-		"label3": "Point to win <br>(max 1000)",
+		"label2": "Number of players <br class='hidden-xs'>(max 11)",
+		"label3": "Point to win <br class='hidden-xs'>(max 1000)",
 		"button": "Create game",
 		"usePin": "Use pin"
 	},
@@ -347,7 +348,9 @@
 		"playersTotal": "11",
 		"text2": " are ready",
 		"button": "start game",
-		"winningScore": "1000"
+		"winningScore": "1000",
+		"playerName": "PlayerName",
+		"connected": "connected"
 	},
 	"players": [
 		{
@@ -421,29 +424,133 @@
 		"selected": [
 			{
 				"name": "Username 1",
-				"card": "1"
+				"card": "1",
+				"users": [
+					{
+						"avatar": "1",
+						"name": "Username_123"
+					},
+					{
+						"avatar": "2",
+						"name": "Username_123"
+					},
+					{
+						"avatar": "3",
+						"name": "Username_123"
+					},
+					{
+						"avatar": "4",
+						"name": "Username_123"
+					}
+				]
 			},
 			{
 				"name": "Username 2",
 				"card": "2",
-				"class": "_active"
+				"class": "_active",
+				"users": [
+					{
+						"avatar": "1",
+						"name": "Username_123"
+					},
+					{
+						"avatar": "2",
+						"name": "Username_123"
+					},
+					{
+						"avatar": "3",
+						"name": "Username_123"
+					}
+				]
 			},
 			{
 				"name": "Username 3",
-				"card": "3"
+				"card": "3",
+				"users": [
+					{
+						"avatar": "1",
+						"name": "Username_123"
+					},
+					{
+						"avatar": "2",
+						"name": "Username_123"
+					},
+					{
+						"avatar": "3",
+						"name": "Username_123"
+					},
+					{
+						"avatar": "4",
+						"name": "Username_123"
+					}
+				]
 			},
 			{
 				"name": "Username 4",
-				"card": "4"
+				"card": "4",
+				"users": [
+					{
+						"avatar": "1",
+						"name": "Username_123"
+					},
+					{
+						"avatar": "2",
+						"name": "Username_123"
+					},
+					{
+						"avatar": "3",
+						"name": "Username_123"
+					},
+					{
+						"avatar": "4",
+						"name": "Username_123"
+					}
+				]
 			},
 			{
 				"name": "Username 5",
 				"card": "5",
-				"class": "_active"
+				"class": "_active",
+				"users": [
+					{
+						"avatar": "1",
+						"name": "Username_123"
+					},
+					{
+						"avatar": "2",
+						"name": "Username_123"
+					},
+					{
+						"avatar": "3",
+						"name": "Username_123"
+					},
+					{
+						"avatar": "4",
+						"name": "Username_123"
+					}
+				]
 			},
 			{
 				"name": "Username 6",
-				"card": "6"
+				"card": "6",
+				"users": [
+					{
+						"avatar": "1",
+						"name": "Username_123"
+					},
+					{
+						"avatar": "2",
+						"name": "Username_123"
+					},
+					{
+						"avatar": "3",
+						"name": "Username_123"
+					},
+					{
+						"avatar": "4",
+						"name": "Username_123"
+					}
+				]
 			}
 		],
 		"yourCards": "Your<br> Cards"
@@ -726,6 +833,10 @@
 				"title": "Dutch"
 			}
 		]
+	},
+	"userTimePopup": {
+		"name": "Username_123",
+		"selectCard": "select card"
 	},
 	"winners": [
 		{

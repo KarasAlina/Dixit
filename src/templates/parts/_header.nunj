@@ -1,5 +1,6 @@
 {% from "../parts/_button.nunj" import button %}
 {% from "../parts/_icon.nunj" import icon %}
+{% from "../parts/_players.nunj" import playersBlock %}
 
 
 {% macro header(props) %}
@@ -7,7 +8,7 @@
 <header class="header {{ props.class }}">
 	<div class="container">
 		<div class="row _aic">
-			<div class="col-xs-6 col-lg-6">
+			<div class="col-xs-4 col-lg-6">
                 {{ button({
                     type: "square",
                     icon: "menu",
@@ -80,13 +81,43 @@
                                 tag: "div"
                             }) }}
                             {{ headerItem.rules }}
-                        </div>      
+                        </div>   
+                        <a href="/" class="header-menu-nav__item header-menu-results">
+                            {{ button({
+                                type: "square",
+                                icon: "eye",
+                                class: "_margin-right "
+                            }) }}
+                            {{ headerItem.results }}
+                        </a>   
+                        <a href="/" class="header-menu-nav__item header-menu-exit">
+                            {{ button({
+                                type: "square",
+                                icon: "exit",
+                                class: "_exit _margin-right"
+                            }) }}
+                            {{ headerItem.exit }}
+                        </a>
                     </nav>
                     <div class="header-menu__row">
                         <a href="{{ headerItem.privacyPolicyLink }}" class="header-menu__simple-link">{{ headerItem.privacyPolicy }}</a>
                         <br>
                         <a href="{{ headerItem.termsOfUseLink }}" class="header-menu__simple-link">{{ headerItem.termsOfUse }}</a>
                     </div>
+                </div>
+                <div class="header-players-wrapper">
+                    <div class="header-menu-close header-players-close">
+                        {{ icon({
+                            name: "cross",
+                            width: "20",
+                            height: "20"
+                        })}}
+                    </div>
+                    {{ playersBlock({
+                        start: "0",
+                        end: "10",
+                        class: "header-players"
+                    })}}
                 </div>
                 <div class="header-offside _flex _aic">
                     {{ button({
@@ -112,7 +143,7 @@
                         {{ headerItem.rules }}
                     </div>
                 </div>
-                <div class="header-results">
+                <div class="header-results hidden-xs">
                     {{ button({
                         type: "square",
                         icon: "eye",
@@ -122,7 +153,7 @@
                 </div>
 			</div>
 
-			<div class="col-xs-6 col-lg-6 _flex _jcfe _aic">
+			<div class="col-xs-8 col-lg-6 _flex _jcfe _aic _pl0-xs">
                 <div class="header-unauthorized _flex _jcfe _aic">
                     <div class="select select-languages-header hidden-xs">
                         <div class="select__init select-languages-header__init" data-value="-1">
@@ -167,12 +198,17 @@
                     {{ button({
                         type: "square",
                         icon: "settings",
-                        class: "_margin-left"
+                        class: "_settings _margin-left hidden-xs"
                     }) }}
                     {{ button({
                         type: "square",
                         icon: "exit",
-                        class: "_exit _margin-left"
+                        class: "_exit _margin-left hidden-xs"
+                    }) }}
+                    {{ button({
+                        type: "square",
+                        icon: "players-grey",
+                        class: "header-players-button _margin-left visible-xs"
                     }) }}
                 </div>
 			</div>

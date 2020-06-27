@@ -1,38 +1,68 @@
 .create-game
-    background: linear-gradient(180deg, #193A41 0%, #1E384B 100%)
-    &__background
-        background: url('../img/create-game/create-game-bg.png') no-repeat top 10% center
-        background-size: 100%
-    &-form
-        display: flex
-        position: relative
-        flex-direction: column
-        align-items: center
-        width: 100%
-        &-row
-            width: 100%
-            margin-bottom: 20px
-            +min-screen($screen-lg)
-                margin-bottom: 50px
-                &:last-of-type
-                    margin-bottom: 65px
-            &__col
-                width: 150px
-        &__text
-            margin-bottom: 3px
-            min-height: 32px
-            color: #FFF
-            font-family: "BloggerSans"
-            font-size: 12px
-            text-align: center
-            +min-screen($screen-lg)
-                margin-bottom: 8px
-        &__checkbox
-            margin-right: 20px
-        &__button
-            width: 100%
-            +min-screen($screen-md)
-                width: 80%
+	background: linear-gradient(180deg, #193A41 0%, #1E384B 100%)
+	&__background
+		background: url('../img/create-game/create-game-bg.png') no-repeat top 10% center
+		background-size: cover
+		+min-screen($screen-md)
+			background-size: 100%
+	&-container
+		+max-screen($screen-sm)
+			max-height: 100%
+			padding-top: 158px
+			padding-bottom: 40px
+			overflow: auto
+			align-items: center
+			*
+				flex-shrink: 0
+
+	&-form
+		display: flex
+		position: relative
+		flex-direction: column
+		align-items: center
+		width: 100%
+		flex: 0 1 auto
+		+max-screen($screen-sm)
+			*
+				flex-shrink: 0
+		&-row
+			width: 100%
+			margin-bottom: 20px
+			+max-screen($screen-sm)
+				flex-direction: column
+				flex-shrink: 0
+			+min-screen($screen-md)
+				margin-bottom: 50px
+				&:last-of-type
+					margin-bottom: 65px
+			&__col
+				width: 100%
+				margin-bottom: 20px
+				&:last-of-type
+					margin-bottom: 0
+				+min-screen($screen-sm)
+					width: 150px
+					margin-bottom: 0
+		&__text
+			margin-bottom: 3px
+			color: #FFF
+			font-family: "BloggerSans"
+			font-size: 12px
+			text-align: center
+			+min-screen($screen-md)
+				min-height: 32px
+				margin-bottom: 8px
+		&__select
+			margin-bottom: 20px
+			+min-screen($screen-md)
+				margin-bottom: 0
+		&__checkbox
+			margin-right: 20px
+		&__button
+			width: 100%
+			+min-screen($screen-md)
+				width: 80%
 
 
-        
+
+		

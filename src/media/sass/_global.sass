@@ -11,6 +11,9 @@ body
 	font-weight: normal
 	color: $grey-dark
 	letter-spacing: 0.1px
+	height: calc(var(--vh, 1vh) * 100)
+	+max-screen($screen-sm)
+		overflow: hidden
 
 .clearfix
 	// zoom: 1
@@ -132,13 +135,16 @@ body
 ._aifs
 	align-items: flex-start
 
+._aife
+	align-items: flex-end
+
 .gradient-border
 	display: flex
 	align-items: center
 	background: url('../img/button-border.svg') no-repeat center
 	background-color: rgba($grey-dark, 0.3)
 	background-size: contain
-	border-radius: 18px
+	border-radius: $border-radius-2
 	border: none
 	cursor: pointer
 	@extend .transition-active
@@ -151,6 +157,10 @@ body
 ._full-width
 	width: 100%
 
+._full-width-xs
+	+max-screen($screen-sm)
+		width: 100%
+
 ._centered
 	margin: 0 auto
 
@@ -159,14 +169,20 @@ body
 	position: relative
 	background: $grey-dark url('../img/section-bg.png') repeat center
 	background-size: 70%
-	border-radius: 18px
-	border: 40px solid $grey-dark
-	border-image: url('../img/bg-image.png') 40 round round
-	+min-screen($screen-lg)
+	border-radius: $border-radius-2
+	border: 30px solid transparent
+	border-image: url('../img/bg-image-2.png') 30 round round
+	-webkit-border-image: url('../img/bg-image-2.png') 30 round round
+	-o-border-image: url('../img/bg-image-2.png') 30 round round
+	-moz-border-image: url('../img/bg-image-2.png') 30 round round
+	+min-screen($screen-md)
 		padding: 10px 30px
-		border-radius: 24px
+		border-radius: $border-radius-1
 		border: 40px solid $grey-dark
 		border-image: url('../img/bg-image.png') 40 round round
+		-webkit-border-image: url('../img/bg-image.png') 40 round round
+		-o-border-image: url('../img/bg-image.png') 40 round round
+		-moz-border-image: url('../img/bg-image.png') 40 round round
 	&__title
 		margin-bottom: 20px
 		font-size: 40px
@@ -191,3 +207,11 @@ body
 
 ._p0
 	padding: 0
+
+._order-1
+	+max-screen($screen-ipad)
+		order: -1
+
+._pl0-xs
+	+max-screen($screen-sm)
+		padding-left: 0
