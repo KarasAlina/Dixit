@@ -2,7 +2,7 @@
     display: flex
     justify-content: center
     margin: 26px 0 10px
-    +min-screen($screen-md)
+    +min-screen($screen-lg)
         margin: 23px 0 50px
     &__name
         color: #FFF
@@ -28,18 +28,18 @@
         margin-bottom: 20px
         box-shadow: 0px 10.1491px 10.1491px rgba(0, 0, 0, 0.25)
         border-radius: 16px
-        +min-screen($screen-ipad)
-            +size(15.597vw,21.361vw)
         +min-screen($screen-md)
+            +size(15.597vw,21.361vw)
+        +min-screen($screen-lg)
             +size(11.597vw,17.361vw)
             margin-bottom: 21px
         ._winner &
             +size(29.375vw,43.750vw)
             margin-bottom: 10px
-            +min-screen($screen-ipad)
+            +min-screen($screen-md)
                 +size(16.917vw,22.444vw)
                 margin-bottom: 20px
-            +min-screen($screen-md)
+            +min-screen($screen-lg)
                 +size(12.917vw,19.444vw)
                 margin-bottom: 21px
         &-wrapper
@@ -48,11 +48,11 @@
             align-items: center
             &._winner
                 margin: 0 2.500vw
-                +min-screen($screen-md)
+                +min-screen($screen-lg)
                     margin: 0 3.3vw
             &:not(._winner)
                 margin: 30px 0 0
-                +min-screen($screen-md)
+                +min-screen($screen-lg)
                     margin-top: 36px
     &-winners
         display: flex
@@ -66,7 +66,7 @@
             &:not(:last-of-type)
                 margin-left: -15px
                 margin-bottom: 0
-                +min-screen($screen-md)
+                +min-screen($screen-lg)
                     margin-left: -27px
             &__avatar
                 +size(100%)

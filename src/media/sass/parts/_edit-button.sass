@@ -5,9 +5,12 @@
     justify-content: center
     background: $yellow
     border-radius: 50%
-    +min-screen($screen-lg)
+    @extend .transition-active
+    +min-screen($screen-xlg)
         +size(40px)
     &__icon
         +size(60%)
-        +min-screen($screen-lg)
+        +min-screen($screen-xlg)
              +size(45%)
+    &:hover
+        background: #FFAD29

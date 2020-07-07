@@ -1,7 +1,7 @@
 .game-played
     color: #FFF
     margin-bottom: 10px
-    +min-screen($screen-md)
+    +min-screen($screen-sm)
         padding: 10px 30px 20px
     &__top-row
         display: flex
@@ -11,20 +11,20 @@
         margin: 0 0 15px
         &:last-of-type
             flex-wrap: wrap
-        +min-screen($screen-md)
+        +min-screen($screen-sm)
             flex-wrap: nowrap
             &:last-of-type
                 flex-wrap: nowrap
     &__name
         margin-bottom: 20px
         font-size: 24px
-        +min-screen($screen-md)
+        +min-screen($screen-sm)
             margin-bottom: 0
             font-size: 44px
     &__date
         margin-bottom: 20px
         font-size: 18px
-        +min-screen($screen-md)
+        +min-screen($screen-sm)
             margin-bottom: 0
             font-size: 24px
     &-win
@@ -32,7 +32,7 @@
         +max-screen($screen-sm)
             width: 100%
             margin-bottom: 10px 
-        +min-screen($screen-md)
+        +min-screen($screen-sm)
             flex-wrap: wrap
         &__icon
             margin-right: 5px
@@ -46,7 +46,7 @@
             padding-left: 27px
             font-size: 16px
             line-height: 1
-            +min-screen($screen-md)
+            +min-screen($screen-sm)
                 width: 100%
                 font-size: 24px
                 margin-left: 0

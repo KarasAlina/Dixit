@@ -18,6 +18,6 @@
             text: loginPopup.button,
             class: "popup-login__button"
         })}}
-		<a href="{{ loginPopup.resetLink }}" class="popup-login__reset">{{ loginPopup.resetText }}</a>
+		<a href="{{ loginPopup.resetLink }}" data-popup-opener="forget-password" class="popup-login__reset">{{ loginPopup.resetText }}</a>
 	</form>
 </div>

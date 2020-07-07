@@ -4,10 +4,10 @@
 		background: url('../img/intro/tree.svg') no-repeat bottom 50% left 125%
 		background-size: cover
 		opacity: 1
-		+min-screen($screen-ipad)
+		+min-screen($screen-md)
 			background-size: auto 78%
 			background-position: bottom 0% left 125%
-		+min-screen($screen-md)
+		+min-screen($screen-lg)
 			background-size: auto 108%
 			background-position: bottom 50% left 125%
 	&-leafs
@@ -38,12 +38,12 @@
 		text-transform: uppercase
 		letter-spacing: 0.8px
 		text-align: center
-		+min-screen($screen-ipad)
+		+min-screen($screen-md)
 			width: 60%
 			margin: auto
 			font-size: 46px
 			line-height: 50px
-		+min-screen($screen-lg)
+		+min-screen($screen-xlg)
 			width: 80%
 			margin-bottom: 20px
 			font-size: 64px
@@ -55,12 +55,12 @@
 		font-family: "BloggerSans"
 		+min-screen($screen-md)
 			margin-bottom: 20px
-		+min-screen($screen-lg)
+		+min-screen($screen-xlg)
 			margin-bottom: 48px
 			font-size: 22px
 	&__button
 		width: 248px
-		+min-screen($screen-md)
+		+min-screen($screen-lg)
 			width: 240px
 	&-video-preview
 		position: relative
@@ -74,6 +74,10 @@
 			border-radius: 25px
 			overflow: hidden
 			z-index: 2
+		&__logo
+			display: block
+			+min-screen($screen-md)
+				display: none
 		&-overlay
 			display: flex
 			align-items: center
@@ -98,9 +102,12 @@
 			&__icon
 				+size(40px)
 				margin: 0 5px
-				+min-screen($screen-ipad)
+				@extend .transition-active
+				+min-screen($screen-md)
 					+size(79px)
 					margin: 0 10px
+				&:hover
+					transform: scale(0.8)
 
 	&-col
 		&-left
@@ -109,6 +116,8 @@
 		&-right
 			position: relative
 			align-items: flex-start
+			+min-screen($screen-md)
+				margin-top: 7vh
 
 	&-card
 		perspective: none
@@ -117,14 +126,18 @@
 		transform-origin: center right
 		transition: transform 1s
 		&.card
+			
+			+max-screen($screen-sm)
+				+size(124px,186px)
 			+max-screen($screen-xs)
 				+size(73px,110px)
-			+max-screen($screen-ipad)
-				+size(124px,186px)
 		&-wrapper
 			perspective: 700px
 			position: absolute
-			+max-screen($screen-md)
+			+max-screen($screen-lg)
+			.intro-card
+				&__inner
+					transform-origin: center
 			&:nth-of-type(1)
 				top: 20%
 				right: 15%
@@ -135,6 +148,11 @@
 				.intro-card
 					transform: rotateX(50deg) rotateY(-10deg) rotateZ(50deg)
 					animation: card 5s 0s infinite alternate-reverse ease-in-out forwards
+					&__inner
+						transform-origin: center
+				&:hover
+					.intro-card__inner
+						transform: rotateX(-10deg) rotateY(-90deg)
 			&:nth-of-type(2)
 				top: 12%
 				left: 10%
@@ -145,6 +163,9 @@
 				.intro-card
 					transform: rotateX(50deg) rotateY(10deg) rotateZ(-50deg)
 					animation: card2 4s 0s infinite alternate-reverse ease-in-out forwards
+				&:hover
+					.intro-card__inner
+						transform: rotateX(-10deg) rotateY(75deg)
 			&:nth-of-type(3)
 				top: -30%
 				left: 15%
@@ -154,6 +175,9 @@
 					left: -20%
 				.intro-card
 					animation: card3 4s 0s infinite alternate-reverse ease-in-out forwards
+				&:hover
+					.intro-card__inner
+						transform: rotateX(-20deg) rotateY(75deg)
 			&:nth-of-type(4)
 				top: -30%
 				right: 25%
@@ -162,6 +186,9 @@
 					right: 0%
 				.intro-card
 					animation: card4 3s 0s infinite alternate-reverse ease-in-out forwards
+				&:hover
+					.intro-card__inner
+						transform: rotateX(-20deg) rotateY(-55deg)
 			&:nth-of-type(5)
 				top: 5%
 				right: -20%
@@ -170,9 +197,10 @@
 					display: none
 				.intro-card
 					animation: card5 3s 0s infinite alternate-reverse ease-in-out forwards
-		&:hover
-			.intro-card__inner
-				transform: rotateX(-80deg) rotateY(-70deg)
+				&:hover
+					.intro-card__inner
+						transform: rotateX(20deg) rotateY(-75deg)
+		
 				
 
 

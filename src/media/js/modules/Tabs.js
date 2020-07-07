@@ -16,7 +16,7 @@ Tabs.prototype = {
 	_initTabs($container) {
 		let useSlideAnimation = typeof $container.attr('data-tabs-use-slideups') != 'undefined';
 		$container.find('.tabs').append("<div class='tabs__sliding-block'></div>");
-		let $openers = $container.find('[data-tab-opener]').removeClass('_active');
+		let $openers = $container.find('[data-tab-opener]').removeClass('_active-tab');
 		let $needOpeners = $('100-percent-no-element');
 
 		let totalOpeners = $openers.length;
@@ -34,7 +34,7 @@ Tabs.prototype = {
 
 		$openers = $needOpeners;
 
-		let $tabs = $container.find('[data-tab]').removeClass('_active');
+		let $tabs = $container.find('[data-tab]').removeClass('_active-tab');
 		let $needTabs = $('100-percent-no-element');
 		let totalTabs = $tabs.length;
 		for (let k = 0; k < totalTabs; k++) {
@@ -51,32 +51,35 @@ Tabs.prototype = {
 
 		$tabs = $needTabs;
 
-		$openers.first().addClass('_active');
+		$openers.first().addClass('_active-tab');
 		var leftPos, newWidth;
 		var $background = $('.tabs__sliding-block');
-
-		$background
-			.width($('._active').width())
-			.css('left', $('._active').position.left)
-			.data('origLeft', $background.position.left)
-			.data('origWidth', $background.width());
+		var widthopeners = $('._active-tab').width();
+		console.log(widthopeners);
+		// $background
+		// 	.width($openers.first().width())
+		// 	.css('left', $('._active-tab').position.left)
+		// 	.data('origLeft', $background.position.left)
+		// 	.data('origWidth', $background.width());
 
 		let $firstTab = $tabs
 			.first()
-			.addClass('_active')
+			.addClass('_active-tab')
 			.show();
-		$openers.filter('[data-tab-opener="' + $firstTab.attr('data-tab') + '"]').addClass('_active');
+		$openers
+			.filter('[data-tab-opener="' + $firstTab.attr('data-tab') + '"]')
+			.addClass('_active-tab');
 
 		$openers.click(function(e) {
 			e.preventDefault();
 
 			let $this = $(this);
-			if ($this.hasClass('_active')) {
+			if ($this.hasClass('_active-tab')) {
 				return;
 			}
 
-			$openers.removeClass('_active');
-			$tabs.removeClass('_active');
+			$openers.removeClass('_active-tab');
+			$tabs.removeClass('_active-tab');
 			var x = $this.position();
 			leftPos = x.left;
 			newWidth = $this.width();
@@ -90,15 +93,15 @@ Tabs.prototype = {
 				$tabs.stop().hide();
 			}
 
-			$this.addClass('_active');
+			$this.addClass('_active-tab');
 			$openers
 				.filter('[data-tab-opener="' + $this.attr('data-tab-opener') + '"]')
 				.not($this)
-				.addClass('_active');
+				.addClass('_active-tab');
 
 			let $tab = $tabs
 				.filter('[data-tab="' + $this.attr('data-tab-opener') + '"]')
-				.addClass('_active');
+				.addClass('_active-tab');
 
 			if (useSlideAnimation) {
 				$tab.stop().slideDown();

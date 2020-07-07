@@ -12,11 +12,13 @@
 	&__apps
 		display: inline-block
 		width: 114px
-		+min-screen($screen-md)
+		+min-screen($screen-sm)
 			width: 165px
+		+min-screen($screen-md)
 			margin-right: calc(27px + 9.722vw)
 		&:first-of-type
 			margin-right: auto
+			
 			+min-screen($screen-md)
 				margin-right: 10px
 		&:hover

@@ -3,7 +3,7 @@
         attr: "data-popup-closer"
     })}}
     <div class="popup__title popup-pin-code__title">{{ pinCode.title }}</div>
-    <form action="">
+    <div>
         {{ input({
             type: "email",
             placeholder: pinCode.input,
@@ -11,9 +11,13 @@
             errorText: pinCode.errorText
         })}}
 
-        {{ button({
-            text: pinCode.button,
-            class: "popup-pin-code__button"
-        })}}
-    </form>
+        {{ button(
+             tag = "a",
+            {
+                href: "/game-1.html",
+                text: pinCode.button,
+                class: "popup-pin-code__button"
+            }
+        )}}
+    </div>
 </div>

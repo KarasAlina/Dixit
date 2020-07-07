@@ -4,7 +4,7 @@
 <div class="players {{ props.class }}">
     {% for player in players.slice(props.start,props.end) %}
         <div class="player{% if player.loading == true %} _loading{% endif %}{% if player.leader == true %} _leader{% endif %}">
-            <div class="player__avatar">
+            <div class="player__avatar" data-popup-opener="about-player">
                 <img src="media/img/avatars/avatar-{{ player.avatar }}.png" alt="">
             </div>
             {% if player.loading == true %}

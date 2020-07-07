@@ -14,9 +14,9 @@
 		border-radius: $border-radius-2
 		z-index: 0
 		@extend .transition-active
-		+screen($screen-sm, $screen-ipad)
+		+screen($screen-sm, $screen-md)
 			padding: 60px 30px 25px
-		+min-screen($screen-lg)
+		+min-screen($screen-xlg)
 			padding: 60px 30px 25px
 		._opened &
 			opacity: 1
@@ -29,10 +29,10 @@
 			&._selected,
 			&:hover
 				color: $yellow
-			+screen($screen-sm, $screen-ipad)
+			+screen($screen-sm, $screen-md)
 				font-size: 32px
 				line-height: 56px
-			+min-screen($screen-lg)
+			+min-screen($screen-xlg)
 				font-size: 32px
 				line-height: 56px
 	&__init
@@ -44,9 +44,9 @@
 		font-size: 24px
 		border: none
 		z-index: 1
-		+screen($screen-sm, $screen-ipad)
+		+screen($screen-sm, $screen-md)
 			font-size: 32px
-		+min-screen($screen-lg)
+		+min-screen($screen-xlg)
 			font-size: 32px
 		._opened &
 			z-index: 3
@@ -63,7 +63,7 @@
 		pointer-events: none
 		z-index: 1
 		@extend .transition-active
-		+min-screen($screen-lg)
+		+min-screen($screen-xlg)
 			right: 23px
 		._opened &
 			transform: translateY(-50%) rotateX(-180deg)
@@ -73,9 +73,9 @@
 		@extend .gradient-border
 		background-image: url('../img/select-lang-border.svg')
 		font-size: 32px
-		+screen($screen-sm, $screen-ipad)
+		+screen($screen-sm, $screen-md)
 			+size(142px,60px)
-		+min-screen($screen-lg)
+		+min-screen($screen-xlg)
 			+size(142px,60px)
 		&__icon
 			margin-right: 4px
@@ -86,16 +86,16 @@
 			background: none
 			border: none
 			color: #FFF
-			+screen($screen-sm, $screen-ipad)
+			+screen($screen-sm, $screen-md)
 				padding: 0px 15px
-			+min-screen($screen-lg)
+			+min-screen($screen-xlg)
 				padding: 0px 15px
 		&-options
 			top: calc(100% + 10px)
 			padding: 20px 10px 20px 10px
 			box-sizing: content-box
 			transform: translateY(-12px)
-			+min-screen($screen-lg)
+			+min-screen($screen-xlg)
 				padding: 20px 50px 20px 20px
 			&__item
 				display: flex

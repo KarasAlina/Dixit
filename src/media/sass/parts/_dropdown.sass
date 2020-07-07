@@ -1,5 +1,6 @@
 .dropdown
 	@extend .select
+	cursor: default
 	&__init
 		position: relative
 		display: flex
@@ -8,8 +9,9 @@
 		font-family: 'Paperfiller'
 		font-size: 24px
 		border: none
+		cursor: pointer
 		z-index: 1
-		+min-screen($screen-lg)
+		+min-screen($screen-xlg)
 			font-size: 32px
 		._opened &
 			z-index: 3
@@ -26,7 +28,7 @@
 		pointer-events: none
 		z-index: 1
 		@extend .transition-active
-		+min-screen($screen-lg)
+		+min-screen($screen-xlg)
 			right: 23px
 		._opened &
 			transform: translateY(-50%) rotateX(-180deg)
@@ -45,9 +47,9 @@
 		border-radius: $border-radius-2
 		z-index: 1
 		@extend .transition-active
-		+min-screen($screen-md)
-			height: 300px
 		+min-screen($screen-lg)
+			height: 300px
+		+min-screen($screen-xlg)
 			padding: 60px 30px 25px
 		._opened &
 			opacity: 1
@@ -71,15 +73,16 @@
 			&-check
 				flex: 0 0 47%
 				height: 30px
-				margin-bottom: 10px
-				+min-screen($screen-md)
-					flex: 0 0 40%
+				margin-bottom: 20px
+				+min-screen($screen-lg)
+					flex: 0 0 44%
 				&__label
 					display: block
 					position: relative
 					width: 100%
 					font-family: "BloggerSans"
 					font-size: 20px
+					line-height: 1
 					cursor: pointer
 					@extend .transition-active
 					&:after,
@@ -89,8 +92,9 @@
 						display: block
 						position: absolute
 						right: 0
-						top: 0
-						+min-screen($screen-md)
+						top: 50%
+						transform: translateY(-50%)
+						+min-screen($screen-lg)
 							+size(30px)
 					&:after
 						background: url('../img/add.svg') no-repeat center
@@ -107,5 +111,8 @@
 								opacity: 0
 							&:before
 								opacity: 1
-							
-				
+					&:disabled
+						+ .dropdown-content-languages-check__label
+							color: $grey-middle
+							pointer-events: none
+							cursor: default

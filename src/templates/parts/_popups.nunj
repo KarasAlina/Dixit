@@ -28,5 +28,7 @@
 		{% include '../parts/popups/_settings.nunj' %}
 		<!-- about player -->
 		{% include '../parts/popups/_about-player.nunj' %}
+		<!-- round-finished  -->
+		{% include '../parts/popups/_round-finished.nunj' %}
 	</div>
 </div>

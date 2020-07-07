@@ -7,7 +7,7 @@
         overflow-x: auto
         &::-webkit-scrollbar
             display: none
-    +min-screen($screen-ipad)
+    +min-screen($screen-md)
         width: 100%
         margin-right: 0
         flex-wrap: wrap
@@ -19,7 +19,7 @@
         font-size: 24px
         text-align: center
         color: #FFF
-        +min-screen($screen-ipad)
+        +min-screen($screen-md)
             display: block
     &-card
         +max-screen($screen-sm - 1px)
@@ -37,10 +37,10 @@
                     margin-left: 0 
                 &:nth-child(5n)
                     margin-right: 0 
-            +min-screen($screen-ipad)
+            +min-screen($screen-md)
                 padding-top: 0
                 margin-bottom: 5px
-            +min-screen($screen-md)
+            +min-screen($screen-lg)
                 margin-bottom: 30px
                     
     &__small-cards
@@ -49,18 +49,18 @@
         font-size: 24px
         line-height: 1
         color: #FFF
-        +screen($screen-sm, $screen-ipad)
+        +screen($screen-sm, $screen-md)
             font-size: 44px
             margin-right: 25px
             line-height: 38px
-        +min-screen($screen-lg)
+        +min-screen($screen-xlg)
             font-size: 44px
             margin-right: 25px
             line-height: 38px
     &-users
         display: flex
         flex-direction: column
-        +min-screen($screen-ipad)
+        +min-screen($screen-md)
             display: none
         &-player
             display: flex

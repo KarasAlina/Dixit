@@ -118,7 +118,9 @@ SlickSliders.prototype = {
 			}
 
 			$slides.slick(options);
-
+			$('.header-results__button').on('click', function() {
+				$slides.slick('slickGoTo', 5);
+			});
 			if ($dotsContainer.length) {
 				let $dotModel = $dotsContainer
 					.children()

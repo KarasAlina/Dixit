@@ -2,19 +2,21 @@ const dom = require('../utils/DOM');
 
 function Cards() {
 	var card = $('[data-card-zooming]');
+	var cardParent = card.parent();
 	var zoom = $('.card__increase');
 	var gallery = $('.choose-card-gallery-wrapper');
 	var gallerySlide = $('.choose-card-gallery-wrapper .card');
 	var closer = $('.choose-card-gallery__closer');
 	var button = $('.choose-card__button');
 
-	card.on('click', function() {
-		let $this = $(this);
-		if ($this.is(':not(._focus)')) {
+	cardParent.on('click', function() {
+		let $this = $(this).find(card);
+		if ($this.is(':not(._focus)') && $this.is(':not(._active)')) {
 			$this.addClass('_focus').removeClass('_disabled');
 			button.removeAttr('disabled');
-			$this
-				.siblings(card)
+			$(this)
+				.siblings()
+				.find(card)
 				.removeClass('_focus')
 				.addClass('_disabled');
 		} else if ($this.parents().is('.choose-card')) {
@@ -28,6 +30,14 @@ function Cards() {
 			card.removeClass('_focus').removeClass('_disabled');
 			button.attr('disabled', 'disabled');
 		}
+	});
+	$('.selected-associations__small-cards').on('click', function() {
+		var slideIndex1 = $(this).index();
+		setTimeout(function() {
+			$('.choose-card-gallery').slick('slickGoTo', parseInt(slideIndex1 - 1));
+		}, 300);
+		console.log(slideIndex1);
+		gallery.addClass('_show');
 	});
 	closer.on('click', function() {
 		gallery.removeClass('_show');

@@ -3,17 +3,18 @@
 	&__background
 		background: url('../img/create-game/create-game-bg.png') no-repeat top 10% center
 		background-size: cover
-		+min-screen($screen-md)
+		+min-screen($screen-lg)
 			background-size: 100%
 	&-container
 		+max-screen($screen-sm)
 			max-height: 100%
-			padding-top: 158px
 			padding-bottom: 40px
 			overflow: auto
 			align-items: center
 			*
 				flex-shrink: 0
+		+max-screen($screen-xs)
+			padding-top: 108px
 
 	&-form
 		display: flex
@@ -28,10 +29,12 @@
 		&-row
 			width: 100%
 			margin-bottom: 20px
-			+max-screen($screen-sm)
-				flex-direction: column
-				flex-shrink: 0
-			+min-screen($screen-md)
+			flex-direction: column
+			flex-shrink: 0
+			+min-screen($screen-sm)
+				flex-direction: row
+				flex-shrink: 1
+			+min-screen($screen-lg)
 				margin-bottom: 50px
 				&:last-of-type
 					margin-bottom: 65px
@@ -41,6 +44,8 @@
 				&:last-of-type
 					margin-bottom: 0
 				+min-screen($screen-sm)
+					width: 170px
+				+min-screen($screen-md)
 					width: 150px
 					margin-bottom: 0
 		&__text
@@ -49,18 +54,20 @@
 			font-family: "BloggerSans"
 			font-size: 12px
 			text-align: center
-			+min-screen($screen-md)
+			+min-screen($screen-sm)
 				min-height: 32px
 				margin-bottom: 8px
 		&__select
+			width: 100%
 			margin-bottom: 20px
-			+min-screen($screen-md)
+			+min-screen($screen-sm)
+				flex: 1 1 44%
 				margin-bottom: 0
 		&__checkbox
 			margin-right: 20px
 		&__button
 			width: 100%
-			+min-screen($screen-md)
+			+min-screen($screen-lg)
 				width: 80%
 
 

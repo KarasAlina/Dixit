@@ -10,7 +10,7 @@
             </div>
             <div class="player-row">
                 <div class="timer user-time-popup-timer" data-timer="1:20" data-timing="80s">
-                    <div class="timer__countdown user-time-popup-timer__countdown" data-indicator></div>
+                    <div class="timer__countdown user-time-popup-timer__countdown" data-indicator>1:20</div>
                     <div class="timer__indicator"></div>
                 </div>
             </div>

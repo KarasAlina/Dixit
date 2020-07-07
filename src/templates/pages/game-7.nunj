@@ -15,7 +15,7 @@
 	</div>
 	<div class="score-winners">
 	    {% for winner in winners %}
-		<div class="winner">
+		<div class="winner" data-popup-opener="about-player">
             <div class="winner__avatar">
                 <img src="media/img/avatars/avatar-{{ winner.avatar }}.png" alt="">
             </div>

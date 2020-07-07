@@ -27,7 +27,6 @@
 	background: #FFF 
 	color: $grey-dark
 	border-radius: $border-radius-1
-	overflow: hidden
 	+min-screen($screen-sm)
 		+size(58.333vw,100%)
 		max-width: calc(100% - 40px)
@@ -35,7 +34,7 @@
 		height: 100%
 	iframe
 		width: 100%
-		+min-screen($screen-md)
+		+min-screen($screen-lg)
 			height: 100vh
 	&:after,
 	&:before
@@ -54,6 +53,7 @@
 		+min-screen($screen-sm)
 			border-radius: 14.5vw
 	&-video
+		height: 60%
 		background: #000
 		+max-screen($screen-sm)
 			height: auto
@@ -70,14 +70,14 @@
 			padding: 70px 50px 30px
 		&:before
 			border-radius: 100px
-			+min-screen($screen-md)
+			+min-screen($screen-lg)
 				border-radius: 140px
 		.button
 			width: 300px
 	&__title
 		font-size: 26px
 		line-height: 24px
-		+min-screen($screen-md)
+		+min-screen($screen-lg)
 			font-size: 44px
 			line-height: 38px
 	&__text,
@@ -108,13 +108,13 @@
 		margin-bottom: 50px
 		img
 			+size(80px)
-		+min-screen($screen-md)
+		+min-screen($screen-lg)
 			width: 100%
 			margin-top: 30px
 			margin-bottom: 96px
 			img
 				+size(160px)
-		+min-screen($screen-lg)
+		+min-screen($screen-xlg)
 			width: 85%
 	&-button-download
 		width: 260px
@@ -127,13 +127,13 @@
 		height: auto
 		min-height: 100%
 		padding: 70px 7.639vw 9.7vh 
-		+min-screen($screen-md)
+		+min-screen($screen-lg)
 			width: 58.333vw
 			padding: 9.7vh 10.417vw 6.2vh 7.639vw
 		&__title
 			margin-bottom: 20px
 			text-align: center
-			+min-screen($screen-md)
+			+min-screen($screen-lg)
 				margin-bottom: 30px
 				text-align: left
 			+ .popup__text
@@ -149,12 +149,12 @@
 			padding: 0 30px	
 		&__title
 			margin-bottom: 10px
-			+min-screen($screen-md)
+			+min-screen($screen-lg)
 				margin-bottom: 0
 			+
 				.popup-thanks__text
 					margin-bottom: 20px
-					+min-screen($screen-md)
+					+min-screen($screen-lg)
 						margin-bottom: 30px
 		&__text
 			+max-screen($screen-sm)
@@ -166,15 +166,15 @@
 		text-align: center
 		&._small 
 			padding: 50px 26px 73px
-			+min-screen($screen-md)
+			+min-screen($screen-lg)
 				padding: 70px 50px 30px
 		&__title
 			margin-bottom: 20px
-			+min-screen($screen-md)
+			+min-screen($screen-lg)
 				margin-bottom: 30px
 		&__input
 			margin-bottom: 10px
-			+min-screen($screen-md)
+			+min-screen($screen-lg)
 				margin-bottom: 20px
 		&__button
 			margin-bottom: 20px
@@ -194,11 +194,11 @@
 			text-align: center
 			&._small
 				height: 320px		
-				+min-screen($screen-md)
+				+min-screen($screen-lg)
 					height: 460px
 			&__title
 				margin-bottom: 20px
-				+min-screen($screen-md)
+				+min-screen($screen-lg)
 					margin-bottom: 30px
 			&__button
 				margin-bottom: 10px
@@ -247,24 +247,24 @@
 		flex-direction: column
 		text-align: center
 		&._small
-			+min-screen($screen-md)
+			+min-screen($screen-lg)
 				padding-top: 80px
 				padding-bottom: 74px
 			+max-screen($screen-sm)
 				padding: 60px 20px
 		&__title
 			margin-bottom: 10px
-			+min-screen($screen-md)
+			+min-screen($screen-lg)
 				margin-bottom: 15px
 		&__text
 			margin-bottom: 20px
-			+min-screen($screen-md)
+			+min-screen($screen-lg)
 				margin-bottom: 32px
 		form
 			width: 100%
 		&__input
 			margin-bottom: 20px
-			+min-screen($screen-md)
+			+min-screen($screen-lg)
 				margin-bottom: 31px
 	&-pin-code
 		text-align: center
@@ -272,18 +272,18 @@
 			padding-bottom: 74px
 		&__title
 			margin-bottom: 35px
-			+min-screen($screen-md)
+			+min-screen($screen-lg)
 				margin-bottom: 63px
 		&__input
 			margin-bottom: 65px
-			+min-screen($screen-md)
+			+min-screen($screen-lg)
 				margin-bottom: 77px
 	&-attention
 		width: 280px
 		height: auto
 		padding: 64px 28px
 		text-align: center
-		+min-screen($screen-md)
+		+min-screen($screen-lg)
 			width: 620px
 			padding: 87px 86px 57px
 		&__title
@@ -291,12 +291,12 @@
 			margin-bottom: 10px
 			font-size: 40px
 			line-height: 40px
-			+min-screen($screen-md)
+			+min-screen($screen-lg)
 				font-size: 64px
 				line-height: 60px
 		&__text
 			margin-bottom: 20px
-			+min-screen($screen-md)
+			+min-screen($screen-lg)
 				margin-bottom: 54px
 		&-buttons
 			width: 90%
@@ -315,7 +315,7 @@
 		padding: 30px 20px
 		&:before
 			display: none
-		+min-screen($screen-md)
+		+min-screen($screen-lg)
 			padding: 40px 70px
 		&-buttons
 			display: flex
@@ -324,7 +324,7 @@
 				&:not(._dark-border)
 					flex: 1 1 auto
 					margin-left: 10px
-					+min-screen($screen-md)
+					+min-screen($screen-lg)
 						margin-left: 24px
 	&-about-player
 		width: 100%
@@ -332,8 +332,20 @@
 		padding: 30px
 		+min-screen($screen-sm)
 			width: 60%
-		+min-screen($screen-md)
+		+min-screen($screen-lg)
 			width: 730px
 			padding: 52px 63px 72px 40px
 		&:before
 			display: none
+	&-winning-cards
+		height: auto
+		background: $grey-dark
+		&:before,
+		&:after
+			display: none
+		.closer-button
+			top: -30px
+			right: -30px
+			+min-screen($screen-lg)
+				top: -40px
+				right: -40px

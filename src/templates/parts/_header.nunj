@@ -55,7 +55,7 @@
                         </div>
                     </div>
                     <nav class="header-menu-nav">
-                        <a href="" class="header-menu-nav__item">
+                        <a href="/" class="header-menu-nav__item">
                             {{ button({
                                 type: "square",
                                 icon: "home",
@@ -64,7 +64,7 @@
                             }) }}
                             {{ headerItem.home }}
                         </a>
-                        <a href="" class="header-menu-nav__item">
+                        <a href="mailto: dixit@mail.com" class="header-menu-nav__item">
                             {{ button({
                                 type: "square",
                                 icon: "message",
@@ -73,6 +73,14 @@
                             }) }}
                             {{ headerItem.support }}
                         </a>
+                        <div class="header-menu-nav__item header-menu-settings" data-popup-opener="settings">
+                            {{ button({
+                                type: "square",
+                                icon: "settings",
+                                class: "_settings _margin-right"
+                            }) }}
+                            {{ headerItem.settings }}
+                        </div>
                         <div class="header-menu-nav__item" data-popup-opener="rules">
                             {{ button({
                                 type: "square",
@@ -82,7 +90,7 @@
                             }) }}
                             {{ headerItem.rules }}
                         </div>   
-                        <a href="/" class="header-menu-nav__item header-menu-results">
+                        <a href="/" class="header-menu-nav__item header-menu-results" data-popup-opener="round-finished">
                             {{ button({
                                 type: "square",
                                 icon: "eye",
@@ -120,12 +128,18 @@
                     })}}
                 </div>
                 <div class="header-offside _flex _aic">
-                    {{ button({
+                    {{ button(
+                        tag = "a",
+                    {
+                        href: "/",
                         type: "square",
                         icon: "home",
                         class: "_margin-right"
                     }) }}
-                    {{ button({
+                    {{ button(
+                        tag = "a",
+                    {
+                        href: "mailto: dixit@mail.com",
                         type: "square",
                         icon: "message",
                         class: "_margin-right"
@@ -143,7 +157,7 @@
                         {{ headerItem.rules }}
                     </div>
                 </div>
-                <div class="header-results hidden-xs">
+                <div class="header-results hidden-xs" data-popup-opener="round-finished">
                     {{ button({
                         type: "square",
                         icon: "eye",
@@ -192,13 +206,14 @@
                         <img src="media/img/coins.svg" alt="" class="header-coins__coin">
                         <div class="header-coins__quantity">9 000</div>
                     </div>
-                    <div class="header-avatar _margin-left">
+                    <div class="header-avatar _margin-left" data-popup-opener="about-player">
                         <img src="media/img/avatars/avatar-1.png" class="header-avatar__img" alt="">
                     </div>
                     {{ button({
                         type: "square",
                         icon: "settings",
-                        class: "_settings _margin-left hidden-xs"
+                        class: "_settings _margin-left hidden-xs",
+                        attr: "data-popup-opener='settings'"
                     }) }}
                     {{ button({
                         type: "square",

@@ -15,7 +15,7 @@
                     </div>
                 {% endfor %}
             </div>
-            <div class="container section-container">
+            <div class="container">
                 <div class="row _aifs">
                     <div class="col-xs-12 col-sm-12 col-md-6 intro-col-left _aic">
                         <img class="intro__logo hidden-xs" src="media/img/logo.svg" alt="">
@@ -27,9 +27,9 @@
                             attr: "data-slider-next"
                         })}}
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-4 offset-md-1 col-lg-4 offset-lg-1 intro-col-right _jcc _order-1">
+                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4 offset-lg-1 intro-col-right _jcc _order-1">
                         <div class="intro-video-preview">
-                            <img class="intro__logo visible-xs" src="media/img/logo.svg" alt="">
+                            <img class="intro__logo intro-video-preview__logo" src="media/img/logo.svg" alt="">
                             <img src="media/img/intro/video.png" alt="" class="intro-video-preview__img hidden-xs">
                             <div class="intro-video-preview-overlay"  data-yt-video-popup="{{ introContent.videoPreview.videoId }}" >
                                 <div class="intro-video-preview-overlay__text">{{ introContent.videoPreview.watch }}</div>
@@ -69,7 +69,7 @@
                                 <a href="{{link.link}}" class="footer__link">{{ link.text }}</a>
                             {% endfor %}
                         </div>
-                        <div class="col-xs-10 offset-xs-1 col-md-6 col-lg-6 _jcfe">
+                        <div class="col-xs-12 offset-xs-1 col-md-6 col-lg-6 _jcfe">
                             {% for apps in footerContent.apps %}
                                 <a href="{{apps.link}}" class="footer__apps"><img src="media/img/{{ apps.img }}.png" alt=""></a>
                             {% endfor %}

@@ -9,11 +9,11 @@
 	border-radius: 12px
 	border: 1px solid transparent
 	box-sizing: border-box
-	+screen($screen-sm, $screen-ipad)
+	+screen($screen-sm, $screen-md)
 		+size(100%,$button-height-md)
 		padding: 0 30px
 		border-radius: 16px
-	+min-screen($screen-lg)
+	+min-screen($screen-xlg)
 		+size(100%,$button-height-md)
 		padding: 0 30px
 		border-radius: 16px
@@ -65,7 +65,7 @@
 		text-align: center
 		font-family: "Paperfiller"
 		font-size: 24px
-		+min-screen($screen-lg)
+		+min-screen($screen-xlg)
 			width: 150px
 			padding-left: calc(#{$button-height-md} + 19px)
 		&__icon
@@ -73,7 +73,7 @@
 			top: 0
 			left: 0
 			+size($button-height-sm)
-			+min-screen($screen-lg)
+			+min-screen($screen-xlg)
 				+size($button-height-md)
 	&__nav
 		position: absolute
@@ -82,20 +82,25 @@
 		background: none
 		border: none
 		cursor: pointer
+		path
+			@extend .transition-active
+		&:hover
+			path
+				fill: $yellow
 		&._sub
 			left: calc(#{$button-height-sm} + 22px)
-			+min-screen($screen-md)
+			+min-screen($screen-lg)
 				left: calc(#{$button-height-md} + 3px)
 		&._add
 			right: 22px
-			+min-screen($screen-md)
+			+min-screen($screen-lg)
 				right: 16px
 	&-check-pin
 		width: 125px
 		padding-left: 36px
 		padding-right: 25px
 		font-size: 16px
-		+min-screen($screen-md)
+		+min-screen($screen-lg)
 			font-size: 22px
 			line-height: 24px
 			padding-left: 43px
@@ -108,7 +113,7 @@
 			left: 10px
 			transform: translateY(-50%)
 			+size(18px,24px)
-			+min-screen($screen-lg)
+			+min-screen($screen-xlg)
 				left: 17px
 	&-error-block
 		position: absolute
@@ -120,7 +125,7 @@
 		text-align: center
 		font-family: "BloggerSans"
 		opacity: 0
-		+min-screen($screen-lg)
+		+min-screen($screen-xlg)
 			top: $button-height-md
 			text-align: left
 		&:after
@@ -132,7 +137,7 @@
 			bottom: calc( 100% + ((#{$button-height-sm} - 24px) / 2))
 			background: url('../img/error.svg') no-repeat center
 			background-size: contain
-			+min-screen($screen-lg)
+			+min-screen($screen-xlg)
 				bottom: calc( 100% + ((#{$button-height-md} - 24px) / 2))
 	&._error
 		border-color: $red

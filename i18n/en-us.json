@@ -1,6 +1,7 @@
 {
 	"headerItem": {
 		"rules": "Game rules",
+		"settings": "Settings",
 		"results": "Previous<br class='hidden-xs'> results",
 		"home": "Home",
 		"support": "Support",
@@ -826,7 +827,8 @@
 			},
 			{
 				"name": "itl",
-				"title": "Italian"
+				"title": "Italian",
+				"disabled": true
 			},
 			{
 				"name": "dch",

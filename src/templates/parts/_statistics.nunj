@@ -19,109 +19,105 @@
                     </div>
                 {% endfor %}
             </div>
-            <button data-slider-prev style="position: absolute; top: 50%;left:50%; z-ondex: 1000;">prev</button>
-            <div class="container lobby__container _max-height-full section-container">
-                <div class="row _max-height-full">
-                    <div class="col-xs-12 col-md-8 col-lg-8 _centered _max-height-full">
-                        <div class="lobby-table bordered-block">
-                            {{ closerButton( {
-                                class: "_in-bordered-block",
-                                attr: "data-slider-prev"
-                            }) }}
-                            <div class="bordered-block__title lobby-table__title">{{ statisticsContent.title }}</div>
-                            <div class="scroll-block-wrapper _scrollable">
-                                <div class="scroll-block">
-                                    {% for game in games %}
-                                        <div class="game-played grey-block">
-                                            <div class="game-played__top-row">
-                                                <div class="game-played__name">{{ game.name }}</div>
-                                                <div class="game-played__date">{{ game.date }}</div>
+            <div class="lobby__scroll">
+                <div class="container lobby__container _max-height-full section-container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-10 col-md-8 col-lg-8 _centered">
+                            <div class="lobby-table bordered-block">
+                                {{ closerButton( {
+                                    class: "_in-bordered-block",
+                                    attr: "data-slider-prev"
+                                }) }}
+                                <div class="bordered-block__title lobby-table__title">{{ statisticsContent.title }}</div>
+                                
+                                {% for game in games %}
+                                    <div class="game-played grey-block">
+                                        <div class="game-played__top-row">
+                                            <div class="game-played__name">{{ game.name }}</div>
+                                            <div class="game-played__date">{{ game.date }}</div>
+                                        </div>
+                                        
+                                        <div class="row game-played__row">
+                                            <div class="game-played-win">
+                                                {{ icon({
+                                                    name: "win",
+                                                    class: "game-played-win__icon",
+                                                    width: "22",
+                                                    height: "20"
+                                                })}}
+                                                <div class="game-played-win__text">{{ game.gold.name }}</div>
+                                                <div class="game-played-win-score">
+                                                    {{ game.gold.score }}
+                                                    {{ icon({
+                                                        name: "star",
+                                                        class: "game-played-win-score__icon",
+                                                        width: "15",
+                                                        height: "14"
+                                                    })}}
+                                                </div>
                                             </div>
-                                           
-                                            <div class="row game-played__row">
-                                                <div class="game-played-win">
+                                            <div class="game-played-win">
+                                                {{ icon({
+                                                    name: "win-silver",
+                                                    class: "game-played-win__icon",
+                                                    width: "22",
+                                                    height: "20"
+                                                })}}
+                                                <div class="game-played-win__text">{{ game.silver.name }}</div>
+                                                <div class="game-played-win-score">
+                                                    {{ game.silver.score }}
                                                     {{ icon({
-                                                        name: "win",
-                                                        class: "game-played-win__icon",
-                                                        width: "22",
-                                                        height: "20"
+                                                        name: "star",
+                                                        class: "game-played-win-score__icon",
+                                                        width: "15",
+                                                        height: "14"
                                                     })}}
-                                                    <div class="game-played-win__text">{{ game.gold.name }}</div>
-                                                    <div class="game-played-win-score">
-                                                        {{ game.gold.score }}
-                                                        {{ icon({
-                                                            name: "star",
-                                                            class: "game-played-win-score__icon",
-                                                            width: "15",
-                                                            height: "14"
-                                                        })}}
-                                                    </div>
                                                 </div>
-                                                <div class="game-played-win">
+                                            </div>
+                                            <div class="game-played-win">
+                                                {{ icon({
+                                                    name: "win-bronze",
+                                                    class: "game-played-win__icon",
+                                                    width: "22",
+                                                    height: "20"
+                                                })}}
+                                                <div class="game-played-win__text">{{ game.bronze.name }}</div>
+                                                <div class="game-played-win-score">
+                                                    {{ game.bronze.score }}
                                                     {{ icon({
-                                                        name: "win-silver",
-                                                        class: "game-played-win__icon",
-                                                        width: "22",
-                                                        height: "20"
+                                                        name: "star",
+                                                        class: "game-played-win-score__icon",
+                                                        width: "15",
+                                                        height: "14"
                                                     })}}
-                                                    <div class="game-played-win__text">{{ game.silver.name }}</div>
-                                                    <div class="game-played-win-score">
-                                                        {{ game.silver.score }}
-                                                        {{ icon({
-                                                            name: "star",
-                                                            class: "game-played-win-score__icon",
-                                                            width: "15",
-                                                            height: "14"
-                                                        })}}
-                                                    </div>
                                                 </div>
-                                                <div class="game-played-win">
+                                            </div>
+                                            <div class="game-played-win">
+                                                {{ icon({
+                                                    name: "win-iron",
+                                                    class: "game-played-win__icon",
+                                                    width: "22",
+                                                    height: "20"
+                                                })}}
+                                                <div class="game-played-win__text">{{ game.iron.name }}</div>
+                                                <div class="game-played-win-score">
+                                                    {{ game.iron.score }}
                                                     {{ icon({
-                                                        name: "win-bronze",
-                                                        class: "game-played-win__icon",
-                                                        width: "22",
-                                                        height: "20"
+                                                        name: "star",
+                                                        class: "game-played-win-score__icon",
+                                                        width: "15",
+                                                        height: "14"
                                                     })}}
-                                                    <div class="game-played-win__text">{{ game.bronze.name }}</div>
-                                                    <div class="game-played-win-score">
-                                                        {{ game.bronze.score }}
-                                                        {{ icon({
-                                                            name: "star",
-                                                            class: "game-played-win-score__icon",
-                                                            width: "15",
-                                                            height: "14"
-                                                        })}}
-                                                    </div>
-                                                </div>
-                                                <div class="game-played-win">
-                                                    {{ icon({
-                                                        name: "win-iron",
-                                                        class: "game-played-win__icon",
-                                                        width: "22",
-                                                        height: "20"
-                                                    })}}
-                                                    <div class="game-played-win__text">{{ game.iron.name }}</div>
-                                                    <div class="game-played-win-score">
-                                                        {{ game.iron.score }}
-                                                        {{ icon({
-                                                            name: "star",
-                                                            class: "game-played-win-score__icon",
-                                                            width: "15",
-                                                            height: "14"
-                                                        })}}
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    {% endfor %}
-                                </div>
+                                    </div>
+                                {% endfor %}
                             </div>
-                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </section>
 {% endmacro %}

@@ -53,7 +53,7 @@
 	</div>
 
 	<div class="row">
-		<div class="col-xs-12 _aic _jcfe">
+		<div class="col-xs-12 _aic _jcfe" data-slider="gallery">
             <div class="selected-associations__your-cards">
                 {{ associations.yourCards}}
             </div>
@@ -63,6 +63,18 @@
                 end: 3,
                 class: "selected-associations__small-cards _small"
             })}}
+			<div class="choose-card-gallery-wrapper">
+                <div class="choose-card-gallery" data-slider-slides>
+                    {{ cards({
+                        start: "0",
+                        end: "3",
+                        class: "choose-card-gallery__card",
+                        galleryWrapper: true,
+                        close: true,
+                        closeClass: "choose-card-gallery__closer"
+                    })}}
+                </div>
+            </div>
 		</div>
 	</div>
 </div>

@@ -7,7 +7,7 @@
 		background-size: cover
 		&__container
 			margin-top: 95px
-			+min-screen($screen-md)
+			+min-screen($screen-lg)
 				margin-top: 145px
 	&-content
 		display: flex
@@ -15,7 +15,7 @@
 		margin: 0 auto
 		flex-wrap: wrap
 		padding: 0 
-		+min-screen($screen-md)
+		+min-screen($screen-lg)
 			display: block
 			padding: 0 $site-paddings-sm 
 		&._block-xs
@@ -35,7 +35,7 @@
 		justify-content: center
 		width: 100%
 		min-height: 70px
-		padding: 7px 0
+		padding: 16px 0
 		margin: 0 auto 10px
 		background: $grey-dark
 		color: #FFF
@@ -48,15 +48,13 @@
 		+min-screen($screen-sm)
 			min-height: 90px
 			font-size: 4vh
+			padding: 7px 0
 			line-height: 0.9
 			&:not(._full-width)
 				width: 80%
-		+screen($screen-sm, $screen-ipad)
+		+screen($screen-sm, $screen-md)
 			padding: 23px 0
-		+min-screen($screen-ipad)
-			&:not(._full-width)
-				width: 60%
-		+min-screen($screen-md)
+		+min-screen($screen-lg)
 			height: 16.64vh
 			margin-top: -6.4vh
 			font-size: 6.1vh
@@ -66,7 +64,7 @@
 		&._bigger
 			+min-screen($screen-sm)
 				font-size: 5vh
-			+min-screen($screen-md)
+			+min-screen($screen-lg)
 				font-size: 8.87vh
 				line-height: 8.32vh
 		&:before,
@@ -81,14 +79,14 @@
 			transform: translateY(-50%)
 			background: url('../img/game-title-bg.png') no-repeat left
 			background-size: auto 100%
-			+min-screen($screen-md)
+			+min-screen($screen-lg)
 				left: 10px
 				height: calc(100% - 20px)
 		&:after
 			right: 7px
 			left: auto
 			transform: translateY(-50%) rotate(180deg)
-			+min-screen($screen-md)
+			+min-screen($screen-lg)
 				right: 10px
 		&__suptitle
 			display: inline-block
@@ -146,12 +144,12 @@
 		transform: translateY(-100%)
 		@extend .transition-active
 		z-index: -1
-		+min-screen($screen-ipad)
+		+min-screen($screen-md)
 			display: none
 		span
 			margin: 0 3px
 			color: $yellow
-		+min-screen($screen-md)
+		+min-screen($screen-lg)
 			display: none
 		&._show
 			opacity: 1

@@ -1,5 +1,5 @@
 .choose-card
-	+min-screen($screen-md)
+	+min-screen($screen-lg)
 		margin-bottom: 50px
 	&-wrapper
 		flex-wrap: wrap
@@ -19,10 +19,10 @@
 					justify-content: flex-start
 				&:nth-child(3n)
 					justify-content: flex-end
-		+min-screen($screen-md)
+		+min-screen($screen-lg)
 			flex-wrap: nowrap
 	&__card
-		+screen($screen-sm, $screen-ipad - 1px)
+		+screen($screen-sm, $screen-md - 1px)
 			width: 21.813vw
 			height: 34.375vw			
 		+max-screen($screen-sm)
@@ -64,10 +64,10 @@
 			.card__inner,
 			.card__face
 				border-radius: 20px
-			+screen($screen-sm, $screen-ipad)
+			+screen($screen-sm, $screen-md)
 				width: 23.813vw
 				height: 35.375vw
-			+min-screen($screen-md)
+			+min-screen($screen-lg)
 				width: 42.5vh
 				height: 63.8vh
 				.card__inner,
@@ -90,14 +90,14 @@
 		color: #FFF
 		+min-screen($screen-sm)
 			font-size: 36px
-		+min-screen($screen-ipad)
+		+min-screen($screen-md)
 			margin-top: 11vh
 			margin-bottom: 4.16vh
 			font-size: 44px
 			
 	&-game-title-block.game-title-block
 		margin-bottom: 23px
-		+min-screen($screen-md)
+		+min-screen($screen-lg)
 			margin-bottom: 14.8vh
 		+max-screen($screen-sm)
 			padding: 16px 0 7px

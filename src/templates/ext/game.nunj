@@ -33,7 +33,7 @@
                             </div>
                             {% endif %}
                             {% if players != false %}
-                                <div class="col-xs-12 col-sm-12 _centered col-md-8 col-lg-8">
+                                <div class="col-xs-12 col-sm-12 _centered col-md-10 col-lg-8">
                                 {% elif containerClass != false %}
                                     <div class="{{ containerClass }}">                                
                                 {% else %}

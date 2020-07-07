@@ -14,7 +14,7 @@
         </div>
         <div class="timer" data-timer="1:30" data-timing="90s">
             <div class="timer__indicator"></div>
-            <div class="timer__countdown" data-indicator></div>
+            <div class="timer__countdown" data-indicator>1:30</div>
             <div class="timer__indicator"></div>
         </div>
         <div class="row choose-card _flex" data-slider="gallery">

@@ -1,106 +1,113 @@
 .players
-    display: flex
-    flex-direction: column
-    +min-screen($screen-md)
-        align-items: center
+	display: flex
+	flex-direction: column
+	+min-screen($screen-lg)
+		align-items: center
 .player
-    display: flex
-    align-items: center
-    color: #FFF
-    &:not(:last-of-type)
-        margin-bottom: 20px
-    +min-screen($screen-md)
-        flex-direction: column
-    &__avatar
-        position: relative
-        display: block
-        +size(60px)
-        margin-right: 20px
-        border-radius: 36px
-        +min-screen($screen-md)
-            +size(80px)
-            margin-right: 0
-            margin-bottom: 5px
-        ._loading &
-            display: none
-        ._leader &
-            &:after
-                content: ''
-                display: block
-                position: absolute
-                bottom: 0
-                left: 50%
-                transform: translateX(-50%)
-                +size(150%,100%)
-                background: url('../img/avatars/wreath.svg') no-repeat center
-                background-size: contain
-        img
-            +size(100%)
-            object-fit: cover
-            border-radius: 36px
-            border: 3px solid rgba(255, 255, 255, 0.2)
-            ._leader &
-                border-color: $yellow
-    &-row
-        display: flex
-        flex-direction: column
-        +min-screen($screen-md)
-            align-items: center 
-    &__name
-        font-size: 3.3vh
-        line-height: 1
-        ._loading &
-            display: none
-    &__percents
-        display: none
-        font-size: 3.3vh
-        line-height: 1
-        ._loading &
-            display: block
-    &-loading
-        position: relative
-        display: none
-        align-items: center
-        justify-content: center
-        +size(60px)
-        margin-right: 20px
-        border-radius: 36px
-        overflow: hidden
-        +min-screen($screen-md)
-            +size(80px)
-            transform: scale(1)
-            margin-right: 0
-            margin-bottom: 5px
-        canvas,
-        &__progress
-            +size(100% !important)
-        ._loading &
-            display: flex
-        &__inner
-            display: flex
-            align-items: center
-            justify-content: center
-            +size(54px)
-            position: absolute
-            top: 50%
-            left: 50%
-            transform: translate(-50%,-50%)
-            background: url('../img/loading-bg.png') no-repeat center
-            background-size: cover
-            border-radius: 36px
-            +min-screen($screen-md)
-                +size(76px)
-        &__hourglass
-            +size(18px,27px)
-            transition: 0.3s
-            animation: hourglass 2s infinite 
-    &-score
-        display: flex
-        align-items: center
-        margin-top: 3px
-        font-size: 16px
-        line-height: 1
-        font-family: "BloggerSans"
-        &__icon
-            margin-top: -5px
-            margin-left: 4px
+	display: flex
+	align-items: center
+	color: #FFF
+	cursor: pointer
+	&:not(:last-of-type)
+		margin-bottom: 20px
+	+min-screen($screen-lg)
+		flex-direction: column
+	&__avatar
+		position: relative
+		display: block
+		+size(60px)
+		margin-right: 20px
+		border-radius: 36px
+		@extend .transition-active
+		&:hover
+			box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.25)
+			img
+				border-color: $yellow
+		+min-screen($screen-lg)
+			+size(80px)
+			margin-right: 0
+			margin-bottom: 5px
+		._loading &
+			display: none
+		._leader &
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				bottom: 0
+				left: 50%
+				transform: translateX(-50%)
+				+size(150%,100%)
+				background: url('../img/avatars/wreath.svg') no-repeat center
+				background-size: contain
+		img
+			+size(100%)
+			object-fit: cover
+			border-radius: 36px
+			border: 3px solid rgba(255, 255, 255, 0.2)
+			@extend .transition-active
+			._leader &
+				border-color: $yellow
+	&-row
+		display: flex
+		flex-direction: column
+		+min-screen($screen-lg)
+			align-items: center 
+	&__name
+		font-size: 3.3vh
+		line-height: 1
+		._loading &
+			display: none
+	&__percents
+		display: none
+		font-size: 3.3vh
+		line-height: 1
+		._loading &
+			display: block
+	&-loading
+		position: relative
+		display: none
+		align-items: center
+		justify-content: center
+		+size(60px)
+		margin-right: 20px
+		border-radius: 36px
+		overflow: hidden
+		+min-screen($screen-lg)
+			+size(80px)
+			transform: scale(1)
+			margin-right: 0
+			margin-bottom: 5px
+		canvas,
+		&__progress
+			+size(100% !important)
+		._loading &
+			display: flex
+		&__inner
+			display: flex
+			align-items: center
+			justify-content: center
+			+size(54px)
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			background: url('../img/loading-bg.png') no-repeat center
+			background-size: cover
+			border-radius: 36px
+			+min-screen($screen-lg)
+				+size(76px)
+		&__hourglass
+			+size(18px,27px)
+			transition: 0.3s
+			animation: hourglass 2s infinite 
+	&-score
+		display: flex
+		align-items: center
+		margin-top: 3px
+		font-size: 16px
+		line-height: 1
+		font-family: "BloggerSans"
+		&__icon
+			margin-top: -5px
+			margin-left: 4px

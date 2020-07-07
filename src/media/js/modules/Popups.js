@@ -22,7 +22,7 @@ function Popups() {
 	this.activePopupName = '';
 
 	let self = this;
-	// self.open('about-player');
+	// self.open('round-finished');
 	dom.$body.on('click', '[data-popup-opener]', function(e) {
 		e.preventDefault();
 
@@ -30,6 +30,15 @@ function Popups() {
 
 		self.open($this.attr('data-popup-opener'));
 		$this.addClass('_active');
+		var $background = $('.tabs__sliding-block');
+		var widthopeners = $('._active-tab').width();
+		console.log(widthopeners);
+		$background
+			.width($('._active-tab').width())
+			.css('left', $('._active-tab').position.left)
+			.data('origLeft', $background.position.left)
+			.data('origWidth', $background.width());
+		$('.backgrounds-slider').slick('refresh');
 	});
 
 	this.$ytPopup = this.$popups.filter('[data-popup="yt-video"]');

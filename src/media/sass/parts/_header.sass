@@ -35,13 +35,14 @@
 		._authorized &
 			display: flex
 	&-offside
-		+max-screen($screen-ipad)
+		+max-screen($screen-md)
 			display: none
 		._in-game &
 			display: none
 	&-results
 		display: none
 		align-items: center
+		cursor: pointer
 		&__text
 			margin-left: 10px
 			font-size: 24px
@@ -49,24 +50,26 @@
 			color: #FFF
 		._in-game &
 			display: flex
-			
 	&-avatar
 		+size($button-height-sm)
 		@extend .gradient-border
 		padding: 2px
 		overflow: hidden
+		@extend .transition-active
+		&:hover
+			box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.25)
 		+max-screen($screen-sm - 1px)
 			&._margin-left
 				margin-left: 5px
-		+screen($screen-sm, $screen-ipad)
+		+screen($screen-sm, $screen-md)
 			+size($button-height-md)
-		+min-screen($screen-lg)
+		+min-screen($screen-xlg)
 			+size($button-height-md)
 		&__img
 			+size(105%)
 			object-fit: cover
 			border-radius: $border-radius-2
-			+min-screen($screen-lg)
+			+min-screen($screen-xlg)
 				border-radius: 22px
 	&-coins
 		&__quantity
@@ -95,7 +98,7 @@
 		._menu-opened &
 			transform: translateX(0%)
 		&-button
-			+min-screen($screen-md)
+			+min-screen($screen-lg)
 				display: none
 		&-close
 			display: flex
@@ -128,6 +131,11 @@
 			display: none
 			.game &
 				display: flex 
+		&-settings
+			display: none
+			._authorized &,
+			.game &
+				display: flex
 		&-exit
 			color: $red
 	&-players

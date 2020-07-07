@@ -3,13 +3,13 @@
 	flex: auto
 	&-wrapper
 		flex-direction: column
-		+min-screen($screen-md)
+		+min-screen($screen-lg)
 			flex-direction: row
 	&__name
 		margin-left: 10px
 		font-size: 40px
 		line-height: 1
-		+min-screen($screen-md)
+		+min-screen($screen-lg)
 			font-size: 64px
 			line-height: 60px
 			margin-left: 0
@@ -22,7 +22,7 @@
 		font-size: 12px
 		line-height: 16px
 		font-family: "BloggerSans"
-		+min-screen($screen-md)
+		+min-screen($screen-lg)
 			font-size: 16px
 			line-height: 24px
 	&__text
@@ -30,7 +30,7 @@
 		align-items: center
 		font-size: 26px
 		line-height: 24px
-		+min-screen($screen-md)
+		+min-screen($screen-lg)
 			font-size: 32px
 			line-height: 38px
 		+ .about-player__title
@@ -39,7 +39,7 @@
 		display: flex
 		flex-wrap: wrap
 		margin-bottom: 20px
-		+min-screen($screen-md)
+		+min-screen($screen-lg)
 			flex-wrap: nowrap
 			margin-bottom: 30px
 		&._nowrap
@@ -47,11 +47,11 @@
 	&-col
 		&._left
 			width: 100%
-			+min-screen($screen-md)
+			+min-screen($screen-lg)
 				width: 45%
 		&._right
 			width: 100%
-			+min-screen($screen-md)
+			+min-screen($screen-lg)
 				flex: auto
 		&._half-xs
 			+max-screen($screen-sm)
@@ -80,7 +80,7 @@
 			visibility: hidden
 			@extend .transition-active
 			z-index: 10
-			+min-screen($screen-md)
+			+min-screen($screen-lg)
 				width: 275px
 				bottom: 90%
 				left: 90%
@@ -105,14 +105,14 @@
 		justify-content: space-between
 		align-items: center
 		margin-top: 10px
-		+min-screen($screen-md)
+		+min-screen($screen-lg)
 			margin-top: 0
 		&__item
 			display: flex
 			align-items: center
 			font-size: 26px
 			line-height: 1
-			+min-screen($screen-md)
+			+min-screen($screen-lg)
 				font-size: 32px
 		&__icon
 			margin-right: 5px
@@ -127,7 +127,7 @@
 			.about-player-col
 				&:first-of-type
 					margin-bottom: 4px
-		+min-screen($screen-md)
+		+min-screen($screen-lg)
 			width: 90%
 		&__icon
 			margin-left: 10px
@@ -144,7 +144,7 @@
 	margin-top: 10px
 	border-radius: 27px
 	background-color: $grey-light
-	+min-screen($screen-md)
+	+min-screen($screen-lg)
 		margin-top: 0
 	&__bar 
 		border-radius: 27px
@@ -158,7 +158,7 @@
 		font-size: 18px
 		align-items: center
 		justify-content: center
-		+min-screen($screen-md)
+		+min-screen($screen-lg)
 			font-size: 24px
 	&__icon
 		position: absolute

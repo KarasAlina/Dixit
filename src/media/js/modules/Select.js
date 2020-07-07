@@ -1,12 +1,16 @@
+const dom = require('../utils/DOM');
+
 var container = $('.select');
 var init = $('.select__init');
 var wrapper = $('.select-options');
 var option = $('.select-options__item').not('.select-languages-header-options__item');
 var optionHeader = $('.select-languages-header-options__item');
+var dropdown = $('.dropdown');
+var trigger = dropdown.find('.dropdown__init');
 
 init.on('click', function() {
 	$(this)
-		.parent('.select')
+		.parent(container)
 		.toggleClass('_opened');
 });
 optionHeader.on('click', function() {
@@ -36,4 +40,18 @@ option.on('click', function() {
 		.addClass('_selected')
 		.siblings()
 		.removeClass('_selected');
+});
+trigger.on('click', function() {
+	$(this)
+		.parent(dropdown)
+		.toggleClass('_opened');
+});
+
+dom.$document.mouseup(function(e) {
+	if (!container.is(e.target) && container.has(e.target).length === 0) {
+		container.removeClass('_opened');
+	}
+	if (!dropdown.is(e.target) && dropdown.has(e.target).length === 0) {
+		dropdown.removeClass('_opened');
+	}
 });

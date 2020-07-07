@@ -39,12 +39,6 @@ global.ProjectName = new function ProjectName() { // eslint-disable-line
 			label.parents('.chat').toggleClass('_show').toggleClass('_hide');
 		});
 
-		var dropdown = $('.dropdown');
-		var trigger = dropdown.find('.dropdown__init');
-		trigger.on('click', function(){
-			$(this).parent(dropdown).toggleClass('_opened');
-		});
-
 		var menu = $('.header-menu-button');
 		var players = $('.header-players-button');
 		var close = $('.header-menu-close')
@@ -57,6 +51,8 @@ global.ProjectName = new function ProjectName() { // eslint-disable-line
 		close.on('click', function(){
 			$(this).parents('.header').removeClass('_menu-opened _players-opened');
 		});
+		
+		
 	});
 }();
 

@@ -1,6 +1,6 @@
 <div class="popup popup-settings" data-tabs data-popup="settings">
     <div class="tabs">
-        <div class="tabs__item _active" data-tab-opener="settings">{{ settingsPopup.tabs.settings }}</div>
+        <div class="tabs__item" data-tab-opener="settings">{{ settingsPopup.tabs.settings }}</div>
         <div class="tabs__item" data-tab-opener="info">{{ settingsPopup.tabs.info }}</div>
 
     </div>

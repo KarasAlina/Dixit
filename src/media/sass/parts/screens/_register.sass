@@ -13,6 +13,9 @@
 		font-weight: normal
 		text-align: center
 		+min-screen($screen-md)
+			font-size: 14.64vh
+			line-height: 11.86vh
+		+min-screen($screen-lg)
 			font-size: 16.64vh
 			line-height: 13.86vh
 			margin: 0
@@ -25,11 +28,11 @@
 		flex-direction: column
 		align-items: center
 		width: 100%
-		padding: 54px 26px 30px
+		padding: 54px 35px 30px
 		background: $grey-dark url('../img/section-bg.png') repeat center
 		background-size: 70%
 		border-radius: $border-radius-2
-		+min-screen($screen-lg)
+		+min-screen($screen-xlg)
 			padding: 89px 50px 30px
 			border-radius: 32px
 		&-avatar
@@ -39,7 +42,7 @@
 			top: -40px
 			border: 4px solid $grey-dark
 			border-radius: 50%	
-			+min-screen($screen-lg)
+			+min-screen($screen-xlg)
 				+size(120px)
 				top: -60px
 				border-width: 8px 
@@ -58,15 +61,15 @@
 				bottom: -10px
 				right: -10px
 				border: 4px solid $grey-dark
-				+min-screen($screen-lg)
+				+min-screen($screen-xlg)
 					border-width: 6px
 		&__input
 			&-wrapper
 				margin-bottom: 10px
-				+min-screen($screen-lg)
+				+min-screen($screen-xlg)
 					margin-bottom: 25px
 		&__button
-			+min-screen($screen-lg)
+			+min-screen($screen-xlg)
 				margin: 10px 0
 		&__terms
 			color: $grey-middle
@@ -75,6 +78,9 @@
 			font-family: "BloggerSans"
 			a
 				border-bottom: 1px solid  $grey-middle
+				&:hover
+					color: inherit
+					border-color: transparent
 	&-footer
 		+max-screen($screen-md)
 			display: none
@@ -83,33 +89,33 @@
 			position: absolute
 			+size(66px,99px)
 			pointer-events: none
-			+min-screen($screen-lg)
+			+min-screen($screen-xlg)
 				+size(90px,135px)
 			&:nth-of-type(1)
 				top: 10px
 				left: 10px
-				+min-screen($screen-lg)
+				+min-screen($screen-xlg)
 					top: 20px
 					left: 20px
 			&:nth-of-type(2)
 				top: 10px
 				right: 10px
 				transform: rotateY(180deg)	
-				+min-screen($screen-lg)
+				+min-screen($screen-xlg)
 					top: 20px
 					right: 20px
 			&:nth-of-type(3)
 				bottom: 10px
 				left: 10px
 				transform: rotateX(180deg)
-				+min-screen($screen-lg)
+				+min-screen($screen-xlg)
 					bottom: 20px
 					left: 20px
 			&:nth-of-type(4)
 				bottom: 10px
 				right: 10px
 				transform: rotateY(180deg) rotateX(180deg)
-				+min-screen($screen-lg)
+				+min-screen($screen-xlg)
 					bottom: 20px
 					right: 20px
 

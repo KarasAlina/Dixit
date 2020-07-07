@@ -99,7 +99,7 @@ body
 		opacity: 1
 
 .transition-active
-	transition: border-color $default-transition-duration $default-transition-function, color $default-transition-duration $default-transition-function, background $default-transition-duration $default-transition-function, border-color $default-transition-duration $default-transition-function, opacity $default-transition-duration $default-transition-function, transform $default-transition-duration $default-transition-function, fill $default-transition-duration $default-transition-function
+	transition: box-shadow $default-transition-duration $default-transition-function, border-color $default-transition-duration $default-transition-function, color $default-transition-duration $default-transition-function, background $default-transition-duration $default-transition-function, border-color $default-transition-duration $default-transition-function, opacity $default-transition-duration $default-transition-function, transform $default-transition-duration $default-transition-function, fill $default-transition-duration $default-transition-function
 
 .transition-hover
 	transition: none
@@ -148,17 +148,17 @@ body
 	border: none
 	cursor: pointer
 	@extend .transition-active
-	+min-screen($screen-lg)
+	+min-screen($screen-xlg)
 		border-radius: 22px
 	&:hover
-		background-color: rgba($grey-dark, 0.6)
+		background-color: rgba($grey-dark, 1)
 		@extend .transition-hover
 
 ._full-width
 	width: 100%
 
 ._full-width-xs
-	+max-screen($screen-sm)
+	+max-screen($screen-xs)
 		width: 100%
 
 ._centered
@@ -175,7 +175,7 @@ body
 	-webkit-border-image: url('../img/bg-image-2.png') 30 round round
 	-o-border-image: url('../img/bg-image-2.png') 30 round round
 	-moz-border-image: url('../img/bg-image-2.png') 30 round round
-	+min-screen($screen-md)
+	+min-screen($screen-lg)
 		padding: 10px 30px
 		border-radius: $border-radius-1
 		border: 40px solid $grey-dark
@@ -189,7 +189,7 @@ body
 		line-height: 40px
 		color: #FFF
 		text-align: center
-		+min-screen($screen-lg)
+		+min-screen($screen-xlg)
 			margin-bottom: 40px
 			font-size: 8.87vh
 			line-height: 8.3vh
@@ -198,18 +198,18 @@ body
 	padding: 20px 10px 10px
 	background: #424655
 	border-radius: 12px
-	+min-screen($screen-lg)
+	+min-screen($screen-xlg)
 		padding: 22px 30px 17px
 		border-right: 18px
 
 ._max-height-full
-	max-height: 100%
+	height: 100%
 
 ._p0
 	padding: 0
 
 ._order-1
-	+max-screen($screen-ipad)
+	+max-screen($screen-sm)
 		order: -1
 
 ._pl0-xs

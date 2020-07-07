@@ -1,13 +1,13 @@
 .room
     position: relative
     margin-bottom: 10px
-    +min-screen($screen-md)
+    +min-screen($screen-lg)
         padding: 10px 30px 20px
     &__name
         margin-bottom: 15px
         color: #FFF
         font-size: 22px
-        +min-screen($screen-md)
+        +min-screen($screen-lg)
             margin-bottom: 0
             font-size: 32px
     &__row
@@ -19,7 +19,7 @@
         align-items: center
         flex: auto
         &._half-width-xs
-            +max-screen($screen-sm)
+            +max-screen($screen-xs)
                 width: 50%
     &__icon
         margin-right: 5px
@@ -33,10 +33,10 @@
         top: 18px
         right: 10px
         cursor: pointer
-        +min-screen($screen-lg)
+        +min-screen($screen-xlg)
             top: 19px
             right: 30px
     &__button
-        +max-screen($screen-sm)
+        +max-screen($screen-xs)
             width: 100%
             margin-top: 7px

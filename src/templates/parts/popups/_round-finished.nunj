@@ -1,0 +1,51 @@
+<div class="popup popup-winning-cards bordered-block" data-popup="round-finished">
+	{{ closerButton({
+        attr: "data-popup-closer"
+    })}}
+	<div class="winning-cards">
+		{% for item in roundFinished.winningCards %}
+		<div class="winning-cards-card-wrapper{% if item.winner == true %} _winner{% endif %}">
+			<div class="winning-cards__name">
+				{{ item.name }}
+				{% if item.winner == true %}
+				<div class="winning-cards-score">
+					{{ item.score }}
+					{{ icon({
+						name: "star",
+						width: "24",
+						height: "22"
+					})}}
+				</div>
+				{% endif %}
+			</div>
+
+			<div class="card winning-cards-card {{ item.class }}">
+				<div class="card__inner">
+					<div class="card__face _front">
+						<img src="media/img/cards/card-{{ item.card }}.png" class="card__img" alt="">
+					</div>
+					<div class="card__face _back _back-waiting"></div>
+				</div>
+			</div>
+			<div class="winning-cards-winners">
+				{% for winner in item.users %}
+				<div class="player winning-cards-winners-player">
+					<div class="player__avatar winning-cards-winners-player__avatar">
+						<img src="media/img/avatars/avatar-{{ winner.avatar }}.png" alt="">
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+			<div class="winning-cards-score">
+				{{ item.score }}
+				{{ icon({
+						name: "star",
+						width: "24",
+						height: "22"
+					})}}
+			</div>
+		</div>
+
+		{% endfor %}
+	</div>
+</div>

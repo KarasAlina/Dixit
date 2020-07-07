@@ -15,27 +15,27 @@
 	border: none
 	@extend .transition-active
 	cursor: pointer
-	+screen($screen-sm, $screen-ipad)
+	+screen($screen-sm, $screen-md)
 		height: 60px
 		font-size: 32px
 		border-radius: 36px
-	+min-screen($screen-lg)
+	+min-screen($screen-xlg)
 		height: 60px
 		font-size: 32px
 		border-radius: 36px
 	&:hover
 		background: #FFAD29
 	&._big
-		+screen($screen-sm, $screen-ipad)
+		+screen($screen-sm, $screen-md)
 			height: 80px
-		+min-screen($screen-lg)
+		+min-screen($screen-xlg)
 			height: 80px
 	&._login
 		width: 100px
-		+screen($screen-sm, $screen-ipad)
+		+screen($screen-sm, $screen-md)
 			width: 180px
 			border-radius: 22px
-		+min-screen($screen-lg)
+		+min-screen($screen-xlg)
 			width: 180px
 			border-radius: 22px
 	&._small-text
@@ -50,10 +50,10 @@
 		justify-content: center
 		@extend .gradient-border
 		background-size: $button-height-sm $button-height-sm
-		+screen($screen-sm, $screen-ipad)
+		+screen($screen-sm, $screen-md)
 			+size($button-height-md)
 			background-size: $button-height-md $button-height-md
-		+min-screen($screen-lg)
+		+min-screen($screen-xlg)
 			+size($button-height-md)
 			background-size: $button-height-md $button-height-md
 		&__icon
@@ -90,9 +90,9 @@
 	&-timer
 		max-width: 100%
 		font-size: 24px
-		+min-screen($screen-md)
-			width: 27.778vw
 		+min-screen($screen-lg)
+			width: 27.778vw
+		+min-screen($screen-xlg)
 			font-size: 32px
 		span
 			margin-left: 5px
@@ -107,14 +107,14 @@
 			background-size: 24px
 ._margin-right
 	margin-right: 25px
-	+screen($screen-sm, $screen-ipad)
+	+screen($screen-sm, $screen-md)
 		margin-right: 30px
-	+min-screen($screen-lg)
+	+min-screen($screen-xlg)
 		margin-right: 30px
 ._margin-left
 	margin-left: 25px
-	+screen($screen-sm, $screen-ipad)
+	+screen($screen-sm, $screen-md)
 		margin-left: 30px
-	+min-screen($screen-lg)
+	+min-screen($screen-xlg)
 		margin-left: 30px
 
